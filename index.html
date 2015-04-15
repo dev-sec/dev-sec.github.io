@@ -1,0 +1,402 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hardening Framework</title>
+
+    <link rel="stylesheet" href="styles/3e156d82.main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Nav -->
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a href="/index.html" id="nav-logo">
+              Hardening Framework
+            </a>
+          </h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/articles.html">Articles</a></li>
+          <li><a href="/docs/">Docs</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li class="has-dropdown">
+            <a href="#">Community</a>
+            <ul class="dropdown">
+              <li><a href="https://github.com/hardening-io">GitHub</a></li>
+              <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+              <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </section>
+    </nav>
+    <!-- End Nav -->
+
+    <span id="nav"></span>
+
+    <!-- Landing -->
+<section class="landing_container" id="landing">
+  <div id="landing-bg"></div>
+
+  <div class="row">
+    <div class="large-10 medium-12 small-12 small-centered columns headline">
+ 
+      <div class="row">
+        <div class="small-12 columns">
+          <h1>Automatic server hardening</h1>
+        </div>
+      </div>
+
+    </div>    
+  </div>
+</section>
+<!-- End Landing -->
+
+<section class="press border-top">
+
+<ul>
+  <li><a href="https://news.ycombinator.com/item?id=8875130"><img src="styles/images/7a98581c.hacker-news.png"></a></li>
+  <li><a href="http://www.heise.de/security/meldung/Telekom-Tools-fuer-sichere-Server-Konfiguration-2517840.html"><img src="styles/images/9c0519f5.heise_security_logo_2014.png"></a></li>
+  <li><a href="http://phpmagazine.net/2015/02/hardening-framework-plans-to-support-php.html"><img src="styles/images/c0c73664.phpmaglogo.png"></a></li>
+</ul>
+
+</section>
+
+<!-- Explain -->
+<section class="explain border-top" id="explain_intro">
+  <div class="row">
+    <div class="large-6 medium-12 small-12 right columns">
+      <h2>Add security to your automation</h2>
+      <p>Hardening adds a layer into your automation framework, that configures your
+      operating systems and services.</p>
+      <p>It takes care of difficult settings, compliance guidelines, cryptography
+      recommendations, and secure defaults.</p>
+    </div>
+    <div class="large-6 medium-12 small-12 left text-center columns">
+      <img src="styles/images/5b003508.configmerge.png">
+    </div>
+  </div> 
+</section>
+
+<section class="explain border-top" id="explain_demo">
+  <div class="terminal" id="br" id="bn">
+    <div class="header">
+      <div class="ibutton red"><div class="shine"></div><div class="glow"></div></div>
+      <div class="ibutton yellow"><div class="shine"></div><div class="glow"></div></div>
+      <div class="ibutton green"><div class="shine"></div><div class="glow"></div></div>
+      <span id="title">Server Hardening - Zsh</span>
+    </div>
+
+    <div class="window">
+      <iframe id="screen" src="https://player.vimeo.com/video/106808139?autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="explain border-top" id="integration">
+  <div class="row">
+    <div class="large-12 medium-12 small-12 text-center columns">
+      <h2 style="margin-bottom: 0.8rem">Fits your environment</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 medium-12 small-12 text-center columns splitarrow" style="padding: 0 21%">
+      <img src="styles/images/72fb010b.splitarrow.png">
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 medium-6 small-12 text-center columns">
+      <div class="row link-item provider-logo"><div class="small-12 text-center columns">
+        <div>
+          <img class="chef-logo" src="styles/images/7c4ae1c5.chef.png">
+        </div>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>All-in-one Example</h4>
+        <p>
+        <a href="https://github.com/hardening-io/example-chef-hardening/" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>Base Operating System</h4>
+        <p>
+        <a href="https://github.com/hardening-io/chef-os-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <a href="https://supermarket.getchef.com/cookbooks/os-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>SSH</h4>
+        <p>
+        <a href="https://github.com/hardening-io/chef-ssh-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <a href="https://supermarket.getchef.com/cookbooks/ssh-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>MySQL</h4>
+        <p>
+        <a href="https://github.com/hardening-io/chef-mysql-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <a href="https://supermarket.getchef.com/cookbooks/mysql-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>PostgreSQL</h4>
+        <p>
+        <a href="https://github.com/hardening-io/chef-postgres-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <a href="https://supermarket.getchef.com/cookbooks/postgres-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>Apache</h4>
+        <p>
+        <a href="https://github.com/hardening-io/chef-apache-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <!--
+        <a href="https://supermarket.getchef.com/cookbooks/apache-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+        -->
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>Nginx</h4>
+        <p>
+        <a href="https://github.com/hardening-io/chef-nginx-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <!--
+        <a href="https://supermarket.getchef.com/cookbooks/nginx-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+        -->
+        </p>
+      </div></div>
+    </div>
+    <div class="large-6 medium-6 small-12 text-center columns">
+      <div class="row link-item provider-logo"><div class="small-12 text-center columns">
+        <div>
+          <a href="https://forge.puppetlabs.com/hardening">
+            <img class="puppet-logo" src="styles/images/94339190.puppet.png">
+          </a>
+        </div>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>All-in-one Example</h4>
+        <p>
+        <a href="https://github.com/hardening-io/example-puppet-hardening/" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>Base Operating System</h4>
+        <p>
+        <a href="https://github.com/hardening-io/puppet-os-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <a href="https://forge.puppetlabs.com/hardening/os_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>SSH</h4>
+        <p>
+        <a href="https://github.com/hardening-io/puppet-ssh-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <a href="https://forge.puppetlabs.com/hardening/ssh_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>MySQL</h4>
+        <p>
+        <a href="https://github.com/hardening-io/puppet-mysql-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <a href="https://forge.puppetlabs.com/hardening/mysql_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>PostgreSQL</h4>
+        <p>
+        <a href="https://github.com/hardening-io/puppet-postgres-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <!--
+        <a href="https://forge.puppetlabs.com/hardening/postgres_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+        -->
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>Apache</h4>
+        <p>
+        <a href="https://github.com/hardening-io/puppet-apache-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <!--
+        <a href="https://forge.puppetlabs.com/hardening/apache_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+        -->
+        </p>
+      </div></div>
+      <div class="row link-item"><div class="small-12 text-center columns">
+        <h4>Nginx</h4>
+        <p>
+        <a href="https://github.com/hardening-io/puppet-nginx-hardening" class="button"><i class="icon-github-circled"></i><span>GitHub</span></a>
+        <!--
+        <a href="https://forge.puppetlabs.com/hardening/nginx_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+        -->
+        </p>
+      </div></div>
+    </div>
+  </div> 
+
+</section>
+
+<section class="explain border-top" id="operating_systems">
+  <div class="row">
+    <div class="large-12 medium-12 small-12 text-center columns">
+      <h2 style="margin-bottom: 0.8rem">Verified on</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 medium-12 small-12 text-center columns">
+      <p>Supported and regularly tested</p>
+    </div>
+  </div>
+
+  <div class="row"><div class="large-10 medium-12 small-12 small-centered columns">
+    <div class="row supported_on">
+      <div class="large-3 medium-3 small-6 text-center columns">
+        <a href="#" class="ubuntu">
+          <h3>Ubuntu</h3>
+          <p>12.04, 14.04</p>
+        </a>
+      </div>
+      <div class="large-3 medium-3 small-6 text-center columns">
+        <a href="#" class="debian">
+          <h3>Debian</h3>
+          <p>7</p>
+        </a>
+      </div>
+      <div class="large-3 medium-3 small-6 text-center columns">
+        <a href="#" class="redhat">
+          <h3>RedHat</h3>
+          <p>6.4, 6.5</p>
+        </a>
+      </div>
+      <div class="large-3 medium-3 small-6 text-center columns">
+        <a href="#" class="centos">
+          <h3>CentOS</h3>
+          <p>6.4, 6.5</p>
+        </a>
+      </div>
+      <div class="large-3 medium-3 small-6 text-center end columns">
+        <a href="#" class="oracle">
+          <h3>Oracle</h3>
+          <p>6.4, 6.5</p>
+        </a>
+      </div>
+    </div>
+    </div></div>
+
+  
+</section>
+
+<!-- mailing list -->
+<section class="explain border-top" id="mc_embed_signup">
+  <div class="row">
+    <div class="small-12 text-center columns">
+      <h2>Subscribe to our mailing list</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 medium-9 small-12 small-centered text-center columns">
+      <form action="//github.us8.list-manage.com/subscribe/post?u=859dbb426ec5ce3480ec29b84&amp;id=b8f9718175" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate data-abide>
+
+<!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="mce-EMAIL" class="right inline">Email <span class="asterisk">*</span></label>
+        </div>
+        <div class="small-9 columns">
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your Email" required>
+          <small class="error">Your must provide your email address</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="mce-FNAME" class="right inline">First Name </label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Your First Name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="mce-LNAME" class="right inline">Last Name </label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Your Last Name">
+        </div>
+      </div>
+
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+      <div style="position: absolute; left: -5000px"><input type="text" name="b_859dbb426ec5ce3480ec29b84_b8f9718175" tabindex="-1" value=""></div>
+
+      <div class="clear">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button right subscribe">
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+<!-- End mailing list -->
+
+
+    <!-- Footer -->
+    <footer>
+      <!-- <div class="small-12 small-centered columns"> -->
+        <ul>
+          <li><a href="imprint.html">Imprint</a></li>
+        </ul>
+      <!-- </div> -->
+    </footer>
+    <!-- End Footer -->
+
+    <script src="scripts/0e454fbf.modules.js"></script>
+
+    <script src="scripts/f51122ec.scripts.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+    </script>
+
+    </body>
+</html>

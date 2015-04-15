@@ -1,0 +1,509 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hardening Framework</title>
+
+    <link rel="stylesheet" href="styles/3e156d82.main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Nav -->
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a href="/index.html" id="nav-logo">
+              Hardening Framework
+            </a>
+          </h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/articles.html">Articles</a></li>
+          <li><a href="/docs/">Docs</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li class="has-dropdown">
+            <a href="#">Community</a>
+            <ul class="dropdown">
+              <li><a href="https://github.com/hardening-io">GitHub</a></li>
+              <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+              <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </section>
+    </nav>
+    <!-- End Nav -->
+
+    <span id="nav"></span>
+
+    <div id="product" class="product">
+    <div id="overview" class="section bg-black">
+
+    <div class="header">
+        <h2 class="title center">Overview</h2>
+        <div class="description center">Hardening Framework Components</div>
+    </div>
+
+    <div class="row"><div class="large-8 medium-12 small-12 small-centered columns feature-box">
+    <div class="row features" data-equalizer>
+        <div class="small-3 columns types" data-equalizer-watch>
+            <div>
+                <span class="green-checkmark">✓</span> Applications
+            </div>
+        </div>
+        <div class="small-9 columns content" data-equalizer-watch>
+            <div class="row">
+                <div class="small-6 columns box mysql">
+                    <a href="#mysql-hardening">
+                        <h5>MySQL</h5>
+                    </a>
+                </div>
+                <div class="small-6 columns box postgres">
+                    <a href="#postgres-hardening">
+                        <h5>PosgreSQL</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-6 columns box apache">
+                    <a href="#apache-hardening">
+                        <h5>Apache</h5>
+                    </a>
+                </div>
+                <div class="small-6 columns box nginx">
+                    <a href="#nginx-hardening">
+                        <h5>Nginx</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row features" data-equalizer>
+        <div class="small-3 columns types" data-equalizer-watch>
+            <div>
+                <span class="red-checkmark">✗</span> Operations
+            </div>
+        </div>
+        <div class="small-9 columns content" data-equalizer-watch>
+            <div class="row">
+                <div class="small-4 columns box deactivated">
+                    <a href="#">
+                        <span>Logging / Monitoring</span>
+                    </a>
+                </div>
+                <div class="small-4 columns box deactivated">
+                    <a href="#">
+                        <span>User Management</span>
+                    </a>
+                </div>
+                <div class="small-4 columns box deactivated">
+                    <a href="#">
+                        <span>Patch-management</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row features" data-equalizer>
+        <div class="small-3 columns types" data-equalizer-watch>
+            <div>
+                <span class="green-checkmark">✓</span> OS
+            </div>
+        </div>
+        <div class="small-9 columns content" data-equalizer-watch>
+            <div class="row">
+                <div class="small-12 columns box ssh">
+                    <a href="#ssh-hardening">
+                        <h5>SSH Hardening</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns box os">
+                    <a href="#os-hardening">
+                        <h5>Operating System Hardening</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row features" data-equalizer>
+        <div class="small-3 columns types" data-equalizer-watch>
+            <div>
+                <span class="red-checkmark">✗</span> Network
+            </div>
+        </div>
+        <div class="small-9 columns content" data-equalizer-watch>
+            <div class="row">
+                <div class="small-6 columns box deactivated">
+                    <a href="#">
+                        <span>Intrusion Detection</span>
+                    </a>
+                </div>
+                <div class="small-6 columns box deactivated">
+                    <a href="#">
+                        <span>Firewall</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row features">
+        <div class="small-3 columns"></div>
+        <div class="small-9 columns">
+            <div class="center">
+                <span class="green-checkmark">✓</span> included &nbsp;&nbsp;&nbsp;
+                <span class="red-checkmark">✗</span> not in scope
+            </div>
+        </div>
+    </div>
+    </div></div>
+
+    </div>
+
+    <div id="os-hardening" class="section bg-gray">
+        <div class="row">
+            <div class="inner">
+                <div class="logo center"><i class=""></i>
+                </div>
+
+                <div class="header">
+                    <h2 class="title center">OS Hardening</h2>
+                    <div class="description center">Secure the base operating system</div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>PAM</h4>
+                        Configures pam and pam_limts
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Permissions</h4>
+                        Restrict the permissions by setting SUID bits and configuring system paths.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Verified Packages</h4>
+                        Verifies only signed packages are installed.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Sysctl</h4>
+                        Set secure kernel parameters
+                    </div>
+                </div>
+                <div class="row center links">
+                    <a href="https://github.com/hardening-io/chef-os-hardening" class="button"><i class="icon-github-circled"></i><span>Chef GitHub</span></a>
+                    <a href="https://supermarket.getchef.com/cookbooks/os-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+                    <a href="https://github.com/hardening-io/puppet-os-hardening" class="button"><i class="icon-github-circled"></i><span>Puppet GitHub</span></a>
+                    <a href="https://forge.puppetlabs.com/hardening/os_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ssh-hardening" class="section bg-gray">
+        <div class="row">
+            <div class="inner">
+                <div class="logo center"><i class=""></i>
+                </div>
+                <div class="header">
+                    <h2 class="title center">Ssh Hardening</h2>
+                    <div class="description center">Secure configuration of SSH</div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Secure Ciphers</h4>
+                        Configures SSH with secure ciphers.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Configuration</h4>
+                        Configures the ssh client and server with industry best-practices.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Certificate Authentication</h4>
+                        Deactivates password authentication and enables the secure certificate authentication.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>User Management</h4>
+                        Leave the user management with their authorization to you, thus enabling a smooth integration without changing existing infrastructure.
+                    </div>
+                </div>
+                <div class="row center links">
+                    <a href="https://github.com/hardening-io/chef-ssh-hardening" class="button"><i class="icon-github-circled"></i><span>Chef GitHub</span></a>
+                    <a href="https://supermarket.getchef.com/cookbooks/ssh-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+                    <a href="https://github.com/hardening-io/puppet-ssh-hardening" class="button"><i class="icon-github-circled"></i><span>Puppet GitHub</span></a>
+                    <a href="https://forge.puppetlabs.com/hardening/ssh_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mysql-hardening" class="section bg-gray">
+        <div class="row">
+            <div class="inner">
+                <div class="logo center"><i class=""></i>
+                </div>
+                <div class="header">
+                    <h2 class="title center">MySql Hardening</h2>
+                    <div class="description center">Harden your MySql Server</div>
+                </div>
+                <div class="row">
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Secure Authentication</h4>
+                        Enables the secure authentication for Mysql.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Removes Demo Configuration</h4>
+                        Removes the demo database and unused components to reduce the attack surface.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Compatibility</h4>
+                        Integrates with the existing Puppet and Chef modules. Therefore you just need to drop in the hardening configuration.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Optimized for OS and SSH Hardening</h4>
+                        The hardening is optimized to work well with the other components that are part of the Hardening Framework.
+                    </div>
+                </div>
+                <div class="row center links">
+                    <a href="https://github.com/hardening-io/chef-mysql-hardening" class="button"><i class="icon-github-circled"></i><span>Chef GitHub</span></a>
+                    <a href="https://supermarket.getchef.com/cookbooks/mysql-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+                    <a href="https://github.com/hardening-io/puppet-mysql-hardening" class="button"><i class="icon-github-circled"></i><span>Puppet GitHub</span></a>
+                    <a href="https://forge.puppetlabs.com/hardening/mysql_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="postgres-hardening" class="section bg-gray">
+        <div class="row">
+            <div class="inner">
+                <div class="logo center"><i class=""></i>
+                </div>
+
+                <div class="header">
+                    <h2 class="title center">PostgreSQL Hardening</h2>
+                    <div class="description center">This module is currently work in progress.</div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Ensure trusted SSL</h4>
+                        Some default installations are shipped with untrusted content, we ensure,
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Password Encryption</h4>
+                        Hardening configures PostgreSQL to ensure that no empty passwords are allowed and passwords are only stored hashed.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>System Monitoring</h4>
+                        Provides a secure configuration for PostgreSQL logging.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Verify filesytem permission</h4>
+                        Ensures all directories and files of PostgreSQL are properly set.
+                    </div>
+                </div>
+                <div class="row center links">
+                    <a href="https://github.com/hardening-io/chef-postgres-hardening" class="button"><i class="icon-github-circled"></i><span>Chef GitHub</span></a>
+                    <a href="https://supermarket.getchef.com/cookbooks/postgres-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+                    <a href="https://github.com/hardening-io/puppet-postgres-hardening" class="button"><i class="icon-github-circled"></i><span>Puppet GitHub</span></a>
+                    <a href="https://forge.puppetlabs.com/hardening/postgres_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nginx-hardening" class="section bg-gray">
+        <div class="row">
+            <div class="inner">
+                <div class="logo center"><i class=""></i>
+                </div>
+                <div class="header">
+                    <h2 class="title center">Nginx Hardening</h2>
+                    <div class="description center">Hardens a Nginx web server</div>
+                </div>
+                <div class="row">
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Stealth Mode</h4>
+                        Does not send information like 'Server' or 'X-Powered-By'
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>XSS</h4>
+                        Ensures 'X-XSS-Protection' is activated. Prepares for 'Content-Security-Policy'.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Removes Demo configuration</h4>
+                        After the standard installation various files for demo purposes are installed. The Hardening Framework removes those things for you.
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <h1><i class=""></i>
+                        </h1>
+                        <h4>Timeouts</h4>
+                        The timeouts are optimized for production use.
+                    </div>
+                </div>
+                <div class="row center links">
+                    <a href="https://github.com/hardening-io/chef-nginx-hardening" class="button"><i class="icon-github-circled"></i><span>Chef GitHub</span></a>
+                    <!--
+                    <a href="https://supermarket.getchef.com/cookbooks/nginx-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+                    -->
+                    <a href="https://github.com/hardening-io/puppet-nginx-hardening" class="button"><i class="icon-github-circled"></i><span>Puppet GitHub</span></a>
+                    <!--
+                    <a href="https://forge.puppetlabs.com/hardening/nginx_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="apache-hardening" class="section bg-gray">
+        <div class="row">
+            <div class="inner">
+                <div class="logo center"><i class=""></i>
+                </div>
+                <div class="header">
+                    <h2 class="title center">Apache Hardening</h2>
+                    <div class="description center">This module is currently work in progress.</div>
+
+                    <div>
+                        <div class="row">
+                            <div class="large-3 medium-6 small-12 columns">
+                                <h1><i class=""></i>
+                                </h1>
+                                <h4></h4>
+
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <h1><i class=""></i>
+                                </h1>
+                                <h4></h4>
+
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <h1><i class=""></i>
+                                </h1>
+                                <h4></h4>
+
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <h1><i class=""></i>
+                                </h1>
+                                <h4></h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row center links">
+                        <a href="https://github.com/hardening-io/chef-apache-hardening" class="button"><i class="icon-github-circled"></i><span>Chef GitHub</span></a>
+                        <!--
+                        <a href="https://supermarket.getchef.com/cookbooks/apache-hardening" class="button"><i class="icon-home"></i><span>Chef Supermarket</span></a>
+                        -->
+                        <a href="https://github.com/hardening-io/puppet-apache-hardening" class="button"><i class="icon-github-circled"></i><span>Puppet GitHub</span></a>
+                        <!--
+                        <a href="https://forge.puppetlabs.com/hardening/apache_hardening" class="button"><i class="icon-home"></i><span>Puppet Forge</span></a>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+      <!-- <div class="small-12 small-centered columns"> -->
+        <ul>
+          <li><a href="imprint.html">Imprint</a></li>
+        </ul>
+      <!-- </div> -->
+    </footer>
+    <!-- End Footer -->
+
+    <script src="scripts/0e454fbf.modules.js"></script>
+
+    <script src="scripts/f51122ec.scripts.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+    </script>
+
+    </body>
+</html>
