@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://hardening.io/articles.html</loc>
+    <loc>http://dev-sec.io/articles.html</loc>
     <lastmod>2016-03-03T11:38:10.905Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://hardening.io/features.html</loc>
+    <loc>http://dev-sec.io/features.html</loc>
     <lastmod>2016-03-03T11:38:10.925Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://hardening.io/imprint.html</loc>
+    <loc>http://dev-sec.io/imprint.html</loc>
     <lastmod>2016-03-03T11:38:10.929Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://hardening.io/</loc>
+    <loc>http://dev-sec.io/</loc>
     <lastmod>2016-03-03T11:38:10.942Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://hardening.io/team.html</loc>
+    <loc>http://dev-sec.io/team.html</loc>
     <lastmod>2016-03-03T11:38:10.945Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
