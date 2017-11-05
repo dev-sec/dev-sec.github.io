@@ -1,5 +1,6 @@
 ---
-title: "A Fast and Flexible Website Generator"
+title: "Security + DevOps"
+description: "Automatic Server Hardening"
 date: 2017-03-02T12:00:00-05:00
 features:
   - heading: Blistering Speed
