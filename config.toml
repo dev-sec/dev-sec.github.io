@@ -1,0 +1,72 @@
+baseURL = "https://dev-sec.io/"
+languageCode = "en-us"
+title = "DevSec Hardening Framework"
+theme = "devsec"
+metaDataFormat = "yaml"
+
+#CUSTOM PARAMS
+[params]
+  description = "The world’s fastest framework for building websites"
+  ## Used for views in rendered HTML (i.e., rather than using the .Hugo variable)
+  release = "0.30.2"
+  ## Setting this to true will add a "noindex" to *EVERY* page on the site
+  removefromexternalsearch = false
+  ## Gh repo for site footer (include trailing slash)
+  ghrepo = "https://github.com/gohugoio/hugoDocs/"
+  ## GH Repo for filing a new issue
+  github_repo = "https://github.com/gohugoio/hugo/issues/new"
+  ### Edit content repo (set to automatically enter "edit" mode; this is good for "improve this page" links)
+  ghdocsrepo = "https://github.com/gohugoio/hugoDocs/tree/master/docs"
+  ## Gitter URL
+  gitter = "https://gitter.im/spf13/hugo"
+  ## Discuss Forum URL
+  forum = "https://discourse.gohugo.io/"
+  ## Google Tag Manager
+  gtmid = ""
+
+  # First one is picked as the Twitter card image if not set on page.
+  images = ["images/gohugoio-card.png"]
+
+  flex_box_interior_classes = "flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height"
+
+
+[[menu.global]]
+  name = "Features"
+  weight = 1
+  identifier = "features"
+  url = "/features/"
+
+[[menu.global]]
+  name = "News"
+  weight = 1
+  identifier = "news"
+  url = "/news/"
+
+[[menu.global]]
+  name = "Docs"
+  weight = 5
+  identifier = "docs"
+  url = "/docs/"
+
+# [[menu.global]]
+#   name = "Profiles"
+#   weight = 10
+#   identifier = "profiles"
+#   url = "https://themes.gohugo.io/"
+
+# Anything with a weight > 100 gets an external icon
+[[menu.global]]
+  name = "Community"
+  weight = 150
+  icon = true
+  identifier = "community"
+  post = "external"
+  url = "https://gitter.im/dev-sec/general/"
+
+
+[[menu.global]]
+  name = "GitHub"
+  weight = 200
+  identifier = "github"
+  post = "external"
+  url = "https://github.com/dev-sec"

@@ -1,0 +1,17 @@
+{{ define "title" }}
+  {{ .Title }} – {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{ .Content }}
+
+<div id="product" class="product">
+  {{ partial "features/overview.html" . }}
+
+  {{ range $.Site.Data.baselines.baselines }}
+    {{ partial "features/entry.html" . }}
+  {{ end }}
+
+</div>
+
+{{ end }}
