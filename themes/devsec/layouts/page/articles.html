@@ -1,0 +1,55 @@
+{{ define "title" }}
+  {{ .Title }} – {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+
+<section class="articles bg-black bg-landing">
+  <div class="row">
+    <div class="large-12 medium-12 small-12 small-center columns">
+      <div class="row articles-header">
+        <div class="small-12 columns">
+          <h2>Articles</h2>
+        </div>
+      </div>
+
+      <div class="row articles-container" data-equalizer="">
+        {{ range $ind, $art := $.Site.Data.articles.articles }}
+        <div class="large-4 medium-6 small-12 columns text-center article">
+          <div data-equalizer-watch>
+            <h5><a href="{{$art.url}}" target="_blank">{{$art.title | markdownify }}</a></h5>
+            {{ range $art.authors }}
+              <span class="author"><a href="{{ .url }}" target="_blank">{{ .name | markdownify }}</a></span>
+            {{ end }}
+            <span class="time">{{ $art.date }}</span>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="articles bg-gray">
+    <div class="row">
+      <div class="large-12 medium-12 small-12 small-center columns">
+      <div>
+        <div class="row articles-header">
+          <div class="small-12 columns">
+            <h2>Videos</h2>
+          </div>
+        </div>
+
+        <div class="row articles-container" data-equalizer="">
+          {{ range $ind, $vid := $.Site.Data.videos.videos }}
+          <div class="large-6 medium-12 small-12 columns text-center video">
+            <iframe width="400" height="225" src="{{ .url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+</section>
+
+{{ end }}

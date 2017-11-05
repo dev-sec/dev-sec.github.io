@@ -1,0 +1,132 @@
+---
+baselines:
+  - id: os-hardening
+    title: OS Hardening
+    description: Secure the base operating system
+    features:
+      - title: PAM
+        description: Configures pam and pam_limts
+      - title: Permissions
+        description: Restrict the permissions by setting SUID bits and configuring system paths.
+      - title: Verified Packages
+        description: Verifies only signed packages are installed.
+      - title: Sysctl
+        description: Set secure kernel parameters
+    links:
+      - name: Chef GitHub
+        url: https://github.com/hardening-io/chef-os-hardening
+        icon: icon-github-circled
+      - name: Chef Supermarket
+        url: https://supermarket.getchef.com/cookbooks/os-hardening
+        icon: icon-home
+      - name: Puppet GitHub
+        url: https://github.com/hardening-io/puppet-os-hardening
+        icon: icon-github-circled
+      - name: Puppet Forge
+        url: https://forge.puppetlabs.com/hardening/os_hardening
+        icon: icon-home
+  - id: ssh-hardening
+    title: Ssh Hardening
+    description: Secure configuration of SSH
+    features:
+      - title: Secure Ciphers
+        description: Configures SSH with secure ciphers.
+      - title: Configuration
+        description: Configures the ssh client and server with industry best-practices.
+      - title: Certificate Authentication
+        description: Deactivates password authentication and enables the secure certificate authentication.
+      - title: User Management
+        description: Leave the user management with their authorization to you, thus enabling a smooth integration without changing existing infrastructure.
+    links:
+      - name: Chef GitHub
+        url: https://github.com/hardening-io/chef-ssh-hardening
+        icon: icon-github-circled
+      - name: Chef Supermarket
+        url: https://supermarket.getchef.com/cookbooks/ssh-hardening
+        icon: icon-home
+      - name: Puppet GitHub
+        url: https://github.com/hardening-io/puppet-ssh-hardening
+        icon: icon-github-circled
+      - name: Puppet Forge
+        url: https://forge.puppetlabs.com/hardening/ssh_hardening
+        icon: icon-home
+  - id: mysql-hardening
+    title: MySql Hardening
+    description: Harden your MySql Server
+    features:
+      - title: Secure Authentication
+        description: Enables the secure authentication for Mysql.
+      - title: Removes Demo Configuration
+        description: Removes the demo database and unused components to reduce the attack surface.
+      - title: Compatibility
+        description: Integrates with the existing Puppet and Chef modules. Therefore you just need to drop in the hardening configuration.
+      - title: Optimized for OS and SSH Hardening
+        description: The hardening is optimized to work well with the other components that are part of the Hardening Framework.
+    links:
+      - name: Chef GitHub
+        url: https://github.com/hardening-io/chef-mysql-hardening
+        icon: icon-github-circled
+      - name: Chef Supermarket
+        url: https://supermarket.getchef.com/cookbooks/mysql-hardening
+        icon: icon-home
+      - name: Puppet GitHub
+        url: https://github.com/hardening-io/puppet-mysql-hardening
+        icon: icon-github-circled
+      - name: Puppet Forge
+        url: https://forge.puppetlabs.com/hardening/mysql_hardening
+        icon: icon-home
+  - id: postgres-hardening
+    title: PostgreSQL Hardening
+    description: This module is currently work in progress.
+    features:
+      - title: Ensure trusted SSL
+        description: Some default installations are shipped with untrusted content, we ensure.
+      - title: Password Encryption
+        description: Hardening configures PostgreSQL to ensure that no empty passwords are allowed and passwords are only stored hashed.
+      - title: System Monitoring
+        description: Provides a secure configuration for PostgreSQL logging.
+      - title: Verify filesytem permission
+        description: Ensures all directories and files of PostgreSQL are properly set.
+    links:
+      - name: Chef GitHub
+        url: https://github.com/hardening-io/chef-postgres-hardening
+        icon: icon-github-circled
+      - name: Chef Supermarket
+        url: https://supermarket.getchef.com/cookbooks/postgres-hardening
+        icon: icon-home
+      - name: Puppet GitHub
+        url: https://github.com/hardening-io/puppet-postgres-hardening
+        icon: icon-github-circled
+      - name: Puppet Forge
+        url: https://forge.puppetlabs.com/hardening/postgres_hardening
+        icon: icon-home
+  - id: nginx-hardening
+    title: Nginx Hardening
+    description: Hardens a Nginx web server
+    features:
+      - title: Stealth Mode
+        description: Does not send information like 'Server' or 'X-Powered-By'
+      - title: XSS
+        description: Ensures 'X-XSS-Protection' is activated. Prepares for 'Content-Security-Policy'.
+      - title: Removes Demo configuration
+        description: After the standard installation various files for demo purposes are installed. The Hardening Framework removes those things for you.
+      - title: Timeouts
+        description: The timeouts are optimized for production use.
+    links:
+      - name: Chef GitHub
+        url: https://github.com/hardening-io/chef-nginx-hardening
+        icon: icon-github-circled
+      - name: Puppet GitHub
+        url: https://github.com/hardening-io/puppet-nginx-hardening
+        icon: icon-github-circled
+  - id: apache-hardening
+    title: Apache Hardening
+    description: This module is currently work in progress.
+    features:
+    links:
+      - name: Chef GitHub
+        url: https://github.com/hardening-io/chef-apache-hardening
+        icon: icon-github-circled
+      - name: Puppet GitHub
+        url: https://github.com/hardening-io/puppet-apache-hardening
+        icon: icon-github-circled

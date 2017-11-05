@@ -1,0 +1,16 @@
+---
+videos:
+- title: "AppSec EU 2017 DevSec: Continuous Patch And Security Assessment With Inspec by Christoph Hartmann"
+  url: "https://www.youtube.com/embed/Uc941CUWedc"
+- title: "InSpec: Human Readable, Automated Compliance"
+  url: "https://www.youtube.com/embed/IaUjpJ5SUAA"
+- title: "Save Your Crash Dummies! A Test-driven Infrastructure Solution"
+  url: "https://www.youtube.com/embed/LUKhcf2e-GM"
+- title: "Windows Compliance with InSpec"
+  url: "https://www.youtube.com/embed/o7VuiZntFT4"
+- title: "CeBit 2015 Automatic Server Hardening"
+  url: "https://www.youtube.com/embed/DIwl1PUnjIw"
+- title: "Hardening Framework"
+  url: "https://player.vimeo.com/video/106808139?color=ff0179"
+- title: "Hardening Wordpress"
+  url: "https://player.vimeo.com/video/123069526?color=ff0179"
