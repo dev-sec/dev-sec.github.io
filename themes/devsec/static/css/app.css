@@ -5970,7 +5970,7 @@ h1, h2, h3, h4 {
         background: #CF6C00; }
       .explain .supported_on > div > a.debian:hover {
         background: #CC4DC2; }
-      .explain .supported_on > div > a.redhat:hover {
+      .explain .supported_on > div > a.rhel:hover {
         background: #FF4545; }
       .explain .supported_on > div > a.centos:hover {
         background: #8A4DCC; }
