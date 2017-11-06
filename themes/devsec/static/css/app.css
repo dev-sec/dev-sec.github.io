@@ -5808,6 +5808,13 @@ th.hide-for-touch {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+#blog-header {
+  background: url(/images/background.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 350px;
+}
+
 #team {
   background: url("/images/background.jpeg");
   background-repeat: no-repeat;
