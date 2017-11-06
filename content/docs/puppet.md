@@ -3,8 +3,6 @@ title: "Puppet overview"
 date:   2015-04-15 21:00:00
 ---
 
-# Puppet overview
-
 The following modules are part of the hardening framework:
 
 Base Operating System
