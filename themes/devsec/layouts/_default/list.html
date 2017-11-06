@@ -3,7 +3,7 @@
   {{ range .Data.Pages }}
     <article>
       <h2>{{ .Title }}</h2>
-      <!-- {{ .Content }} -->
+      {{ .Summary }}
       <a href="{{ .RelPermalink }}" class="f6 mt2 db link primary-color dim">
         Read More &raquo;
       </a>

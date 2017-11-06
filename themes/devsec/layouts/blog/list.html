@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section id="blog-header">
+  <div class="" style="
+    height: 100%;
+    width: 100%;
+    position: relative;
+">
+        <div class="" style="
+    left: 50%;
+    top: 34%;
+    background-repeat: no-repeat;
+    position: absolute;
+    border-radius: 50%;
+    transition-duration: .25s;
+    z-index: 1;
+">
+          <h1>Blog</h1>
+        </div>
+      </div>
+</section>
+<section class="blog">
+  {{ range .Data.Pages }}
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <a href="{{ .RelPermalink }}">
+      <h2>{{ .Title }}</h2>
+      <b>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</b>
+      {{ .Summary }}
+
+        Read More &raquo;
+      </a>
+    </article>
+  </div>
+  <br>
+  {{ end }}
+</section>
+
+{{ end }}
