@@ -3,13 +3,11 @@ title: "File headers"
 date:   2015-04-15 21:00:00
 ---
 
-# File headers
-
 ## Ruby
 ```ruby
 # encoding: utf-8
 #
-# Copyright 2017, DevSec Hardening Framework Team
+# Copyright 2014-2017, DevSec Hardening Framework Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,7 +25,7 @@ date:   2015-04-15 21:00:00
 
 ## JavaScript
 ```javascript
-/* Copyright 2017 DevSec Hardening Framework Team
+/* Copyright 2014-2017 DevSec Hardening Framework Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,7 +44,7 @@ date:   2015-04-15 21:00:00
 ## Python
 
 ```python
-# Copyright 2017 DevSec Hardening Framework Team
+# Copyright 2014-2017 DevSec Hardening Framework Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -65,7 +63,7 @@ date:   2015-04-15 21:00:00
 
 ```html
 <!--
-Copyright 2017 DevSec Hardening Framework Team
+Copyright 2014-2017 DevSec Hardening Framework Team
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

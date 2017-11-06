@@ -3,8 +3,6 @@ title: "Linting"
 date:   2015-04-15 21:00:00
 ---
 
-# Linting
-
 We run several linting tools in our continuous integration pipeline. If you create a pull request the CI will kick in and run [Rubocop](https://github.com/bbatsov/rubocop) for every project as well as [Foodcritic](http://www.foodcritic.io) for chef repos or [puppet-lint](http://puppet-lint.com) for puppet repos. The tasks are provided as Rake Tasks ready to run an give feedback.
 
 Here the example output of the [chef-os-hardening project](https://github.com/hardening-io/chef-os-hardening) (kitchen-tasks stripped):

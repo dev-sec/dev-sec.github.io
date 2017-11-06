@@ -3,8 +3,6 @@ title: "Contributing"
 date:   2015-04-15 21:00:00
 ---
 
-# Contributing
-
 The general steps are:
 
 - Create a ticket in Github Issues.

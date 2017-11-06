@@ -3,8 +3,6 @@ title: "Chef overview"
 date:   2015-04-15 21:00:00
 ---
 
-# Chef overview
-
 The following modules are part of the hardening framework:
 
 Base Operating System

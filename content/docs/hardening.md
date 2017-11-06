@@ -3,8 +3,6 @@ title: "Automatic server hardening"
 date:   2015-04-15 21:00:00
 ---
 
-# Automatic server hardening
-
 Server hardening is a well-known topic with many guides out in the wild. Why this project?
 
 At Deutsche Telekom we need to manage thousands of servers for customers and ourselves. All servers need to be configured properly and maintained, which is difficult and time-consuming to get right.

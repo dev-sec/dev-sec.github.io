@@ -3,8 +3,6 @@ title: "Frequently asked questions"
 date:   2015-04-15 21:00:00
 ---
 
-# Frequently asked questions
-
 ### Is it possible to use the toolkit without internet connection
 
 Yes, it is possible to use the hardening scripts on computers without internet connection. You need to ensure two specific things:
