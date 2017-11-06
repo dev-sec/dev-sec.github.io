@@ -1,0 +1,29 @@
+---
+os:
+- name: Ubuntu
+  versions:
+    - 12.04
+    - 14.04
+    - 16.04
+- name: Debian
+  versions:
+    - 7
+    - 8
+- name: RHEL
+  versions:
+    - 6.4
+    - 6.5
+    - 6.6
+    - 7
+- name: CentOS
+  versions:
+    - 6.4
+    - 6.5
+    - 6.6
+    - 7
+- name: Oracle
+  versions:
+    - 6.4
+    - 6.5
+    - 6.6
+    - 7
