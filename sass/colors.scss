@@ -52,6 +52,6 @@ $devsec_opacity: 0.4;
 }
 
 .b-gradient {
-  @include filter-gradient($devsec_mint, $devsec_purple, horizontal);
-  @include background-image(linear-gradient(left top, $devsec_mint 0%, $devsec_purple 100%));
+  //@include filter-gradient($devsec_mint, $devsec_purple, horizontal);
+  //@include background-image(linear-gradient(left top, $devsec_mint 0%, $devsec_purple 100%));
 }
