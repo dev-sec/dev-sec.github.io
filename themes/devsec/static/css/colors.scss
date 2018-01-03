@@ -1,0 +1,57 @@
+//color variables
+
+$devsec_mint: #00FFDA;
+$devsec_purple: #D903FF;
+$devsec_white: #ffffff;
+$devsec_black: #000000;
+$devsec_gray: #212334;
+$devsec_opacity: 0.4;
+
+//font color classes
+
+.t-mint {
+  color: $devsec_mint;
+}
+
+.t-purple {
+  color: $devsec_purple;
+}
+
+.t-white {
+  color: $devsec_white;
+}
+
+.t-black {
+  color: $devsec_black;
+}
+
+.t-gray {
+  color: $devsec_gray;
+}
+
+//background color classes
+
+.b-mint {
+  background: $devsec_mint;
+}
+
+.b-purple {
+  background: $devsec_purple;
+}
+
+.b-white {
+  background: $devsec_white;
+}
+
+.b-black {
+  background: $devsec_black;
+}
+
+.b-gray {
+  background: $devsec_gray;
+}
+
+.b-gradient {
+  @include filter-gradient($devsec_mint, $devsec_purple, horizontal);
+  @include background-image(linear-gradient(left top, $devsec_mint 0%, $devsec_purple 100%));
+}
