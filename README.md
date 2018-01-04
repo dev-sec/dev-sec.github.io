@@ -12,3 +12,11 @@
     ```
     gulp serve
     ```
+
+**Startup takes a while**, but only the first time, because hugo needs to register all the things in node_modules (need to get that fixed...).
+
+
+## Development
+
+* Custom elements can be developed in `themes/devsec/static/elements`
+* SASS styling is developed in `sass` and will automatically be built by `gulp serve` into `themes/devsec/static/css` and `themes/devsec/static/elements/shared-styles.html`
