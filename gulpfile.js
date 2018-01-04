@@ -37,7 +37,7 @@ gulp.task('shared-styles', ['sass'], function() {
     </style>
   </template>
 </dom-module>`
-  return fs.writeFileSync('elements/shared-styles.html', content)
+  return fs.writeFileSync('./themes/devsec/static/elements/shared-styles.html', content)
 })
 
 gulp.task('watch', ()=>{

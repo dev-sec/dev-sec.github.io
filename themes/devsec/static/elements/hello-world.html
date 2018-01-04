@@ -1,0 +1,18 @@
+<link rel="import" href="../node_modules/@bower_components/polymer/polymer-element.html">
+
+<dom-module id="hello-world">
+  <template>
+    <h1>hi wooooorld</h1>
+  </template>
+  <script>
+    class HelloWorld extends Polymer.Element {
+      static get is() {
+        return 'hello-world'
+      }
+      static get properties() {
+        return {}
+      }
+    }
+    window.customElements.define(HelloWorld.is, HelloWorld)
+  </script>
+</dom-module>
