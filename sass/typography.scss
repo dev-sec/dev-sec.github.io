@@ -10,21 +10,29 @@
   font-url('/fonts/Rene Bieder - Galano Grotesque.otf') format('truetype')
 }
 
+@font-face {
+  font-family: "Galano Grotesque SemiBold";
+  src: url('/fonts/Rene Bieder - Galano Grotesque SemiBold.otf') format('truetype');
+  src: font-url('/fonts/Rene Bieder - Galano Grotesque SemiBold.otf?#iefix') format('embedded-opentype'),
+  font-url('/fonts/Rene Bieder - Galano Grotesque SemiBold.woff') format('woff'),
+  font-url('/fonts/Rene Bieder - Galano Grotesque SemiBold.ttf') format('truetype')
+}
+
 //font _variables
 
 $regular_font: "Galano Grotesque";
+$semibold_font: "Galano Grotesque SemiBold";
 
 %heading_font {
   font-family: $regular-font;
   color: $devsec_black;
-  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 
 %body_font {
   font-family: $regular-font;
   color: $devsec_gray;
-  font-weight: 400;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -40,10 +48,12 @@ p, small {
 
 h1 {
   font-size: 3em;
+  line-height: 1em;
 }
 
 h2 {
   font-size: 1.8em;
+  line-height: 1em;
 }
 
 h3 {
@@ -59,11 +69,21 @@ small {
 }
 
 strong {
-  font-weight: 600;
+  font-family: $semibold_font;
+  font-weight: initial;
 }
 
 .t-upper {
-  font-weight: 600;
+  font-family: $semibold_font;
+  font-weight: initial;
   letter-spacing: 0.5em;
   text-transform: uppercase;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
 }

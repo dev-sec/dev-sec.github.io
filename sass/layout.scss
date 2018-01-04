@@ -1,3 +1,147 @@
+//layout _variables
+
+$default_margin: 15%;
+$small_margin: 35px;
+
+$default_height: 60%;
+$medium_height: 30%;
+
+//width and height _classes
+
+section {
+  height: 100%;
+}
+
+.container-height {
+  height: $default_height;
+}
+
+.container-height-md {
+  height: $medium_height;
+}
+
+.fill-height {
+  height: -webkit-fill-available;
+}
+
+.fit-height {
+  height: fit-content;
+}
+
+//layout _classes
+
+.row {
+  max-width: 100%;
+  display: flex;
+}
+
+//margin _classes
+
+.space-left {
+  margin-left: $default_margin;
+}
+
+.space-right {
+  margin-right: $default_margin;
+}
+
+.space-horizontal {
+  margin-left: $default_margin;
+  margin-right: $default_margin;
+}
+
+.space-top {
+  margin-top: $default_margin;
+}
+
+.space-bottom {
+  margin-bottom: $default_margin;
+}
+
+.space-vertical {
+  margin-top: $default_margin;
+  margin-bottom: $default_margin;
+}
+
+.space-left {
+  margin-left: $default_margin;
+}
+
+.space-right-sm {
+  margin-right: $small_margin;
+}
+
+.space-horizontal-sm {
+  margin-left: $small_margin;
+  margin-right: $small_margin;
+}
+
+.space-top-sm {
+  margin-top: $small_margin;
+}
+
+.space-bottom-sm {
+  margin-bottom: $small_margin;
+}
+
+.space-vertical-sm {
+  margin-top: $small_margin;
+  margin-bottom: $small_margin;
+}
+
+//padding _classes
+
+.pad-left {
+  padding-left: $default_margin;
+}
+
+.pad-right {
+  padding-right: $default_margin;
+}
+
+.pad-horizontal {
+  padding-left: $default_margin;
+  padding-right: $default_margin;
+}
+
+.pad-top {
+  padding-top: $default_margin;
+}
+
+.pad-bottom {
+  padding-bottom: $default_margin;
+}
+
+.pad-vertical {
+  padding-top: $default_margin;
+  padding-bottom: $default_margin;
+}
+
+.pad-left {
+  padding-left: $default_margin;
+}
+
+.pad-right-sm {
+  padding-right: $small_margin;
+}
+
+.pad-horizontal-sm {
+  padding-left: $small_margin;
+  padding-right: $small_margin;
+}
+
+.pad-top-sm {
+  padding-top: $small_margin;
+}
+
+.pad-bottom-sm {
+  padding-bottom: $small_margin;
+}
+
+.pad-vertical-sm {
+  padding-top: $small_margin;
+  padding-bottom: $small_margin;
+}
 
 //alignment _classes
 
@@ -14,4 +158,36 @@
 .center {
   text-align: center;
   margin: 0 auto;
+}
+
+.vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+}
+
+.align-bottom {
+  align-items: flex-end;
+}
+
+.align-middle {
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.back {
+  z-index: -1;
+}
+
+.front {
+  z-index: 1;
 }

@@ -31,7 +31,7 @@ gulp.task('shared-styles', ['sass'], function() {
 <dom-module id="shared-styles">
   <template>
     <style>
-    
+
       `+base_css+`
 
     </style>
@@ -45,7 +45,7 @@ gulp.task('watch', ()=>{
 })
 
 gulp.task('serve', () => {
-  exec('hugo server', (err, stdout, stderr) => {
+  exec('hugo server --watch', (err, stdout, stderr) => {
     if(stdout != "") gutil.log('serve: ' + stdout);
     if(stderr != "") gutil.logError('serve: ' + stderr);
     if(err != null) gutil.logError('serve error: ' + err);

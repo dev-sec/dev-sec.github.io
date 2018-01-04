@@ -52,8 +52,8 @@ $devsec_opacity: 0.4;
 }
 
 .b-gradient {
-  background: -moz-linear-gradient(-45deg, $devsec_mint 0%, $devsec_purple 100%);
-  background: -webkit-linear-gradient(-45deg, $devsec_mint 0%,$devsec_purple 100%);
-  background: linear-gradient(135deg, $devsec_mint 0%,$devsec_purple 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$devsec_mint', endColorstr='$devsec_purple',GradientType=1 );
+  background: -moz-linear-gradient(-45deg, #00CBD5 0%, $devsec_purple 100%);
+  background: -webkit-linear-gradient(-45deg, #00CBD5 0%,$devsec_purple 100%);
+  background: linear-gradient(135deg, #00CBD5 0%,$devsec_purple 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00CBD5', endColorstr='$devsec_purple',GradientType=1 );
 }
