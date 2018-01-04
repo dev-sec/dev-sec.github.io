@@ -44,7 +44,24 @@ gulp.task('watch', ()=>{
   gulp.watch('sass/**/*.scss', ['shared-styles'])
 })
 
-gulp.task('serve', () => {
+gulp.task('prepare', () => {
+  dst = 'themes/devsec/static/node_modules'
+  src = 'node_modules'
+  src_rel = path.relative(path.dirname(dst), src)
+  if(fs.existsSync(dst)) {
+    if(!fs.lstatSync(dst).isSymbolicLink() ||
+      fs.readlinkSync(dst) !== src_rel) {
+      console.error("Path "+dst+" exists but is not the symlink we expect. Please remove it if this is by accident and try again.")
+      process.exit(1)
+    }
+    console.log('    > symlink '+src+' -> '+dst)
+  } else {
+    fs.symlinkSync(src_rel, dst)
+    console.log('[ok]  symlink '+src+' -> '+dst)
+  }
+})
+
+gulp.task('serve', ['prepare'], () => {
   exec('hugo server --watch', (err, stdout, stderr) => {
     if(stdout != "") gutil.log('serve: ' + stdout);
     if(stderr != "") gutil.logError('serve: ' + stderr);
