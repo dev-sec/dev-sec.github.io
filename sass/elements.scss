@@ -5,7 +5,35 @@
 //element _classes
 
 .box-shadow {
-  -webkit-box-shadow: 0px 40px 100px 0px rgba(33,35,52,0.25);
-  -moz-box-shadow: 0px 40px 100px 0px rgba(33,35,52,0.25);
-  box-shadow: 0px 40px 100px 0px rgba(33,35,52,0.25);
+  -webkit-box-shadow: 0px 30px 90px 0px rgba(33,35,52,0.3);
+  -moz-box-shadow: 0px 30px 90px 0px rgba(33,35,52,0.3);
+  box-shadow: 0px 30px 90px 0px rgba(33,35,52,0.3);
+}
+
+
+//background image _classes
+
+#bg-mintangle {
+  background-image: url('/images/mintangle-bg.png');
+  position: absolute;
+  right: 0;
+  width: 75%;
+  height: 65%;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+#bg-building {
+  background-image: url('/images/building-bg.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#bg-building2 {
+  background-image: url('/images/building2-bg.png');
+  background-size: cover;
+  background-attachment: fixed;
 }

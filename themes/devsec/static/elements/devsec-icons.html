@@ -3,7 +3,7 @@
 
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="chef-partner-logo">
+<dom-module id="devsec-icons">
   <template>
     <style include="shared-styles">
       svg {
@@ -38,7 +38,7 @@
 
   <script>
     /**
-     * # Chef Partner Logo
+     * # Devsec Icons
      *
      * A fancy partner logo with 2 logo types per partner
      *
@@ -46,10 +46,10 @@
      * @customElement
      * @polymer
      * @summary Render a partner logo
-     * @demo elements/demo/chef-partner-logo.html
+     * @demo elements/demo/devsec-icons.html
      */
-    class chefPartnerLogo extends Polymer.GestureEventListeners(ChefMixin(Polymer.Element)) {
-      static get is() { return 'chef-partner-logo' }
+    class devsecIcons extends Polymer.Element {
+      static get is() { return 'devsec-icons' }
       static get properties() {
         return {
           /**
@@ -87,6 +87,6 @@
       isSlack() { return this.type == 'slack'; }
       isWebhook() {return this.type == 'webhook';}
     }
-    window.customElements.define(chefPartnerLogo.is, chefPartnerLogo);
+    window.customElements.define(devsecIcons.is, devsecIcons);
   </script>
 </dom-module>
