@@ -84,8 +84,5 @@
   },
   "engines": {
     "yarn": ">= 1.0.0"
-  },
-  "scripts": {
-    "sass": "node_modules/node-sass/bin/node-sass --output-style compressed sass/app.scss > themes/devsec/static/css/app.css"
   }
 }
