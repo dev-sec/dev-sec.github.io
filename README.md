@@ -7,9 +7,8 @@
 3. Build
     ```
     yarn
-    yarn run sass
     ```
 4. Develop via:
     ```
-    hugo server
+    gulp serve
     ```
