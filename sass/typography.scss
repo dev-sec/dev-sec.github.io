@@ -1,0 +1,67 @@
+// local fonts
+
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url('Rene Bieder - Galano Grotesque.otf') format('truetype');
+  src: font-url('Rene Bieder - Galano Grotesque.otf?#iefix') format('embedded-opentype'),
+  font-url('Rene Bieder - Galano Grotesque.otf') format('woff'),
+  font-url('Rene Bieder - Galano Grotesque.otf') format('truetype')
+}
+
+//font _variables
+
+$regular_font: "Galano Grotesque";
+
+%heading_font {
+  font-family: $regular-font;
+  color: $devsec_black;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+%body_font {
+  font-family: $regular-font;
+  color: $devsec_gray;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+//font _classes
+
+h1, h2, h3, h4 {
+  @extend %heading_font;
+}
+
+p, small {
+  @extend %body_font;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4, p {
+  font-size: 1em;
+}
+
+small {
+  font-size: 10px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.t-upper {
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
