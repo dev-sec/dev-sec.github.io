@@ -1,0 +1,11 @@
+@import
+'colors.scss',
+'typography.scss';
+
+//element _classes
+
+.box-shadow {
+  -webkit-box-shadow: 0px 40px 100px 0px rgba(33,35,52,0.25);
+  -moz-box-shadow: 0px 40px 100px 0px rgba(33,35,52,0.25);
+  box-shadow: 0px 40px 100px 0px rgba(33,35,52,0.25);
+}
