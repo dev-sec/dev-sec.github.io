@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
   @extend %heading_font;
 }
 
-p, small {
+p, small, a {
   @extend %body_font;
 }
 
@@ -60,7 +60,7 @@ h3 {
   font-size: 1.2em;
 }
 
-h4, p {
+h4, p, a {
   font-size: 1em;
 }
 

@@ -1,0 +1,122 @@
+<link rel="import" href="../node_modules/@bower_components/polymer/polymer-element.html">
+<link rel="import" href="../node_modules/@bower_components/polymer/lib/elements/dom-if.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/places-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/hardware-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/editor-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/device-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/av-icons.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="devsec-hex">
+  <template>
+    <style include="shared-styles">
+      .logo-hexagon {
+        position: relative;
+        width: 150px; 
+        height: 86.60px;
+        margin: 43.30px 0;
+        background-size: auto 173.2051px;
+        background-position: center;
+      }
+
+      .logo-hexTop,
+      .logo-hexBottom {
+        position: absolute;
+        z-index: 1;
+        width: 106.07px;
+        height: 106.07px;
+        overflow: hidden;
+        -webkit-transform: scaleY(0.5774) rotate(-45deg);
+        -ms-transform: scaleY(0.5774) rotate(-45deg);
+        transform: scaleY(0.5774) rotate(-45deg);
+        background: inherit;
+        left: 21.97px;
+      }
+
+      .logo-hexTop:after,
+      .logo-hexBottom:after {
+        content: "";
+        position: absolute;
+        width: 150.0000px;
+        height: 86.60254037844388px;
+        -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+        -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+        transform:          rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        background: inherit;
+      }
+
+      .logo-hexTop {
+        top: -53.0330px;
+      }
+
+      .logo-hexTop:after {
+        background-position: center top;
+      }
+
+      .logo-hexBottom {
+        bottom: -53.0330px;
+      }
+
+      .logo-hexBottom:after {
+        background-position: center bottom;
+      }
+
+      .logo-hexagon:after {
+        content: "";
+        position: absolute;
+        top: 0.0000px;
+        left: 0;
+        width: 150.0000px;
+        height: 86.6025px;
+        z-index: 2;
+        background: inherit;
+      }
+    </style>
+
+    <!-- with logo -->
+    
+    <template is="dom-if" if="[[isLogo()]]">
+      <div class="logo-hexagon box-shadow" 
+            style$="background-image: url('[[image]]');">
+        <div class="logo-hexTop"></div>
+        <div class="logo-hexBottom"></div>
+      </div>
+    </template>
+
+  </template>
+
+  <script>
+
+    class devsecHex extends Polymer.Element {
+      static get is() { return 'devsec-hex' }
+      static get properties() {
+        return {
+          /**
+           * Type of hex
+           */
+          type: {
+            type: String,
+            value: ""
+          },
+           /**
+           * image is a string (URL)
+           */
+          image: {
+            type: String,
+            value: ""
+          }
+        }
+      }
+
+      isLogo() { return this.type == 'logo'; }
+
+    }
+    window.customElements.define(devsecHex.is, devsecHex);
+  </script>
+</dom-module>

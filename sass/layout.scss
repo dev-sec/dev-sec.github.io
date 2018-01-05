@@ -1,10 +1,11 @@
 //layout _variables
 
 $default_margin: 15%;
-$small_margin: 35px;
+$medium_margin: 35px;
+$small_margin: 16px;
 
-$default_height: 60%;
-$medium_height: 30%;
+$default_height: 70%;
+$medium_height: 50%;
 
 //width and height _classes
 
@@ -63,8 +64,34 @@ section {
   margin-bottom: $default_margin;
 }
 
-.space-left {
-  margin-left: $default_margin;
+.space-left-md {
+  margin-left: $medium_margin;
+}
+
+.space-right-md {
+  margin-right: $medium_margin;
+}
+
+.space-horizontal-md {
+  margin-left: $medium_margin;
+  margin-right: $medium_margin;
+}
+
+.space-top-md {
+  margin-top: $medium_margin;
+}
+
+.space-bottom-md {
+  margin-bottom: $medium_margin;
+}
+
+.space-vertical-md {
+  margin-top: $medium_margin;
+  margin-bottom: $medium_margin;
+}
+
+.space-left-sm {
+  margin-left: $small_margin;
 }
 
 .space-right-sm {
@@ -117,8 +144,34 @@ section {
   padding-bottom: $default_margin;
 }
 
-.pad-left {
-  padding-left: $default_margin;
+.pad-left-md {
+  padding-left: $medium_margin;
+}
+
+.pad-right-md {
+  padding-right: $medium_margin;
+}
+
+.pad-horizontal-md {
+  padding-left: $medium_margin;
+  padding-right: $medium_margin;
+}
+
+.pad-top-md {
+  padding-top: $medium_margin;
+}
+
+.pad-bottom-md {
+  padding-bottom: $medium_margin;
+}
+
+.pad-vertical-md {
+  padding-top: $medium_margin;
+  padding-bottom: $medium_margin;
+}
+
+.pad-left-sm {
+  padding-left: $small_margin;
 }
 
 .pad-right-sm {

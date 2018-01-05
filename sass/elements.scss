@@ -2,12 +2,34 @@
 'colors.scss',
 'typography.scss';
 
+//element _variables
+
+%transition {
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 //element _classes
 
 .box-shadow {
   -webkit-box-shadow: 0px 30px 90px 0px rgba(33,35,52,0.3);
   -moz-box-shadow: 0px 30px 90px 0px rgba(33,35,52,0.3);
   box-shadow: 0px 30px 90px 0px rgba(33,35,52,0.3);
+}
+
+.hover-shadow {
+  @extend %transition;
+  cursor: pointer;
+  -webkit-box-shadow: initial;
+  -moz-box-shadow: initial;
+  box-shadow: initial;
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 90px 0px rgba(33,35,52,0.3);
+    -moz-box-shadow: 0px 0px 90px 0px rgba(33,35,52,0.3);
+    box-shadow: 0px 0px 90px 0px rgba(33,35,52,0.3);
+  }
 }
 
 
@@ -18,7 +40,7 @@
   position: absolute;
   right: 0;
   width: 75%;
-  height: 65%;
+  height: 75%;
   background-position-x: right;
   background-position-y: bottom;
   background-attachment: fixed;
