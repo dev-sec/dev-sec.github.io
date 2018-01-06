@@ -1,7 +1,7 @@
 //layout _variables
 
 $default_margin: 15%;
-$medium_margin: 35px;
+$medium_margin: 45px;
 $small_margin: 16px;
 
 $default_height: 70%;
@@ -9,7 +9,7 @@ $medium_height: 50%;
 
 //width and height _classes
 
-section {
+.browser-height {
   height: 100%;
 }
 
@@ -18,7 +18,7 @@ section {
 }
 
 .container-height-md {
-  height: $medium_height;
+  height: $medium_height !important;
 }
 
 .fill-height {
@@ -197,6 +197,10 @@ section {
 }
 
 //alignment _classes
+
+.block {
+  display: block;
+}
 
 .left {
   float: left;

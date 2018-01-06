@@ -1,0 +1,155 @@
+<link rel="import" href="../node_modules/@bower_components/polymer/polymer-element.html">
+<link rel="import" href="../node_modules/@bower_components/polymer/lib/elements/dom-if.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/places-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/hardware-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/editor-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/device-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/av-icons.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="devsec-diagram">
+  <template>
+    <style include="shared-styles">
+    
+      svg, img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      
+      img {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+      }
+      
+      .space-top-lg {
+        margin-top: 35%
+      }
+      
+      .absolute-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .image-top {
+        padding-top: 10%
+      }
+      
+      .graphic-width {
+        width: 70%;
+      }
+
+      .draw {
+        stroke-dasharray: 3000;
+        stroke-dashoffset: 3000;
+        animation: dash 3s linear infinite;
+        -webkit-animation: dash 3s linear infinite;
+        -moz-animation: dash 3s linear infinite;
+        -ms-animation: dash 3s linear infinite;
+        -o-animation: dash 3s linear infinite;
+      }
+
+      @keyframes dash {
+        to { stroke-dashoffset: 0; }
+      }
+      
+      @-webkit-keyframes dash {
+        to { stroke-dashoffset: 0; }
+      }
+      
+      @-moz-keyframes dash {
+        to { stroke-dashoffset: 0; }
+      }
+      
+      .float {
+        animation: floating 1s linear infinite;
+        -webkit-animation: floating 1s linear infinite;
+        -moz-animation: floating 1s linear infinite;
+        -ms-animation: floating 1s linear infinite;
+        -o-animation: floating 1s linear infinite;
+        margin-top: 0;
+      }
+
+      @keyframes floating {
+        50% { margin-top: 50px; transform: scale(0.8);}
+      }
+      
+      @-webkit-keyframes floating {
+        50% { margin-top: 50px; transform: scale(0.8);}
+      }
+      
+      @-moz-keyframes floating {
+        50% { margin-top: 50px; transform: scale(0.8);}
+      }
+    
+    </style>
+
+    <!-- default -->
+    <div class="row relative">
+      <div class="tag b-white box-shadow absolute space-top">
+        <p><strong>your settings</strong></p>
+      </div>
+      <div class="center relative graphic-width back">
+        <div class="absolute absolute-center">
+          <img class="image-top" src="images/cubes.png">
+        </div>
+        <svg class="absolute" width="753px" height="653px" viewBox="0 0 753 653">
+          <defs>
+            <linearGradient x1="-21.0690841%" y1="-21.0690841%" x2="121.069084%" y2="78.9309159%" id="linearGradient">
+              <stop stop-color="#00CBD5" offset="0%"></stop>
+              <stop stop-color="#D903FF" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+            <g transform="translate(-273.000000, 2.000000)" stroke-width="2.5" stroke="url(#linearGradient)" fill="transparent">
+              <path class="draw" d="M630.475699,649.295504 L275,649.295504 L276.40625,646.849982 L463.822121,322 L467.588087,322 L280.64375,646.036893 L627.217088,646.036893 L630.475699,649.295504 Z M668.524301,649.295504 L1024.20625,649.295504 L835.374495,322 L831.602496,322 L1018.55,646.036893 L671.782912,646.036893 L668.524301,649.295504 Z M551.515561,170 L649.59375,0 L651.0125,2.45177665 L747.678738,170 L743.908714,170 L649.59375,6.52347716 L555.280384,170 L551.515561,170 Z"></path>
+            </g>
+          </g>
+        </svg>
+        <svg id="circles" width="738px" height="751px" viewBox="0 0 738 751">
+          <defs>
+            <linearGradient x1="-21.0690841%" y1="-21.0690841%" x2="121.069084%" y2="78.9309159%" id="linearGradient">
+                <stop stop-color="#00CBD5" offset="0%"></stop>
+                <stop stop-color="#D903FF" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+            <g transform="translate(-281.000000, 0.000000)" stroke-width="2.5" stroke="url(#linearGradient)" fill="url(#linearGradient)">
+              <g transform="translate(282.000000, 1.000000)">
+                <path  stroke-width="1.5"  d="M367.996877,73.7019293 C202.903484,73.7019293 68.5890509,208.011503 68.5890509,373.106599 C68.5890509,538.19545 202.903484,672.511269 367.996877,672.511269 C533.096516,672.511269 667.404703,538.19545 667.404703,373.106599 C667.404703,208.011503 533.096516,73.7019293 367.996877,73.7019293 M367.996877,675.771574 C201.11096,675.771574 65.3350254,539.994238 65.3350254,373.106599 C65.3350254,206.218959 201.11096,70.4416244 367.996877,70.4416244 C534.88904,70.4416244 670.664975,206.218959 670.664975,373.106599 C670.664975,539.994238 534.88904,675.771574 367.996877,675.771574"></path>
+                <path class="draw" fill="white" d="M367.996203,9.96409336 C167.264788,9.96409336 3.95645849,173.266514 3.95645849,374 C3.95645849,574.725892 167.264788,738.035907 367.996203,738.035907 C568.735212,738.035907 732.035948,574.725892 732.035948,374 C732.035948,173.266514 568.735212,9.96409336 367.996203,9.96409336 M367.996203,742 C165.085319,742 0,576.912978 0,374 C0,171.087022 165.085319,6 367.996203,6 C570.914681,6 736,171.087022 736,374 C736,576.912978 570.914681,742 367.996203,742"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="space-top">
+        <div class="tag b-white box-shadow absolute right space-top-md">
+          <p><strong>hardening</strong></p>
+        </div>
+        <div class="tag b-white box-shadow absolute absolute right space-top-lg">
+          <p ><strong>system defaults</strong></p>
+        </div>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+
+    class devsecDiagram extends Polymer.Element {
+      static get is() { return 'devsec-diagram' }
+      static get properties() {
+        return {
+        }
+      }  
+    }
+    window.customElements.define(devsecDiagram.is, devsecDiagram);
+  </script>
+</dom-module>

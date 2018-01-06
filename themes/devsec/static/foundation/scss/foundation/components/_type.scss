@@ -218,13 +218,6 @@ $align-class-breakpoints:
       color: $anchor-font-color;
       text-decoration: $anchor-text-decoration;
       line-height: inherit;
-
-      &:hover,
-      &:focus {
-        color: $anchor-font-color-hover;
-        @if $anchor-text-decoration-hover != $anchor-text-decoration {
-        	text-decoration: $anchor-text-decoration-hover;
-        }
       }
 
       img { border:none; }

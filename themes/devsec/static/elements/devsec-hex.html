@@ -13,81 +13,129 @@
 <dom-module id="devsec-hex">
   <template>
     <style include="shared-styles">
-      .logo-hexagon {
+      
+      .clip-solid {
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      
+      .clip-each {
+        display: block;
         position: relative;
-        width: 150px; 
-        height: 86.60px;
-        margin: 43.30px 0;
-        background-size: auto 173.2051px;
-        background-position: center;
+        -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        -webkit-clip-path: url(#hexagon-clip);
+        clip-path: url(#hexagon-clip);
+        margin: 0 auto;
       }
-
-      .logo-hexTop,
-      .logo-hexBottom {
+      
+      .flip-container {
+        cursor: pointer;
+        perspective: 600;
+        position: relative;
+      }
+      
+      .flip {
+        width: 100%;
+        height: 100%;
         position: absolute;
-        z-index: 1;
-        width: 106.07px;
-        height: 106.07px;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transition: all 0.6s ease-in-out;
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+      }
+      
+      .flip:hover {
+        transform: rotateY(180deg);
+      }
+      
+      .flip .face1 {
+        backface-visibility: hidden;
+        position: absolute;
         overflow: hidden;
-        -webkit-transform: scaleY(0.5774) rotate(-45deg);
-        -ms-transform: scaleY(0.5774) rotate(-45deg);
-        transform: scaleY(0.5774) rotate(-45deg);
-        background: inherit;
-        left: 21.97px;
       }
-
-      .logo-hexTop:after,
-      .logo-hexBottom:after {
-        content: "";
-        position: absolute;
-        width: 150.0000px;
-        height: 86.60254037844388px;
-        -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
-        -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
-        transform:          rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
-        -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-        transform-origin: 0 0;
-        background: inherit;
+      
+      .flip .face2 {
+        text-align: center;
+        transform: rotateY(180deg);
       }
-
-      .logo-hexTop {
-        top: -53.0330px;
-      }
-
-      .logo-hexTop:after {
-        background-position: center top;
-      }
-
-      .logo-hexBottom {
-        bottom: -53.0330px;
-      }
-
-      .logo-hexBottom:after {
-        background-position: center bottom;
-      }
-
-      .logo-hexagon:after {
-        content: "";
-        position: absolute;
-        top: 0.0000px;
-        left: 0;
-        width: 150.0000px;
-        height: 86.6025px;
-        z-index: 2;
-        background: inherit;
-      }
+      
     </style>
 
-    <!-- with logo -->
+    <!-- default -->
     
-    <template is="dom-if" if="[[isLogo()]]">
-      <div class="logo-hexagon box-shadow" 
-            style$="background-image: url('[[image]]');">
-        <div class="logo-hexTop"></div>
-        <div class="logo-hexBottom"></div>
+    <template is="dom-if" if="[[isDefault()]]">
+      <div class="clip-each clip-solid" style$="background-image: url('[[image]]'); width: [[getIconSize(size)]]; height: [[getIconSize(size)]]">
+        <svg>
+  				<defs>
+  					<clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox"> 
+  						<polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25"></polygon>
+  					</clipPath>
+  				</defs>
+  			</svg>
+			</div>
+    </template>
+    
+    <!-- with border -->
+    
+    <template is="dom-if" if="[[isBorder()]]">
+      <div class="relative">
+        <div class="clip-each clip-solid" style$="background-image: url('[[image]]'); width: [[getIconSmallSize(size)]]; height: [[getIconSmallSize(size)]]; z-index:1;">
+          <svg>
+            <defs>
+              <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox"> 
+                <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25"></polygon>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class$="clip-each clip-solid [[getStatusColor(color)]]" style$="width: [[getIconSize(size)]]; height: [[getIconSize(size)]]; margin-top: -[[getIconMarginSize(size)]]">
+          <svg>
+            <defs>
+              <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox"> 
+                <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25"></polygon>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
       </div>
     </template>
+    
+    <!-- with flip -->
+    
+    <template is="dom-if" if="[[isFlip()]]">
+      <div class="flip-container svg-shadow" style$="width: [[getIconSize(size)]]; height: [[getIconSize(size)]];">
+        <div class="flip">
+          <div class="clip-each clip-solid b-black face1" style$="width: [[getIconSize(size)]]; height: [[getIconSize(size)]]; z-index:1;">
+            <div class="center vertical">
+              <p class="t-white"><strong>[[title]]</strong></p>
+            </div>
+            <svg>
+              <defs>
+                <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox"> 
+                  <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25"></polygon>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="clip-each clip-solid b-white face2" style$="width: [[getIconSize(size)]]; height: [[getIconSize(size)]]; z-index:1;">
+            <div class="center vertical">
+              <p><strong>[[title]]</strong></p>
+              <slot></slot>
+            </div>
+            <svg>
+              <defs>
+                <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox"> 
+                  <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25"></polygon>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </template>    
 
   </template>
 
@@ -110,12 +158,61 @@
           image: {
             type: String,
             value: ""
+          },
+          /**
+          * size of hexagon
+          */
+          size: {
+            type: Number,
+            value: ""
+          },
+          /**
+          * color of the icon, default is chef dark blue
+          */
+          color: {
+           type: String,
+           value: ""
+          },
+          /**
+          * title for the flip card
+          */
+          title: {
+          type: String,
+          value: ""
           }
         }
       }
+      
+      getIconSize(size) {
+       if (size) { return size + "px"}
+       return "16px";
+      }
 
-      isLogo() { return this.type == 'logo'; }
+      getIconSmallSize(size) {
+        if (size) { return size - 4 + "px"}
+        return "";
+      }
 
+      getIconMarginSize(size) {
+       if (size) { return size - 2 + "px"}
+       return "";
+      }
+
+      getStatusColor(color) {
+       switch (color) {
+         case 'mint': return 'b-mint';
+         case 'purple': return 'b-purple';
+         case 'white': return 'b-white';
+         case 'black': return 'b-black';
+         case 'gradient': return 'b-gradient';
+       }
+       return 't-white';
+      }
+
+      isDefault() { return this.type == 'default'; }
+      isBorder() { return this.type == 'border'; }
+      isFlip() { return this.type == 'flip'; }
+      
     }
     window.customElements.define(devsecHex.is, devsecHex);
   </script>

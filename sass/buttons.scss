@@ -14,3 +14,19 @@ a {
     opacity: $devsec_opacity;
   }
 }
+
+ a.t-mint {
+
+  &:hover {
+    color: $devsec-mint;
+    opacity: $devsec_opacity;
+  }
+}
+
+a.t-purple {
+
+ &:hover {
+   color: $devsec-purple;
+   opacity: $devsec_opacity;
+ }
+}

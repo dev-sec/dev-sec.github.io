@@ -8,7 +8,7 @@
       <div class="b-black small-9 pad-left fill-height">
         <div class="vertical">
           <h1 class="t-mint"><strong>dev</strong>ops + <strong>sec</strong>urity</h1>
-          <h3 class="t-white">automatic server hardening</h3>
+          <h3 class="t-white">automated server hardening</h3>
         </div>
       </div>
       <div class="b-gradient space-right pad-vertical-md pad-horizontal-md fit-height hover-shadow">
@@ -21,29 +21,40 @@
 
   <!-- users -->
 
-  <section id="users">
+  <section id="users" class="browser-height">
     <div class="row container-height-md align-middle ">
-      <div class="small-7 space-left">
+      <div class="small-4 space-left">
         <h4 class="t-purple t-upper">Our Users</h4>
-        <p>Trusted by enterprises, globally.</p>
+        <p>Smart engineers around the world leverage the devsec project to secure their servers with Ansible, Chef, and Puppet.</p>
       </div>
-      <div class="small-5 absolute right space-right">
-        <devsec-hex class="right" style="margin-top: 50px" type="logo" image="/images/users/benocs-logo.png"></devsec-hex>
-        <devsec-hex class="right" style="margin-top: 150px" type="logo" image="/images/users/tmobile-logo.png"></devsec-hex>
-        <devsec-hex class="right" style="margin-top: 50px" type="logo" image="/images/users/convergint-logo.png"></devsec-hex>
-        <devsec-hex class="right" style="margin-top: 25px" type="logo" image="/images/users/tmobile2-logo.png"></devsec-hex>
+      <div class="small-5 absolute right space-right front">
+        <div class="row right pad-top">
+          <devsec-hex class="svg-shadow"  type="default"  size=150 image="/images/users/benocs-logo.png"></devsec-hex>
+          <devsec-hex class="svg-shadow space-horizontal-sm"  type="default" size=150 image="/images/users/tmobile-logo.png"></devsec-hex>
+        </div>
+        <div class="row right pad-right">
+          <devsec-hex class="svg-shadow"  type="default" size=150 image="/images/users/convergint-logo.png"></devsec-hex>
+          <devsec-hex class="svg-shadow space-horizontal-sm"  type="default" size=150 image="/images/users/tmobile2-logo.png"></devsec-hex>
+        </div>
       </div>
     </div>
 
     <!-- user quote -->
-
-    <section class="relative">
-      <div class="row absolute pad-horizontal">
-        <div class="space-top">
-          <div class="b-black center small-9 pad-vertical pad-horizontal-md box-shadow">
-            <p class="t-white t-left"><strong>Industry is spending a fortune and useless spend on SIEM  – less than 1% success in preventing breaches.</strong></p>
-            <p class="t-mint t-left space-top-sm"><strong>Amit Yoran</strong> keynote at RSA conference 2015</p>
-            <a class="t-mint left t-left" href="/articles">view all press articles</a>
+    <section class="relative browser-height">
+      <div class="row absolute pad-horizontal space-top">
+        <div class="b-black center small-9 pad-vertical pad-horizontal-md box-shadow">
+          <div class="row align-middle">
+            <img class="pad-horizontal-sm" style="height:150px" src="/images/devsec-zigzag.png">
+            <div class="block">
+              <p class="t-white t-left"><strong>"Industries are spending a fortune and useless spend on SIEM  – with less than 1% success in preventing breaches."</strong></p>
+              <div class="row align-middle pad-top-sm">
+                <devsec-hex class="pad-horizontal-sm" type="border" color="mint" size=25 image="/images/users/amit-yoran.jpg"></devsec-hex>
+                <div class="block">
+                  <p class="t-mint t-left"><strong>Amit Yoran</strong> keynote at RSA conference 2015</p>
+                  <a class="t-mint left t-left" href="/articles">view all press articles</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -51,45 +62,47 @@
     </section>
   </section>
 
-
   <!-- How it works -->
 
-  <section id="howitworks" class="relative pad-top">
-    <div class="space-horizontal space-top">
+  <section id="howitworks" class="relative space-top">
+    <div class="space-horizontal pad-vertical">
       <div class="center small-9">
         <h4 class="t-purple t-upper">How it works</h4>
         <h2 class="t-height">Add security to your automation</h2>
-        <p>Hardening adds a layer into your automation framework, that configures your
-        operating systems and services. It takes care of difficult settings, compliance guidelines, cryptography
+        <p>The devsec project provides a set of server security best practices and components you deploy in your Ansible, Chef, and Puppet automation. It takes care of difficult settings, compliance guidelines, cryptography
         recommendations, and secure defaults.</p>
+        <a href="" class="t-purple">view the project on github</a>
+      </div>
+      <div class="center small-9 pad-top-md">
+        <devsec-diagram></devsec-diagram>
       </div>
     </div>
   </section>
 
+  <!-- Platforms -->
 
-  <section class="explain border-top" id="operating_systems">
-    <div class="space-vertical space-horizontal">
+  <section id="platforms">
+    <div id="bg-mintangle" class="space-right"></div>
+    <div class="pad-top pad-bottom-md space-horizontal">
       <h4 class="t-purple t-upper">Verified platforms</h4>
       <p>Supported and regularly tested</p>
     </div>
-
-    <div class="row"><div class="large-10 medium-12 small-12 small-centered columns">
-      <div class="row supported_on">
-
+    <div class="space-horizontal space-bottom">
+      <div class="row">
         {{ $len := (len $.Site.Data.supported_os.os) }}
         {{ range $ind, $os := $.Site.Data.supported_os.os }}
-        <div class="large-3 medium-3 small-6 text-center columns {{ if eq (add $ind 1) $len }} end {{ end }} ">
-          <a href="#" class="{{ lower $os.name }}">
-            <h3>{{$os.name }}</h3>
-            <p>{{ delimit $os.versions ", " }}</p>
-          </a>
+        <div class="center columns {{ if eq (add $ind 1) $len }} end {{ end }} ">
+          <devsec-hex  type="flip" size=150 title="{{$os.name }}">
+            <slot>
+              <a class="t-purple" href="/{{ lower $os.name }}/">
+                {{ delimit $os.versions ", " }}
+              </a>
+            </slot>
+          </devsec-hex>
         </div>
         {{ end }}
-
+        </div>
       </div>
-      </div></div>
-
-    </div>
-  </section>
+    </section>
 
 {{ end }}
