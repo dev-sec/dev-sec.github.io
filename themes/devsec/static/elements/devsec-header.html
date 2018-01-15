@@ -1,0 +1,41 @@
+<link rel="import" href="../node_modules/@bower_components/polymer/polymer-element.html">
+<link rel="import" href="../node_modules/@bower_components/polymer/lib/elements/dom-if.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/places-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/hardware-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/editor-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/device-icons.html">
+<link rel="import" href="../node_modules/@bower_components/iron-icons/av-icons.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="devsec-slider">
+  <template>
+    <style include="shared-styles">
+  
+    </style>
+
+    <!-- slider -->
+    <section class="relative browser-height">
+      <div class="row absolute pad-horizontal space-top-md">
+        <div class="b-white center small-9 pad-vertical-md pad-horizontal-md box-shadow">
+        </div>
+      </div>
+      <div class="container-height space-right b-gradient"></div>
+    </section>
+
+  </template>
+
+  <script>
+
+    class devsecSlider extends Polymer.Element {
+      static get is() { return 'devsec-slider' }
+      static get properties() {
+        return {
+        }
+      }  
+    }
+    window.customElements.define(devsecSlider.is, devsecSlider);
+  </script>
+</dom-module>
