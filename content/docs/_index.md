@@ -1,3 +1,0 @@
----
-title: "DevSec Documentation"
----

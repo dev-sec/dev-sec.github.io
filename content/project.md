@@ -1,6 +1,6 @@
 ---
-title: "Automatic server hardening"
-date:   2015-04-15 21:00:00
+title: "DevSec Project"
+layout: project
 ---
 
 Server hardening is a well-known topic with many guides out in the wild. Why this project?
