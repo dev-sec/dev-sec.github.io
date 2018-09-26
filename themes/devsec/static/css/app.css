@@ -5695,7 +5695,7 @@ th.hide-for-touch {
     color: black !important; }
 
 .bg-landing {
-  background: url('/images/background.jpeg');
+  background: url('/images/bg.png');
   -moz-background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%; }
@@ -5728,7 +5728,7 @@ th.hide-for-touch {
   text-align: center; }
 
 #product #overview {
-  background: url("/images/background.jpeg");
+  background-color: #aa82e3;
   background-size: 100%; }
 #product #overview .features {
   margin-bottom: 10px; }
@@ -5809,14 +5809,14 @@ th.hide-for-touch {
   padding-bottom: 20px; }
 
 #blog-header {
-  background: url(/images/background.jpeg);
+  background-color: #9694e2;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 350px;
 }
 
 #team {
-  background: url("/images/background.jpeg");
+  background: url("/images/bg.png");
   background-repeat: no-repeat;
   background-attachment: fixed; }
   #team .header {
@@ -5851,7 +5851,7 @@ h1, h2, h3, h4 {
 .landing_container {
   position: relative; }
   .landing_container #landing-bg {
-    background: url('/images/background.jpeg');
+    background: url('/images/bg.png');
     background-size: 100%;
     width: 100%;
     position: absolute;
