@@ -32,7 +32,7 @@ metaDataFormat = "yaml"
   name = "Community"
   weight = 4
   identifier = "comunity"
-  url = "/contributing/"
+  url = "/community/"
 
 [[menu.global]]
   name = "GitHub"
