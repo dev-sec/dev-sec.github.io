@@ -1,4 +1,4 @@
 ---
 title: "Security + DevOps"
-description: "Automatic Server Hardening"
+description: "Server Hardening Automation"
 ---
