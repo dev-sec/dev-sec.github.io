@@ -1,5 +1,8 @@
 ---
-title: "Overview"
+title: "Overview DevSec Baselines"
+layout: features
+aliases:
+    - /features/
 ---
 
 {{define "main"}}

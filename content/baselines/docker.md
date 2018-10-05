@@ -1,5 +1,6 @@
 ---
-title: "Docker Baseline"
 layout: profile
-baseline: data/cis-docker-benchmark.json
+title: "DevSec Docker Baseline"
+baseline: docker
+inspec: data/cis-docker-benchmark.json
 ---

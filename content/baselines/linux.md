@@ -1,5 +1,7 @@
 ---
-title: "Linux Baseline"
 layout: profile
-baseline: data/linux-baseline.json
+title: "DevSec Linux Baseline"
+
+baseline: linux
+inspec: data/linux-baseline.json
 ---

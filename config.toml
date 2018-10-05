@@ -5,10 +5,10 @@ theme = "devsec"
 metaDataFormat = "yaml"
 
 [[menu.global]]
-  name = "Features"
+  name = "Baselines"
   weight = 1
-  identifier = "features"
-  url = "/features/"
+  identifier = "baselines"
+  url = "/baselines/"
 
 [[menu.global]]
   name = "Articles"

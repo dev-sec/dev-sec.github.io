@@ -5773,7 +5773,13 @@ th.hide-for-touch {
 #product .features .nginx > a {
   background-color: #E54D4D; }
 #product .features .ssh > a {
-  background-color: #6E65B6; }
+  background-color: #658DED; }
+#product .features .docker > a {
+  background-color: #658DED; }
+#product .features .k8s > a {
+  background-color: #658DED; }
+#product .features .ssl > a {
+  background-color: #658DED; }
 #product .features .os > a {
   background-color: #6E65B6; }
 #product .features .mysql > a:hover {
@@ -5785,7 +5791,13 @@ th.hide-for-touch {
 #product .features .nginx > a:hover {
   background-color: #E00000; }
 #product .features .ssh > a:hover {
-  background-color: #574EA2; }
+  background-color: #16347D; }
+#product .features .ssl > a:hover {
+  background-color: #16347D; }
+#product .features .k8s > a:hover {
+  background-color: #16347D; }
+#product .features .docker > a:hover {
+  background-color: #16347D; }
 #product .features .os > a:hover {
   background-color: #574EA2; }
 #product .features .deactivated {
@@ -5797,7 +5809,7 @@ th.hide-for-touch {
     cursor: default;
     opacity: 0.8; }
 #product .features .green-checkmark {
-  font-size: 30px;
+  font-size: 18px;
   color: #37812C; }
 #product .features .red-checkmark {
   color: #e00000; }
@@ -5813,6 +5825,11 @@ th.hide-for-touch {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 350px;
+}
+
+.baseline-links {
+  margin-top: 10px;
+  margin-bottom: 10px
 }
 
 #team {
@@ -6326,3 +6343,7 @@ blockquote:before {
 
 blockquote p {
   display: inline; }
+
+.profile {
+  min-height: 400px;
+}

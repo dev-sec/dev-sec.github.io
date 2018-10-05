@@ -2,7 +2,7 @@
 
   <div class="header">
     <h2 class="title center">Overview</h2>
-    <div class="description center">Hardening Framework Components</div>
+    <div class="description center">DevSec Hardening Framework Baselines</div>
   </div>
 
   <div class="row">
@@ -16,24 +16,24 @@
         <div class="small-9 columns content" data-equalizer-watch>
           <div class="row">
             <div class="small-6 columns box mysql">
-              <a href="#mysql-hardening">
+              <a href="/baselines/mysql">
                 <h5>MySQL</h5>
               </a>
             </div>
             <div class="small-6 columns box postgres">
-              <a href="#postgres-hardening">
+              <a href="/baselines/postgres">
                 <h5>PosgreSQL</h5>
               </a>
             </div>
           </div>
           <div class="row">
             <div class="small-6 columns box apache">
-              <a href="#apache-hardening">
+              <a href="/baselines/apache">
                 <h5>Apache</h5>
               </a>
             </div>
             <div class="small-6 columns box nginx">
-              <a href="#nginx-hardening">
+              <a href="/baselines/nginx">
                 <h5>Nginx</h5>
               </a>
             </div>
@@ -48,23 +48,49 @@
         </div>
         <div class="small-9 columns content" data-equalizer-watch>
           <div class="row">
-            <div class="small-4 columns box deactivated">
+            <div class="small-6 columns box deactivated">
               <a href="#">
                       <span>Logging / Monitoring</span>
                   </a>
             </div>
-            <div class="small-4 columns box deactivated">
+            <div class="small-6 columns box deactivated">
               <a href="#">
                       <span>User Management</span>
                   </a>
             </div>
-            <div class="small-4 columns box deactivated">
-              <a href="#">
-                      <span>Patch-management</span>
-                  </a>
-            </div>
           </div>
         </div>
+      </div>
+      <div class="row features" data-equalizer>
+          <div class="small-3 columns types" data-equalizer-watch>
+            <div>
+              <span class="green-checkmark">✓</span> Components
+            </div>
+          </div>
+          <div class="small-9 columns content" data-equalizer-watch>
+            <div class="row">
+              <div class="small-3 columns box ssh">
+                <a href="/baselines/ssh">
+                  <h5>SSH</h5>
+                </a>
+              </div>
+              <div class="small-3 columns box ssl">
+                <a href="/baselines/ssl">
+                  <h5>SSL</h5>
+                </a>
+              </div>
+              <div class="small-3 columns box docker">
+                <a href="/baselines/docker">
+                  <h5>Docker</h5>
+                </a>
+              </div>
+              <div class="small-3 columns box k8s">
+                <a href="/baselines/kubernetes">
+                  <h5>K8S</h5>
+                </a>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="row features" data-equalizer>
         <div class="small-3 columns types" data-equalizer-watch>
@@ -74,18 +100,16 @@
         </div>
         <div class="small-9 columns content" data-equalizer-watch>
           <div class="row">
-            <div class="small-12 columns box ssh">
-              <a href="#ssh-hardening">
-                <h5>SSH Hardening</h5>
+            <div class="small-6 columns box os">
+              <a href="/baselines/linux">
+                <h5>Linux</h5>
               </a>
             </div>
-          </div>
-          <div class="row">
-            <div class="small-12 columns box os">
-              <a href="#os-hardening">
-                <h5>Operating System Hardening</h5>
-              </a>
-            </div>
+            <div class="small-6 columns box os">
+                <a href="/baselines/windows">
+                  <h5>Windows</h5>
+                </a>
+              </div>
           </div>
         </div>
       </div>

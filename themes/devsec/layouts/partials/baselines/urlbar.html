@@ -1,0 +1,11 @@
+<div id="{{ .id }}" class="section baseline-links">
+    <div class="row">
+        <div class="inner">
+            <div class="row center links">
+              {{ range .links }}
+              <a href="{{ .url }}" class="button"><i class="{{ .icon }}"></i><span>{{ .name }}</span></a>
+              {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

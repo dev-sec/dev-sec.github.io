@@ -1,5 +1,7 @@
 ---
-title: "Kubernetes Baseline"
 layout: profile
-baseline: data/cis-kubernetes-benchmark.json
+title: "DevSec Kubernetes Baseline"
+
+baseline: kubernetes
+inspec: data/cis-kubernetes-benchmark.json
 ---
