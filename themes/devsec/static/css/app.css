@@ -10277,16 +10277,7 @@ th.hide-for-touch {
   font-size: 40pt;
 }
 
-.product .header {
-  margin-bottom: 2.5rem;
-}
-
-.product .header h2 {
-  margin-bottom: 0;
-}
-
-.product #overview h2 {
-  font-weight: 100;
+.product .baselines h2 {
   color: white;
 }
 
@@ -10299,28 +10290,44 @@ th.hide-for-touch {
   text-align: center;
 }
 
-#product #overview {
+.product .baselines {
   background-color: #aa82e3;
   background-size: 100%;
 }
 
-#product #overview .features {
+.product .baselines .feature-box {
+  border: 1px solid white;
+}
+
+.baselines #overview .features {
   margin-bottom: 10px;
 }
 
-#product .feature-box {
+.baselines .header {
+  margin-bottom: 2.5rem;
+}
+
+.baseline .header h2 {
+  margin-bottom: 0;
+}
+
+.product #overview h2 {
+  font-weight: 100;
+}
+
+.baselines .feature-box {
   background: rgba(255, 255, 255, 0.31);
-  border: 1px solid white;
+  border: 1px solid darkgray;
   padding: 10px 20px 10px 0;
   border-radius: 2px;
 }
 
-#product .features .types {
+.baselines .features .types {
   position: relative;
   min-height: 4rem;
 }
 
-#product .features .types>div {
+.baselines .features .types>div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10328,17 +10335,17 @@ th.hide-for-touch {
   margin: -8% 0 0 -25%;
 }
 
-#product .features .content {
+.baselines .features .content {
   border-left: solid 1px whitesmoke;
 }
 
-#product .features .box {
+.baselines .features .box {
   margin: 0.5rem 0;
   display: block;
   text-align: center !important;
 }
 
-#product .features .box>a {
+.baselines .features .box>a {
   padding: 0.7rem 1.3rem 1rem 1.3rem;
   background: #444;
   display: block;
@@ -10346,7 +10353,7 @@ th.hide-for-touch {
   line-height: inherit;
 }
 
-#product .features .box>a * {
+.baselines .features .box>a * {
   margin-bottom: 0.2rem;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -10354,96 +10361,96 @@ th.hide-for-touch {
   color: #fff;
 }
 
-#product .features .mysql>a {
+.baselines .features .mysql>a {
   background-color: #ECA73F;
 }
 
-#product .features .postgres>a {
+.baselines .features .postgres>a {
   background-color: #ECA73F;
 }
 
-#product .features .apache>a {
+.baselines .features .apache>a {
   background-color: #E54D4D;
 }
 
-#product .features .nginx>a {
+.baselines .features .nginx>a {
   background-color: #E54D4D;
 }
 
-#product .features .ssh>a {
+.baselines .features .ssh>a {
   background-color: #658DED;
 }
 
-#product .features .docker>a {
+.baselines .features .docker>a {
   background-color: #658DED;
 }
 
-#product .features .k8s>a {
+.baselines .features .k8s>a {
   background-color: #658DED;
 }
 
-#product .features .ssl>a {
+.baselines .features .ssl>a {
   background-color: #658DED;
 }
 
-#product .features .os>a {
+.baselines.features .os>a {
   background-color: #6E65B6;
 }
 
-#product .features .mysql>a:hover {
+.baselines .features .mysql>a:hover {
   background-color: #EB8D00;
 }
 
-#product .features .postgres>a:hover {
+.baselines .features .postgres>a:hover {
   background-color: #EB8D00;
 }
 
-#product .features .apache>a:hover {
+.baselines .features .apache>a:hover {
   background-color: #E00000;
 }
 
-#product .features .nginx>a:hover {
+.baselines .features .nginx>a:hover {
   background-color: #E00000;
 }
 
-#product .features .ssh>a:hover {
+.baselines .features .ssh>a:hover {
   background-color: #16347D;
 }
 
-#product .features .ssl>a:hover {
+.baselines .features .ssl>a:hover {
   background-color: #16347D;
 }
 
-#product .features .k8s>a:hover {
+.baselines .features .k8s>a:hover {
   background-color: #16347D;
 }
 
-#product .features .docker>a:hover {
+.baselines .features .docker>a:hover {
   background-color: #16347D;
 }
 
-#product .features .os>a:hover {
+.baselines .features .os>a:hover {
   background-color: #574EA2;
 }
 
-#product .features .deactivated {
+.baselines .features .deactivated {
   margin: 0.3rem 0;
   opacity: 1;
 }
 
-#product .features .deactivated>a {
+.baselines .features .deactivated>a {
   background: #4D4D4D !important;
   color: #EEEEEE;
   cursor: default;
   opacity: 0.8;
 }
 
-#product .features .green-checkmark {
+.baselines .features .green-checkmark {
   font-size: 18px;
   color: #37812C;
 }
 
-#product .features .red-checkmark {
+.baselines .features .red-checkmark {
   color: #e00000;
 }
 
@@ -10935,12 +10942,15 @@ h4 {
 }
 
 #integration {
-  background: rgba(0, 0, 0, 0.03);
-  color: rgba(0, 0, 0, 0.75);
+  background: white;
 }
 
-#detection {
-  background: rgba(0, 0, 0, 0.03);
+.explain#detection {
+  background: white;
+}
+
+.explain#overview {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 #operating_systems {
