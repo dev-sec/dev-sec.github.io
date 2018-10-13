@@ -26,4 +26,4 @@ The baseline is designed to work hand-in-hand with multiple configuration manage
 
 To achieve the our standards, we are looking for more contributors to drive that project forward.
 
-- Chris
+Thank you, Chris

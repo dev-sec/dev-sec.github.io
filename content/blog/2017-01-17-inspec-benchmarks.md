@@ -10,15 +10,15 @@ from day one of the DevSec Hardening Framework project, we used the same test su
 
 The DevSec Hardening Framework grew and users requested additional documentation around our recommendations. We always used industry best-practices, but it would be even better to attach more information directly to our tests. [InSpec](http://inspec.io/) builds on the learnings of [Serverspec](https://blog.chef.io/2015/11/04/the-road-to-inspec/) and allowed us to add more meta-data to each test. A Serverspec test like:
 
-{% highlight ruby %}
+```ruby
 describe file('/etc/ssh/sshd_config') do
   its(:content) { should match(/^Protocol 2$/) }
 end
-{% endhighlight %}
+```
 
 could easily represented in InSpec as:
 
-{% highlight ruby %}
+```ruby
 control 'ssh-04' do
   impact 1.0
   title 'Client: Specify protocol version 2'
@@ -31,7 +31,7 @@ control 'ssh-04' do
     its('Protocol') { should eq('2') }
   end
 end
-{% endhighlight %}
+```
 
 With InSpec we are able to document and implement our security checks in one language. We used the opportunity to adapt all of our test suites to use InSpec. Now, users are able to run our tests standalone as well. Therefore we are going to call them `baseline` instead of `tests`. The following baselines are available now:
 
@@ -57,7 +57,7 @@ Application Baselines:
 
 To use the DevSec Hardening Framework baselines just install [InSpec](). All our baselines are registered in Chef Supermarket:
 
-{% highlight bash %}
+```bash
 # List all available profiles
 $ inspec supermarket profiles
 
@@ -66,17 +66,17 @@ $ inspec exec supermarket://devsec/linux-baseline
 
 # Run Windows baseline
 $ inspec exec supermarket://devsec/windows-baseline
-{% endhighlight %}
+```
 
 You can run the baselines directly from Github as well:
 
-{% highlight bash %}
+```bash
 # Linux
 inspec exec github.com/dev-sec/linux-baseline -t ssh://user:host -i /path/to/key
 
 # Windows
 inspec exec github.com/dev-sec/windows-baseline -t winrm://user:host --password secret
-{% endhighlight %}
+```
 
 Since those baselines can be executed independently, you could verify the state of your servers immediately.
 

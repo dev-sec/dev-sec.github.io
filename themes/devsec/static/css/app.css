@@ -10464,10 +10464,70 @@ th.hide-for-touch {
 }
 
 #blog-header {
-  background-color: #9694e2;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 350px;
+}
+
+#blog-header h2 {
+  text-align: center;
+}
+
+.blog {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog article h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.blog article h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.blog.overview article {
+  width: 100%;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  margin-top: 0px;
+  padding-bottom: 20px;
+  border-color: lightgray;
+  border-bottom-style: solid;
+}
+
+.blog.overview article .tag {
+  background: #eee;
+  border-radius: 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  float: left;
+}
+
+.blog.overview article a {
+  color: black;
+}
+
+.blog.content pre {
+  background: whitesmoke;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+}
+
+.blog.content pre code {
+  padding: 0;
+}
+
+
+.blog article .time {
+  font-weight: 600;
 }
 
 .baseline-links {

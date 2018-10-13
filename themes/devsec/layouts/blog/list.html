@@ -1,33 +1,22 @@
 {{ define "main" }}
 <section id="blog-header">
-  <div class="" style="
-    height: 100%;
-    width: 100%;
-    position: relative;
-">
-        <div class="" style="
-    left: 50%;
-    top: 34%;
-    background-repeat: no-repeat;
-    position: absolute;
-    border-radius: 50%;
-    transition-duration: .25s;
-    z-index: 1;
-">
-          <h1>Blog</h1>
-        </div>
-      </div>
+  <div class="row">
+    <div class="large-12 medium-12 small-12 small-center columns">
+      <h2>News</h2>
+    </div>
+  </div>
 </section>
 
   <!-- merge internal and external content -->
   {{ $list := .Data.Pages  }}
-  <section class="blog">
+  <section class="blog overview">
     {{ range $list }}
     <div class="row">
       <article class="large-12 medium-12 small-12 small-center columns">
         {{if eq .Params.External true}}
         <a href="{{ .Params.External_url }}" class="external">
           <h2>{{ .Title }}</h2>
+          <span class="time">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</span><div class="tag">external</div>
         </a>
         {{else}}
         <a href="{{ .RelPermalink }}">
