@@ -1,7 +1,10 @@
 ---
 title: "Ansible mysql-hardening role released"
 date: 2016-07-17 18:00:00
-author: 'Sebastian Gumprich'
+authors:
+- name: Sebastian Gumprich
+  image: https://avatars0.githubusercontent.com/u/3198961?v=4
+  link: https://www.zufallsheld.de
 ---
 
 Even though the Github repository already got 17 stars at the time of writing, we never officially released the [ansible-mysql-hardening](https://github.com/dev-sec/ansible-mysql-hardening) role.

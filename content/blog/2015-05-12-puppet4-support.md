@@ -1,7 +1,10 @@
 ---
 title: "Hardening Framework supports Puppet 4"
 date:   2015-05-12 18:00:00
-author: 'Christoph Hartmann'
+authors:
+- name: Christoph Hartmann
+  image: https://avatars3.githubusercontent.com/u/1178413?v=4
+  link: https://lollyrock.com
 ---
 
 We are happy to announce Puppet 4 support for the [Hardening Framework](http://hardening.io/). All puppet modules have been updated and are continously tested for Puppet 4 support, now:

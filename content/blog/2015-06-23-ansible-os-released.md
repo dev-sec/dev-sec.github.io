@@ -1,7 +1,10 @@
 ---
 title: "Ansible os-hardening role released"
 date:   2015-07-13 18:00:00
-author: 'Sebastian Gumprich'
+authors:
+- name: Sebastian Gumprich
+  image: https://avatars0.githubusercontent.com/u/3198961?v=4
+  link: https://www.zufallsheld.de/
 ---
 
 After two months of development the [Hardening Framework](http://dev-sec.io/) team is glad to announce that we created our second Ansible role: [ansible-os-hardening](https://github.com/dev-sec/ansible-os-hardening/). This role hardens a Linux operating system according to best practices and implements the same guidelines as our successful [Chef](https://github.com/dev-sec/chef-os-hardening) and [Puppet](https://github.com/dev-sec/puppet-os-hardening) implementations.

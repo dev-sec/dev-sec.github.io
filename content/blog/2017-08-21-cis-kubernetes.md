@@ -2,6 +2,10 @@
 title: "CIS Kubernetes and CIS Independent Linux Benchmark"
 date:   2017-05-15 09:00:00
 aliases: [/blog/article/cis-kubernetes/]
+authors:
+- name: Christoph Hartmann
+  image: https://avatars3.githubusercontent.com/u/1178413?v=4
+  link: https://lollyrock.com
 ---
 
 The mission of DevSec Hardening Framework is to provide users with the best content to stay secure across their infrastructure fleet. We started by providing hardening solutions written in Chef cookbooks, Puppet modules as well as Ansible modules. Beginning of this year, we started to transform our testing suite into [standalone InSpec baselines](http://dev-sec.io/blog/article/inspec-benchmarks). Since then we added more and more baselines like [Nginx](https://github.com/dev-sec/nginx-baseline), [TLS/SSL](https://github.com/dev-sec/ssl-baseline), [OpenStack](https://github.com/dev-sec/openstack-baseline), [MySQL](https://github.com/dev-sec/mysql-baseline) or [PostgreSQL](https://github.com/dev-sec/postgres-baseline).
@@ -15,8 +19,7 @@ We like to thank Kristian and Schuberg Philis for their amazing work and their e
 
 ## Kubernetes
 
-{: .center}
-![Kubernetes]({{ site.baseurl }}/assets/images/kube.png)
+![Kubernetes](/images/kube.png)
 
 Kubernetes is one of the leading container orchestration platforms from Google and part of [CNCF](https://www.cncf.io/). While our existing [CIS Docker Benchmark](https://github.com/dev-sec/cis-docker-benchmark) verifies a single-node deployment, the Kubernetes profile is going to verify the container orchestration platform. Now, DevSec users have the ability to secure their containers in production. The benchmarks use [InSpec](https://www.inspec.io/) which allows you to adapt and extend the profile to your needs via [profile inheritance](https://www.inspec.io/docs/reference/profiles/). A sample test in InSpec looks like:
 

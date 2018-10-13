@@ -2,7 +2,10 @@
 layout: post
 title: "Ansible joins Hardening Framework"
 date:   2015-04-30 18:00:00
-author: 'Christoph Hartmann'
+authors:
+- name: Christoph Hartmann
+  image: https://avatars3.githubusercontent.com/u/1178413?v=4
+  link: https://lollyrock.com
 ---
 
 The [Hardening Framework](http://dev-sec.io/) provides best-practice security for DevOps by implementing server hardening with DevOps tools. We are happy to announce that with help of [Sebastian Gumprich](https://www.zufallsheld.de) we were able to implement our first [Ansible](http://www.ansible.com) role: [ansible-ssh-hardening](https://github.com/dev-sec/ansible-ssh-hardening/). Over the last weeks, we worked hard to release version 1.0:

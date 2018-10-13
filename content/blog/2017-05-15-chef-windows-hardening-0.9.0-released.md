@@ -1,7 +1,10 @@
 ---
 title: "chef-windows-hardening 0.9.0 is released"
 date:   2017-05-15 09:00:00
-author: 'Yvo van Doorn'
+authors:
+- name: Yvo van Doorn
+  image: https://avatars0.githubusercontent.com/u/2694655?v=4
+  link: https://github.com/yvovandoorn
 ---
 
 DevSec Hardening Framework project is releasing a new minor release [chef-windows-hardening](https://github.com/dev-sec/chef-windows-hardening/releases/tag/v0.9.0) today.

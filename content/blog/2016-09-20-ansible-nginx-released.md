@@ -1,7 +1,10 @@
 ---
 title: "Ansible nginx-hardening role released"
 date: 2016-09-20 19:00:00
-author: 'Sebastian Gumprich'
+authors:
+- name: Sebastian Gumprich
+  image: https://avatars0.githubusercontent.com/u/3198961?v=4
+  link: https://www.zufallsheld.de
 ---
 
 The next part of server hardening with Ansible is released today: The [ansible-nginx-hardening](https://github.com/dev-sec/ansible-nginx-hardening) role.

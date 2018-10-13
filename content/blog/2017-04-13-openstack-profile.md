@@ -1,7 +1,10 @@
 ---
 title: "Chef Software is contributing OpenStack Baseline"
 date:   2017-04-13 09:00:00
-author: 'Christoph Hartmann'
+authors:
+- name: Christoph Hartmann
+  image: https://avatars3.githubusercontent.com/u/1178413?v=4
+  link: https://lollyrock.com
 ---
 
 I am happy to announce that the [Chef Partners Team](https://www.chef.io/) contributed a new [OpenStack Baseline]( https://github.com/dev-sec/openstack-baseline) to our DevSec project. This Baseline is implementing the [OpenStack Security Guide](https://docs.openstack.org/security-guide/) in [InSpec](http://inspec.io/). [JJ Asghar](https://github.com/jjasghar) will continue to be a core maintainer.

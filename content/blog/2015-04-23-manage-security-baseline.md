@@ -1,7 +1,10 @@
 ---
 title: "Managing your Security Baseline"
 date:   2015-04-23 21:00:00
-author: 'Christoph Hartmann'
+authors:
+- name: Christoph Hartmann
+  image: https://avatars3.githubusercontent.com/u/1178413?v=4
+  link: https://lollyrock.com
 ---
 
 Despite many advancements in the field of security, two fundamental issues have stayed at the core of many attacks over the last 20 years. They preveil despite firewalls, SIEMs, or scanners. They are: Misconfiguration and unpatched software with known vulnerabilities.

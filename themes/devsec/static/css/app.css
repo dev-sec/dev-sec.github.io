@@ -10478,7 +10478,6 @@ th.hide-for-touch {
 .blog article h1 {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 .blog article h2 {
@@ -10515,7 +10514,39 @@ th.hide-for-touch {
   color: black;
 }
 
-.blog.content pre {
+.blog.content .header {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.blog.content .header h1 {
+  margin: 0;
+}
+
+.blog.content .header .infobar {
+  height: 28px
+}
+
+.blog.content .header .username {
+  line-height: 28px;
+  float: left;
+  margin-right: 20px;
+}
+
+.blog.content .header .usericon-small {
+  width: 28px;
+  height: 28px;
+  background-size: 28px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  float: left;
+}
+
+ pre {
   background: whitesmoke;
   padding: 10px 10px 10px 10px;
   margin-bottom: 10px;

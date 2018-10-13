@@ -1,7 +1,10 @@
 ---
 title: "We are happy to announce our new DevSec baselines"
 date:   2017-01-17 09:00:00
-author: 'Christoph Hartmann'
+authors:
+- name: Christoph Hartmann
+  image: https://avatars3.githubusercontent.com/u/1178413?v=4
+  link: https://lollyrock.com
 ---
 
 Happy New Year DevSec users,
