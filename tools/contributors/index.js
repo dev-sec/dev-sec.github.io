@@ -62,7 +62,7 @@ rp('https://api.github.com/users/dev-sec/repos?page=1&per_page=100', {
     entries = Array.from(content.values())
 
     // we filter the content, since we do not need all the data
-    const allowed = ["login", "avatar_url", "url", "contributions"];
+    const allowed = ["login", "avatar_url", "url", "contributions", "html_url"];
     filtered = entries.map(function(element) {
       return Object.keys(element)
       .filter(key => allowed.includes(key))
