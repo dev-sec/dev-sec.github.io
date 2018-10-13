@@ -3,8 +3,16 @@
 {{ end }}
 
 {{ define "main" }}
-
-{{ .Content }}
+<section class="contributing content">
+    <div class="row">
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div class="row">
+        <div class="large-12 medium-12 small-12 small-center columns">
+        {{ .Content }}
+        </div>
+    </div>
+</section>
 
 <div class="explain" id="team">
   <section class="" id="contributors">
@@ -34,7 +42,7 @@
           </div>
           <div class="large-8 medium-8 small-8 columns description">
               <h3>Patrick Münch</h3>
-              <p>Patrick knows Security inside out. He is incredibly skilled at both protecting and hacking every systems he gets his hands on. He is responsible for the security of many mission-critical IT systems at Deutsche Telekom and knows countless critical vulnerabilities. He co-founded this project and validates all our tests and ensures our framework meets corporate security standards.</p>
+              <p>Patrick knows Security inside out. He is incredibly skilled at both protecting and hacking every systems he gets his hands on. His passion is the Penetration Testing of hard and software. He leads his own Penetration Testing Team at SVA GmbH to increase the security level of companies. He co-founded this project and validates all our tests and ensures our framework meets corporate security standards.</p>
           </div>
       </div>
       <div class="row team-box">
@@ -45,7 +53,7 @@
           </div>
           <div class="large-8 medium-8 small-8 columns description">
               <h3>Christoph Hartmann</h3>
-              <p>Christoph is one of the most knowledgeable full-stack developers out there. He speaks countless languages, knows every core service, and mastered automation (even on Windows). He is also the Technical Project Manager responsible for the Hardening Framework at Telekom Laboratories and co-founder of this project. He built our complete CI Infrastructure based on OpenStack and Jenkins.</p>
+              <p>Christoph is one of the most knowledgeable full-stack engineers out there. He speaks countless languages, knows every core service, and mastered automation (even on Windows). He co-created InSpec, co-founded VulcanoSec and is leading the compliance engineering at Chef Software. Before, he was Technical Project Manager responsible for the DevSec Hardening Framework at Deutsche Telekom Laboratories.</p>
           </div>
       </div>
       <div class="row team-box">

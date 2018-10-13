@@ -3,19 +3,19 @@ title: "DevSec Project"
 layout: project
 ---
 
-Server hardening is a well-known topic with many guides out in the wild. Why this project?
+## Challenge
 
-At Deutsche Telekom we need to manage thousands of servers for customers and ourselves. All servers need to be configured properly and maintained, which is difficult and time-consuming to get right.
+Running secure infrastructure is a difficult task. Although server hardening is a well-known topic with many guides out in the wild, it is still very cumbersome to apply and verify secure configuration. If you manage many server, they need to be configured properly and maintained, which is difficult and time-consuming to get right. To answer these needs for security, compliance, and maintainability, we decided to launch this project as a common ground for requirements and their fulfillment.
 
-To answer these needs for security, compliance, and maintainability, we decided to launch this project as a common ground for requirements and their fulfillment.
+The project founders where tasked with the challenge to automate different security requirements of Deutsche Telekom for their infrastructure. Deutsche Telekom, T-Labs and Telekom Security funded the initial research and allowed the team to open source the automation to help foster a more secure world.
 
 ## Vision / Goal
 
-Our goal is simple: Create a common layer for hardening operating systems and services easily and without interference. Even if you aren't knee-deep in configuration manuals for services or the latest security recommendations, you will be able to implement and use this framework with ease.
+Our goal is simple: Create a common layer for operating system and services hardening. Even if you aren't knee-deep in configuration manuals for services or the latest security recommendations, you will be able to implement and use this framework with ease.
 
 ## Scope
 
-Since we use Chef and Puppet to automate our deployments, we decided to put them to work for system hardening. The hardening project is currently limited to Chef and Puppet, though extensions to other automation frameworks are welcome!
+Since we use Ansible, Chef and Puppet to automate our deployments, we decided to put them to work for system hardening. The hardening project is currently limited to Ansible, Chef and Puppet, though extensions to other automation frameworks are welcome!
 
 **What is part of hardening?**
 
@@ -39,14 +39,11 @@ Let's take a quick look at the full lifecycle for servers and services and see w
 
 ### Installation of OS
 
-We recommend to install operating systems from trusted sources. This could be an operating system vendor or a trusted third party. In virtualized environments like OpenStack, the secure generation of base images is part of our daily activity. We have automated the building of RedHat, CentOS and Oracle Linux based instances.
+We recommend to install operating systems from trusted sources. This could be an operating system vendor or a trusted third party e.g. cloud provider like AWS, Azure or Google Cloud.
 
-* [packer-rhel](https://github.com/TelekomLabs/packer-rhel)
-
-### Hardening
+### Server Hardening
 
 We provide multiple cookbooks for chef and modules for puppet to cover this area. We use best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) and the [NSA hardening guide](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf). For more details look into the respective `test-<project>` repository. Checks are implemented following these guides.
-
 
 ### Continuous management
 

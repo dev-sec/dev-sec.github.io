@@ -1,39 +1,60 @@
 ---
 title: "Contributing"
 date:   2015-04-15 21:00:00
-layout: contributing
+layout: text
 ---
 
-The general steps are:
+We are glad you want to contribute to InSpec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with [License Headers](/docs/license-headers).
 
-- Create a ticket in Github Issues.
-- Fork the repository on GitHub.
-- Clone the repository on your local system.
-- Create a branch and make your changes.
-- Push the branch, create a pull request and [reference the issue in your pull request](https://github.com/blog/1506-closing-issues-via-pull-requests).
 
-Read on for detailed steps
+## Submitting Issues and PRs
 
-## License
+We utilize **Github Issues** for issue tracking and contributions. You can contribute in two ways:
 
-This project is Apache 2 licensed. Every contribution must be under the Apache 2 License too. For new files we have added a section with [License Headers](/docs/license-headers).
+1. Reporting an issue or making a feature request
+2. Adding features or fixing bugs yourself and contributing your code
 
-### Sign your work
+## Contribution Process
 
-In addition to the license we only accept contributions signed as your work. The sign-off is a simple line at the end of the explanation for the patch, which certifies that you wrote it or otherwise have the right to pass it on as an open-source patch. The rules are pretty simple: if you can certify the below (from [developercertificate.org](developercertificate.org)):
+We have a 3 step process for contributions:
+
+1. Create an issue in Github Issues to describe the topic
+2. Fork the repository on Github, clone it on your local system and create a new branch
+1. Commit changes to a git branch, making sure to sign-off those changes for the [Developer Certificate of Origin](#developer-certification-of-origin-dco).
+2. Create a Github Pull Request for your change, following the instructions in the pull request template and [reference the issue in your pull request](https://github.com/blog/1506-closing-issues-via-pull-requests)
+3. Perform a [Code Review](#code-review-process) with the project maintainers on the pull request.
+
+## Pull Request Requirements
+
+Our projects are built to last. We strive to ensure high quality throughout the experience. In order to ensure this, we require that all pull requests to DevSec projects meet these specifications:
+
+1. **Tests:** To ensure high quality code and protect against future regressions
+2. **Green CI Tests:** We use [Travis CI](https://travis-ci.org/) and/or [AppVeyor](https://www.appveyor.com/) CI systems to test all pull requests. We require these test runs to succeed on every pull request before being merged.
+3. **Up-to-date Documentation:**  Every code change should be reflected in an update for our documentation. We expect PRs to update the documentation with the code change.
+
+## Code Review Process
+
+Code review takes place in Github pull requests. See [this article](https://help.github.com/articles/about-pull-requests/) if you're not familiar with Github Pull Requests.
+
+Once you open a pull request, project maintainers will review your code and respond to your pull request with any feedback they might have. The process at this point is as follows:
+
+1. At least one thumbs-up (:+1:) is required from project maintainers.
+2. When ready, your pull request will be merged into `master`, we may require you to rebase your PR to the latest `master`.
+3. Once the PR is merged, you will be included in `CHANGELOG.md`.
+
+## Developer Certification of Origin (DCO)
+
+Licensing is very important to open source projects. It helps ensure the software continues to be available under the terms that the author desired.
+
+DevSec uses the Apache 2.0 license to strike a balance between open contribution and allowing you to use the software however you would like to.
+
+The license tells you what rights you have that are provided by the copyright holder. It is important that the contributor fully understands what rights they are licensing and agrees to them. Sometimes the copyright holder isn't the contributor, such as when the contributor is doing work on behalf of a company.
+
+To make a good faith effort to ensure these criteria are met, DevSec requires the Developer Certificate of Origin (DCO) process to be followed.
+
+The DCO is an attestation attached to every contribution made by every developer. In the commit message of the contribution, the developer simply adds a Signed-off-by statement and thereby agrees to the DCO, which you can find below or at <http://developercertificate.org/>.
 
 ```
-Developer Certificate of Origin
-Version 1.1
-
-Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
-660 York Street, Suite 102,
-San Francisco, CA 94110 USA
-
-Everyone is permitted to copy and distribute verbatim copies of this
-license document, but changing it is not allowed.
-
-
 Developer's Certificate of Origin 1.1
 
 By making a contribution to this project, I certify that:
@@ -42,41 +63,39 @@ By making a contribution to this project, I certify that:
     have the right to submit it under the open source license
     indicated in the file; or
 
-(b) The contribution is based upon previous work that, to the best
-    of my knowledge, is covered under an appropriate open source
-    license and I have the right under that license to submit that
-    work with modifications, whether created in whole or in part
-    by me, under the same open source license (unless I am
-    permitted to submit under a different license), as indicated
-    in the file; or
+(b) The contribution is based upon previous work that, to the
+    best of my knowledge, is covered under an appropriate open
+    source license and I have the right under that license to
+    submit that work with modifications, whether created in whole
+    or in part by me, under the same open source license (unless
+    I am permitted to submit under a different license), as
+    Indicated in the file; or
 
 (c) The contribution was provided directly to me by some other
     person who certified (a), (b) or (c) and I have not modified
     it.
 
 (d) I understand and agree that this project and the contribution
-    are public and that a record of the contribution (including all
-    personal information I submit with it, including my sign-off) is
-    maintained indefinitely and may be redistributed consistent with
-    this project or the open source license(s) involved.
+    are public and that a record of the contribution (including
+    all personal information I submit with it, including my
+    sign-off) is maintained indefinitely and may be redistributed
+    consistent with this project or the open source license(s)
+    involved.
 ```
 
-then you just add a line to every git commit message:
+## DCO Sign-Off Methods
 
-    HardeningFramework-DCO-1.1-Signed-off-by: Joe Smith <joe.smith@email.com> (github: github_handle)
-
-using your real name (sorry, no pseudonyms or anonymous contributions.)
-
-One way to automate this, is customise your get ``commit.template`` by adding
-a ``prepare-commit-msg`` hook to your hardening project checkout:
+The DCO requires a sign-off message in the following format appear on each commit in the pull request:
 
 ```
-curl -o .git/hooks/prepare-commit-msg https://raw.githubusercontent.com/hardening-io/docs/master/docs/contrib/prepare-commit-msg.hook && chmod +x .git/hooks/prepare-commit-msg
+Signed-off-by: Christoph Hartmann <chris@dev-sec.io>
 ```
-* Note: the above script expects to find your GitHub user name in ``git config --get github.user``, set it with `git config --global github.user <username>`
 
+You have to use your real name (sorry, no pseudonyms or anonymous contributions.)
 
-## Contributing to the Hardening Framework Projects
+The DCO text can either be manually added to your commit body, or you can add either **-s** or **--signoff** to your usual git commit commands. If you forget to add the sign-off you can also amend a previous commit with the sign-off by running **git commit --amend -s**. If you've pushed your changes to Github already you'll need to force push your branch after this with **git push -f**.
+
+## Sample Contributing to the DevSec Hardening Framework Projects
 
 Below, replace "REPO" with the project that should be changed. Replace "USER" with your GitHub username.
 
@@ -141,24 +160,6 @@ In order to have your contribution accepted as quickly as possible, we have some
 - Please do not mix style changes that are not related to the specific ticket. Create a new, separate ticket for style updates. For example, if a REPO has  Foodcritic findings, create a separate ticket to handle those. See the section on linting.
 - Follow the current style of the code where appropriate.
 - Run the provided lint, spec and integration tests
-
-## Git Hook
-
-`prepare-commit-msg.hook`
-
-```bash
-#!/bin/sh
-#       Auto sign all commits to allow them to be used by the Hardening Framework project.
-#       see https://github.com/hardening-io/docs/blob/master/docs/how-to-contribute.md#sign-your-work
-#
-GH_USER=$(git config --get github.user)
-SOB=$(git var GIT_AUTHOR_IDENT | sed -n "s/^\(.*>\).*$/DevSecHardeningFramework-DCO-1.1-Signed-off-by: \1 \(github: $GH_USER\)/p")
-grep -qs "^$SOB" "$1" || {
-	echo
-	echo "$SOB"
-} >> "$1"
-```
-
 
 ## File Headers
 
