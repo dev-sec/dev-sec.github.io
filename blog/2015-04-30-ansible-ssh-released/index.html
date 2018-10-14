@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  Ansible joins Hardening Framework – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Thursday, Apr 30, 2015
+          </div>
+          <h1>Ansible joins Hardening Framework</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://lollyrock.com">
+              <div class="usericon-small" style="background-image: url(https://avatars3.githubusercontent.com/u/1178413?v=4);"></div>
+              <div class="username">Christoph Hartmann</div>
+            </a>
+            
+        </div>
+      </div>
+      <p>The <a href="http://dev-sec.io/">Hardening Framework</a> provides best-practice security for DevOps by implementing server hardening with DevOps tools. We are happy to announce that with help of <a href="https://www.zufallsheld.de">Sebastian Gumprich</a> we were able to implement our first <a href="http://www.ansible.com">Ansible</a> role: <a href="https://github.com/dev-sec/ansible-ssh-hardening/">ansible-ssh-hardening</a>. Over the last weeks, we worked hard to release version 1.0:</p>
+
+<ul>
+<li>Implement ssh hardening to meet our <a href="https://github.com/dev-sec/tests-ssh-hardening">tests</a></li>
+<li>Setup test infrastructure with <a href="https://github.com/neillturner/kitchen-ansible">kitchen-ansible</a></li>
+<li>Implement travis tests<a href="https://github.com/dev-sec/ansible-ssh-hardening/issues/7">#7</a></li>
+<li>Add handlers to restart sshd only when necessary <a href="https://github.com/dev-sec/ansible-ssh-hardening/issues/6">#6</a></li>
+<li>Add support for Oracle Linux <a href="https://github.com/dev-sec/ansible-ssh-hardening/issues/2">#2</a></li>
+</ul>
+
+<p>The module is available via <a href="https://galaxy.ansible.com/dev-sec/ssh-hardening/">Ansible Galaxy</a>, now.</p>
+
+<p>As a next step, we plan to add support more modules. <code>ansible-os-hardening</code> is already in the works. Stay tuned and follow us on <a href="https://twitter.com/hardening_io">Twitter</a>.</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

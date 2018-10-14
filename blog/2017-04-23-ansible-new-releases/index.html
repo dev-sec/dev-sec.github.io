@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  New Ansible os-, ssh- and mysql-hardening releases – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Sunday, Apr 23, 2017
+          </div>
+          <h1>New Ansible os-, ssh- and mysql-hardening releases</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://www.zufallsheld.de">
+              <div class="usericon-small" style="background-image: url(https://avatars0.githubusercontent.com/u/3198961?v=4);"></div>
+              <div class="username">Sebastian Gumprich</div>
+            </a>
+            
+        </div>
+      </div>
+      
+
+<p>Hey friends,</p>
+
+<p>We released new versions of <a href="https://github.com/dev-sec/ansible-os-hardening">ansible-os-hardening</a>, <a href="https://github.com/dev-sec/ansible-ssh-hardening">ansible-ssh-hardening</a> and <a href="https://github.com/dev-sec/ansible-mysql-hardening">ansible-mysql-hardening</a>!</p>
+
+<p>These releases are important to us in multiple ways:</p>
+
+<p>As always, they provide new features and configuration possibilities for you to use! More on that below.</p>
+
+<h1 id="complete-tests-in-travisci">Complete tests in TravisCI</h1>
+
+<p>Furthermore we now leverage the full possibilities of <a href="https://travis-ci.org/dev-sec/">TravisCI</a> for the <a href="https://travis-ci.org/dev-sec/ansible-ssh-hardening">os-hardening</a>, <a href="https://travis-ci.org/dev-sec/ansible-ssh-hardening">ssh-hardening</a> and <a href="https://travis-ci.org/dev-sec/ansible-mysql-hardening">mysql-hardening</a>  roles. This means that all supported operating systems are now tested and verified online. For that we use customized <a href="https://github.com/rndmh3ro/docker-ansible">docker-images</a> that have Ansible pre-installed, as well as our <a href="https://github.com/dev-sec/?utf8=%E2%9C%93&amp;q=baseline&amp;type=&amp;language=">InSpec-tests</a> to verify the roles!</p>
+
+<p>However some operating systems are still missing for mysql-hardening because we&rsquo;re facing some issues that hopefully will be resolved soon!</p>
+
+<p>We&rsquo;re always looking for help! Join us on <a href="https://github.com/dev-sec/">GitHub</a> or <a href="https://gitter.im/dev-sec/general">Gitter chatroom</a>.</p>
+
+<h1 id="breaking-changes">Breaking Changes</h1>
+
+<p>One more important thing to note are the <strong>breaking changes</strong>.</p>
+
+<h2 id="all-roles">All roles</h2>
+
+<p>We removed support for Ansible 1.9 in all three roles, so we can leverage the new modules and functions of Ansible 2.0!</p>
+
+<h2 id="ssh-hardening">ssh-hardening</h2>
+
+<ul>
+<li>Change the ssh_client_ports list variable into a simple non-list variable named ssh_client_port.  <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/84">#84</a> (<a href="https://github.com/fullyint">fullyint</a>)</li>
+</ul>
+
+<p>Before:</p>
+
+<pre><code class="language-jinja">{% for port in ssh_client_ports -%}
+Port {{port}}
+{% endfor %}
+</code></pre>
+
+<p>After:</p>
+
+<pre><code class="language-jinja">Port {{ ssh_client_port }}
+</code></pre>
+
+<ul>
+<li>Fix ssh config to handle custom options per Host <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/83">#83</a> (<a href="https://github.com/fullyint">fullyint</a>)</li>
+</ul>
+
+<p>Before:</p>
+
+<pre><code class="language-jinja">    # one or more hosts, to which ssh-client can connect to.
+# Default is empty, but should be configured for security reasons!
+    ssh_remote_hosts: []           # ssh
+</code></pre>
+
+<p>After:</p>
+
+<pre><code class="language-jinja"># Hosts with custom options.            # ssh
+# Example:
+# ssh_remote_hosts:
+#   - names: ['example.com', 'example2.com']
+#     options: ['Port 2222', 'ForwardAgent yes']
+#   - names: ['example3.com']
+#     options: ['StrictHostKeyChecking no']
+ssh_remote_hosts: []
+</code></pre>
+
+<h2 id="mysql-hardening">mysql-hardening</h2>
+
+<ul>
+<li>Renamed variables in <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/22">#22</a> (<a href="https://github.com/agno01">agno01</a>) and <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/26">#26</a>
+
+<ul>
+<li>renamed <code>mysql_hardening_mysql_conf</code> var to <code>mysql_hardening_mysql_conf_file</code></li>
+<li>introduced <code>mysql_hardening_mysql_conf_dir</code> variable</li>
+<li>introduced <code>mysql_cnf_owner</code> as variable for owner of configuration files</li>
+<li>set default value of <code>mysql_hardening_mysql_conf_dir</code> variable for RedHat, OracleLinux, Debian</li>
+<li>changed default hardcoded full path in <code>mysql_hardening_hardening_conf</code> var to be based on <code>mysql_hardening_mysql_conf_dir</code> var</li>
+</ul></li>
+</ul>
+
+<h1 id="improvements">Improvements</h1>
+
+<p>Of course we were productive in fixing bugs, improving the code and adding more features. All with the help of <a href="https://github.com/dev-sec/ansible-os-hardening/graphs/contributors">our</a> <a href="https://github.com/dev-sec/ansible-ssh-hardening/graphs/contributors">awesome</a> <a href="https://github.com/dev-sec/ansible-mysql-hardening/graphs/contributors">contributors</a>!</p>
+
+<h2 id="os-hardening">os-hardening</h2>
+
+<ul>
+<li>Install initramfs-tools <a href="https://github.com/dev-sec/ansible-os-hardening/pull/114">#114</a> (<a href="https://github.com/rndmh3ro">rndmh3ro</a>)</li>
+<li>Omit empty variables <a href="https://github.com/dev-sec/ansible-os-hardening/pull/106">#106</a> (<a href="https://github.com/rndmh3ro">rndmh3ro</a>)</li>
+</ul>
+
+<p>Full <a href="https://github.com/dev-sec/ansible-os-hardening/releases/tag/4.0.0">Changelog</a></p>
+
+<h2 id="ssh-hardening-1">ssh-hardening</h2>
+
+<ul>
+<li>Use different Hostkeys according to installed ssh version <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/99">#99</a> (<a href="https://github.com/rndmh3ro">rndmh3ro</a>)</li>
+<li>Remove small dh primes <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/97">#97</a> (<a href="https://github.com/rndmh3ro">rndmh3ro</a>)</li>
+<li>Add Ed25519 SSH host key to match ssh-baseline <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/96">#96</a> (<a href="https://github.com/techraf">techraf</a>)</li>
+<li>Add support for FreeBSD OpenSSH server and client <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/95">#95</a> (<a href="https://github.com/jbenden">jbenden</a>)</li>
+<li>Defaults: Remove DSA from SSH host keys to match ssh-baseline profile <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/92">#92</a> (<a href="https://github.com/techraf">techraf</a>)</li>
+<li>Make ChallengeResponseAuthentication configurable <a href="https://github.com/dev-sec/ansible-ssh-hardening/pull/85">#85</a> (<a href="https://github.com/rndmh3ro">rndmh3ro</a>)</li>
+</ul>
+
+<p>Full <a href="https://github.com/dev-sec/ansible-ssh-hardening/releases/tag/4.0.0">Changelog</a></p>
+
+<h2 id="mysql-hardening-1">mysql-hardening</h2>
+
+<ul>
+<li>Add CentOS7 with MariaDB support <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/27">#27</a> (<a href="https://github.com/chrispoupart">chrispoupart</a>)</li>
+<li>Add follow=yes to my.cnf protect task, in case its a symlink. <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/21">#21</a> (<a href="https://github.com/rndmh3ro">rndmh3ro</a>)</li>
+</ul>
+
+<p>Full <a href="https://github.com/dev-sec/ansible-mysql-hardening/releases/tag/2.0.0">Changelog</a></p>
+
+<p>You can follow us on <a href="https://twitter.com/DevSecIO">Twitter</a>.</p>
+
+<p>Thanks and have a nice and secure day!</p>
+
+<p>Sebastian</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  Ansible mysql-hardening role released – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Sunday, Jul 17, 2016
+          </div>
+          <h1>Ansible mysql-hardening role released</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://www.zufallsheld.de">
+              <div class="usericon-small" style="background-image: url(https://avatars0.githubusercontent.com/u/3198961?v=4);"></div>
+              <div class="username">Sebastian Gumprich</div>
+            </a>
+            
+        </div>
+      </div>
+      <p>Even though the Github repository already got 17 stars at the time of writing, we never officially released the <a href="https://github.com/dev-sec/ansible-mysql-hardening">ansible-mysql-hardening</a> role.
+Today we change that and release <a href="https://github.com/dev-sec/ansible-mysql-hardening/releases/tag/1.0.0">1.0.0</a>!</p>
+
+<p>The mysql-hardening role joins the other two already existing Ansible roles, <a href="https://github.com/dev-sec/ansible-ssh-hardening">ssh-hardening</a> and <a href="https://github.com/dev-sec/ansible-os-hardening">os-hardening</a>.</p>
+
+<p>This role hardens a MySQL server according to best practices and implements the same guidelines as our successful <a href="https://github.com/dev-sec/chef-mysql-hardening">Chef</a> and <a href="https://github.com/dev-sec/puppet-mysql-hardening">Puppet</a> implementations.</p>
+
+<p>The main work was done by <a href="https://github.com/fitz123">Anton Lugovoi</a> and <a href="https://www.zufallsheld.de">Sebastian Gumprich</a> who implemented the following changes:</p>
+
+<ul>
+<li>Local testing <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/17">#17</a></li>
+<li>fix rhel daemon <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/16">#16</a></li>
+<li>alt version initial commit <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/15">#15</a></li>
+<li>add test support for ansible 2.0 and 1.9 <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/13">#13</a></li>
+<li>update platforms in meta-file <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/10">#10</a></li>
+<li>Simplify local testing with custom role <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/9">#9</a></li>
+<li>New role layout <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/8">#8</a></li>
+<li>fix mysql restart not happening because of missing os specific variable <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/5">#5</a></li>
+<li>Separate system-vars from editable vars. <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/2">#2</a></li>
+<li>Add documentation for testing, change value in vars <a href="https://github.com/dev-sec/ansible-mysql-hardening/pull/1">#1</a></li>
+</ul>
+
+<p>We&rsquo;re supporting this role on Debian- and Enterprise Linux-based operating systems, but we&rsquo;ll also try our best in helping you run the role on other systems! Just open up an issue or pull request or join our <a href="https://gitter.im/dev-sec/general">Gitter Chatroom</a> to chat directly with us!</p>
+
+<p>You can find the role on <a href="https://github.com/dev-sec/ansible-mysql-hardening/">Github</a> and on <a href="https://galaxy.ansible.com/dev-sec/mysql-hardening/">Ansible Galaxy</a>.</p>
+
+<p>Be sure to follow us on <a href="https://twitter.com/hardening_io">Twitter</a> for the latest updates.</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

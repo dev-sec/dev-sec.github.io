@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  Contributing – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="contributing content">
+  <div class="row">
+      <h1>Contributing</h1>
+  </div>
+  <div class="row">
+    <div class="large-12 medium-12 small-12 small-center columns">
+      
+
+<p>We are glad you want to contribute to InSpec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with <a href="/docs/license-headers">License Headers</a>.</p>
+
+<h2 id="submitting-issues-and-prs">Submitting Issues and PRs</h2>
+
+<p>We utilize <strong>Github Issues</strong> for issue tracking and contributions. You can contribute in two ways:</p>
+
+<ol>
+<li>Reporting an issue or making a feature request</li>
+<li>Adding features or fixing bugs yourself and contributing your code</li>
+</ol>
+
+<h2 id="contribution-process">Contribution Process</h2>
+
+<p>We have a 3 step process for contributions:</p>
+
+<ol>
+<li>Create an issue in Github Issues to describe the topic</li>
+<li>Fork the repository on Github, clone it on your local system and create a new branch</li>
+<li>Commit changes to a git branch, making sure to sign-off those changes for the <a href="#developer-certification-of-origin-dco">Developer Certificate of Origin</a>.</li>
+<li>Create a Github Pull Request for your change, following the instructions in the pull request template and <a href="https://github.com/blog/1506-closing-issues-via-pull-requests">reference the issue in your pull request</a></li>
+<li>Perform a <a href="#code-review-process">Code Review</a> with the project maintainers on the pull request.</li>
+</ol>
+
+<h2 id="pull-request-requirements">Pull Request Requirements</h2>
+
+<p>Our projects are built to last. We strive to ensure high quality throughout the experience. In order to ensure this, we require that all pull requests to DevSec projects meet these specifications:</p>
+
+<ol>
+<li><strong>Tests:</strong> To ensure high quality code and protect against future regressions</li>
+<li><strong>Green CI Tests:</strong> We use <a href="https://travis-ci.org/">Travis CI</a> and/or <a href="https://www.appveyor.com/">AppVeyor</a> CI systems to test all pull requests. We require these test runs to succeed on every pull request before being merged.</li>
+<li><strong>Up-to-date Documentation:</strong>  Every code change should be reflected in an update for our documentation. We expect PRs to update the documentation with the code change.</li>
+</ol>
+
+<h2 id="code-review-process">Code Review Process</h2>
+
+<p>Code review takes place in Github pull requests. See <a href="https://help.github.com/articles/about-pull-requests/">this article</a> if you&rsquo;re not familiar with Github Pull Requests.</p>
+
+<p>Once you open a pull request, project maintainers will review your code and respond to your pull request with any feedback they might have. The process at this point is as follows:</p>
+
+<ol>
+<li>At least one thumbs-up (:+1:) is required from project maintainers.</li>
+<li>When ready, your pull request will be merged into <code>master</code>, we may require you to rebase your PR to the latest <code>master</code>.</li>
+<li>Once the PR is merged, you will be included in <code>CHANGELOG.md</code>.</li>
+</ol>
+
+<h2 id="developer-certification-of-origin-dco">Developer Certification of Origin (DCO)</h2>
+
+<p>Licensing is very important to open source projects. It helps ensure the software continues to be available under the terms that the author desired.</p>
+
+<p>DevSec uses the Apache 2.0 license to strike a balance between open contribution and allowing you to use the software however you would like to.</p>
+
+<p>The license tells you what rights you have that are provided by the copyright holder. It is important that the contributor fully understands what rights they are licensing and agrees to them. Sometimes the copyright holder isn&rsquo;t the contributor, such as when the contributor is doing work on behalf of a company.</p>
+
+<p>To make a good faith effort to ensure these criteria are met, DevSec requires the Developer Certificate of Origin (DCO) process to be followed.</p>
+
+<p>The DCO is an attestation attached to every contribution made by every developer. In the commit message of the contribution, the developer simply adds a Signed-off-by statement and thereby agrees to the DCO, which you can find below or at <a href="http://developercertificate.org/">http://developercertificate.org/</a>.</p>
+
+<pre><code>Developer's Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the
+    best of my knowledge, is covered under an appropriate open
+    source license and I have the right under that license to
+    submit that work with modifications, whether created in whole
+    or in part by me, under the same open source license (unless
+    I am permitted to submit under a different license), as
+    Indicated in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including
+    all personal information I submit with it, including my
+    sign-off) is maintained indefinitely and may be redistributed
+    consistent with this project or the open source license(s)
+    involved.
+</code></pre>
+
+<h2 id="dco-sign-off-methods">DCO Sign-Off Methods</h2>
+
+<p>The DCO requires a sign-off message in the following format appear on each commit in the pull request:</p>
+
+<pre><code>Signed-off-by: Christoph Hartmann &lt;chris@dev-sec.io&gt;
+</code></pre>
+
+<p>You have to use your real name (sorry, no pseudonyms or anonymous contributions.)</p>
+
+<p>The DCO text can either be manually added to your commit body, or you can add either <strong>-s</strong> or <strong>&ndash;signoff</strong> to your usual git commit commands. If you forget to add the sign-off you can also amend a previous commit with the sign-off by running <strong>git commit &ndash;amend -s</strong>. If you&rsquo;ve pushed your changes to Github already you&rsquo;ll need to force push your branch after this with <strong>git push -f</strong>.</p>
+
+<h2 id="sample-contributing-to-the-devsec-hardening-framework-projects">Sample Contributing to the DevSec Hardening Framework Projects</h2>
+
+<p>Below, replace &ldquo;REPO&rdquo; with the project that should be changed. Replace &ldquo;USER&rdquo; with your GitHub username.</p>
+
+<ol>
+<li>Create a issue for the bug, feature or improvement you are contributing.</li>
+</ol>
+
+<p>See <a href="https://guides.github.com/features/issues/">Mastering Issues</a> for details</p>
+
+<ol>
+<li><p>Fork the repository on GitHub.</p>
+
+<p>HardeningFramework/REPO -&gt; USER/REPO</p>
+
+<p>You can replace REPO in your fork with a name for the repository
+that makes it unique, if required.</p></li>
+
+<li><p>Clone the repository locally</p>
+
+<pre><code>git clone git@github.com:USER/REPO.git
+</code></pre></li>
+
+<li><p>Ensure the origin is your repository.</p>
+
+<pre><code>git config remote.origin.url git@github.com:USER/REPO.git
+</code></pre></li>
+
+<li><p>Add Hardening Framework REPOs as a remote named <code>upstream</code> and track it
+instead of your origin.</p>
+
+<pre><code>git remote add upstream git://github.com/hardening-io/REPO.git
+git config branch.master.remote upstream
+</code></pre></li>
+
+<li><p>Make sure your master branch is updated.</p>
+
+<pre><code>git checkout master
+git pull --rebase
+</code></pre></li>
+
+<li><p>Create a new branch for the ticket.</p>
+
+<pre><code>git checkout -b ISSUE-####
+</code></pre></li>
+
+<li><p>Make your changes and push the branch to your origin.</p>
+
+<pre><code>git push origin ISSUE-####
+</code></pre></li>
+
+<li><p><a href="https://github.com/blog/1506-closing-issues-via-pull-requests">Reference the ISSUE</a> in your <a href="https://help.github.com/articles/using-pull-requests">Github Pull Request</a>. We will review the issue and contribution as soon as possible.</p></li>
+</ol>
+
+<h3 id="some-tips">Some Tips</h3>
+
+<p>In order to have your contribution accepted as quickly as possible, we have some requests for you. These make it easier to merge contributions without merge conflicts, and keep the scope on topic for a specific issue.</p>
+
+<ul>
+<li>Please do not update the version in the metadata.rb (chef) or Modulefile/metadata.json (Puppet) files. We handle that as part of the release process.</li>
+<li>Please do not update the CHANGELOG.md. We handle that as part of the release process.</li>
+<li>Please do not mix style changes that are not related to the specific ticket. Create a new, separate ticket for style updates. For example, if a REPO has  Foodcritic findings, create a separate ticket to handle those. See the section on linting.</li>
+<li>Follow the current style of the code where appropriate.</li>
+<li>Run the provided lint, spec and integration tests</li>
+</ul>
+
+<h2 id="file-headers">File Headers</h2>
+
+<h3 id="ruby">Ruby</h3>
+
+<pre><code class="language-ruby"># encoding: utf-8
+#
+# Copyright 2018, DevSec Hardening Framework Team
+#
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+</code></pre>
+
+<h3 id="javascript">JavaScript</h3>
+
+<pre><code class="language-javascript">/* Copyright 2018 DevSec Hardening Framework Team
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+</code></pre>
+
+<h3 id="python">Python</h3>
+
+<pre><code class="language-python"># Copyright 2018 DevSec Hardening Framework Team
+#
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+</code></pre>
+
+<h3 id="html">HTML</h3>
+
+<pre><code class="language-html">&lt;!--
+Copyright 2018 DevSec Hardening Framework Team
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--&gt;
+</code></pre>
+
+<h2 id="linting">Linting</h2>
+
+<p>We run several linting tools in our continuous integration pipeline. If you create a pull request the CI will kick in and run <a href="https://github.com/bbatsov/rubocop">Rubocop</a> for every project as well as <a href="http://www.foodcritic.io">Foodcritic</a> for chef repos or <a href="http://puppet-lint.com">puppet-lint</a> for puppet repos. The tasks are provided as Rake Tasks ready to run an give feedback.</p>
+
+<p>Here the example output of the <a href="https://github.com/hardening-io/chef-os-hardening">chef-os-hardening project</a> (kitchen-tasks stripped):</p>
+
+<pre><code class="language-shell">± bundle exec rake -T
+rake acceptance                                 # Alias for kitchen:all
+rake foodcritic                                 # Run foodcritic lint checks
+rake integration                                # Run all tests except Kitchen (default task)
+rake kitchen:all                                # Run all test instances
+[ ... kitchen-tasks stripped ... ]
+rake lint                                       # Run linters
+rake rubocop                                    # Run Rubocop lint checks
+rake run_all_linters                            # Run all linters: rubocop and foodcritic
+rake spec                                       # Run chefspec tests
+rake test                                       # Run all tests
+</code></pre>
+
+<p>The CI is configured to run the common task <code>rake run_all_linters</code> in all the projects. Example of a successful run:</p>
+
+<pre><code class="language-shell">± bundle exec rake run_all_linters
+Running RuboCop...
+Inspecting 20 files
+....................
+
+20 files inspected, no offences detected
+Running Foodcritic tests...
+done.
+
+± echo $?
+0
+</code></pre>
+
+<p>The CI evaluates the return code of the task, which is <code>0</code> if no offences are found.</p>
+
+<p>The task will fail fast. Meaning we run <a href="https://github.com/bbatsov/rubocop">Rubocop</a> first and the specific linter (if any) next. A failed run of rubocop looks like the following output:</p>
+
+<pre><code>± bundle exec rake run_all_linters
+Running RuboCop...
+Inspecting 20 files
+....C...............
+
+Offences:
+
+recipes/default.rb:22:1: C: Extra blank line detected.
+
+20 files inspected, 1 offence detected
+RuboCop failed!
+
+± echo $?
+1
+</code></pre>
+
+<p>The exit code is <code>1</code> indicating that one of the linters involved found an offence. Following an example in a chef cookbook were rubocop is successful but foodcritic found an offence:</p>
+
+<pre><code class="language-shell">± bundle exec rake run_all_linters
+Running RuboCop...
+Inspecting 20 files
+....................
+
+20 files inspected, no offences detected
+Running Foodcritic tests...
+done.
+FC019: Access node attributes in a consistent manner: /.../recipes/default.rb:29
+rake aborted!
+FC019: Access node attributes in a consistent manner: /.../recipes/default.rb:29
+/.../.rvm/gems/ruby-2.1.1/gems/foodcritic-3.0.3/lib/foodcritic/rake_task.rb:33:in `block in define'
+/.../.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+/.../.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+Tasks: TOP =&gt; run_all_linters =&gt; foodcritic
+(See full trace by running task with --trace)
+
+± echo $?
+1
+</code></pre>
+
+<h3 id="ruby-rubocop">Ruby - Rubocop</h3>
+
+<p><a href="https://github.com/bbatsov/rubocop">Rubocop</a> catches a lot of basic syntax infractions and provides ruby best practice advise like using double quotes for strings that do not interpolate Ruby variables, or using simple if/else statements when a one-line ternary operator would be sufficient. This helps enforcing a common style guide and avoiding time consuming best practice discussions in pull requests. Have a look at <a href="https://github.com/bbatsov/ruby-style-guide">A community-driven Ruby coding style guide</a> for further details.</p>
+
+<p>Every project has a rake task to run rubocop as well as a task were all linters for the project are run, including rubocop:</p>
+
+<pre><code>± bundle exec rake -T|grep rubocop
+rake rubocop                                    # Run Rubocop lint checks
+rake run_all_linters                            # Run all linters: rubocop and foodcritic
+</code></pre>
+
+<p>Rubocop honors the <code>.rubocop.yml</code> file of the project.</p>
+
+<p>Example successful run of rubocop:</p>
+
+<pre><code class="language-shell">± bundle exec rake rubocop
+Running RuboCop...
+Inspecting 6 files
+......
+
+6 files inspected, no offences detected
+
+± echo $?
+0
+</code></pre>
+
+<h3 id="chef-foodcritic">Chef - Foodcritic</h3>
+
+<p><a href="http://www.foodcritic.io">Foodcritic</a> is a special linter for chef cookbooks. The rake task is configured to fail on <code>any</code> violation. We, as a project, decided to use the single quoted string node attribute notation to honor <a href="http://www.foodcritic.io/#FC019">FC019</a>.</p>
+
+<p>There are some edge cases were, upon discussion a violation is tolerated. This can be done with a special markup in the code itself. Following an example (taken from <a href="https://github.com/hardening-io/chef-ssh-hardening/blob/master/recipes/server.rb#L41">chef-ssh-hardening server.rb</a>)</p>
+
+<pre><code class="language-ruby">  search('users', &quot;#{field}:*&quot;).map do |v| # ~FC003 ignore footcritic violation
+    Chef::Log.info &quot;ssh_server: installing ssh-keys for root access of user #{v['id']}&quot;
+    v[field]
+  end.flatten
+</code></pre>
+
+<p>Here we acknowledge <a href="http://www.foodcritic.io/#FC003">FC003</a> as this cookbook will always need search in order to work and we use solo-search in testing.</p>
+
+<p>Every chef project has a rake task to run foodcritic as well as a task were all linters for the project are run, including rubocop:</p>
+
+<pre><code>± bundle exec rake -T |grep foodcritic
+rake foodcritic                        # Run foodcritic lint checks
+rake run_all_linters                   # Run all linters: rubocop and foodcritic
+</code></pre>
+
+<p>Example successful run of foodcritic</p>
+
+<pre><code>± bundle exec rake foodcritic
+Running Foodcritic tests...
+done.
+
+± echo $?
+0
+</code></pre>
+
+<h3 id="puppet-puppet-lint">Puppet - Puppet-Lint</h3>
+
+<p><a href="http://puppet-lint.com">Puppet-Lint</a> is a special linter for puppet modules. The rake task is configured to fail on <code>any</code> violation.</p>
+
+<pre><code>± bundle exec rake -T |grep puppet-lint
+rake lint             # Run puppet-lint / Check puppet manifests with puppet-lint
+rake run_all_linters  # Run all linters: rubocop and puppet-lint
+</code></pre>
+
+<p>We disabled some checks from puppet-lint</p>
+
+<pre><code>± grep Lint Rakefile
+PuppetLint.configuration.send('disable_autoloader_layout')
+PuppetLint.configuration.send('disable_80chars')
+PuppetLint.configuration.send('disable_inherits_across_namespaces')
+PuppetLint.configuration.fail_on_warnings = true
+PuppetLint.configuration.ignore_paths = ['vendor/**/*.pp']
+</code></pre>
+
+<p>If everything is well the exit code is 0, and no further output is displayed:</p>
+
+<pre><code>± bundle exec rake lint
+± echo $?
+0
+</code></pre>
+
+<p>If there is an error or a warning you get some output and an exit code &lt;&gt; 0</p>
+
+<pre><code>± bundle exec rake lint
+manifests/init.pp - WARNING: double quoted string containing no variables on line 10
+rake aborted!
+
+/.../.rvm/gems/ruby-2.1.1/gems/puppet-lint-0.3.2/lib/puppet-lint/tasks/puppet-lint.rb:25:in `block (2 levels) in initialize'
+/.../.rvm/gems/ruby-2.1.1/gems/puppet-lint-0.3.2/lib/puppet-lint/tasks/puppet-lint.rb:13:in `block in initialize'
+/.../.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+/.../.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+Tasks: TOP =&gt; lint
+(See full trace by running task with --trace)
+
+± echo $?
+1
+</code></pre>
+
+    </div>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

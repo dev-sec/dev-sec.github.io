@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  A New Era at the Hardening Framework Project – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Wednesday, Apr 15, 2015
+          </div>
+          <h1>A New Era at the Hardening Framework Project</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://lollyrock.com">
+              <div class="usericon-small" style="background-image: url(https://avatars3.githubusercontent.com/u/1178413?v=4);"></div>
+              <div class="username">Christoph Hartmann</div>
+            </a>
+            
+        </div>
+      </div>
+      
+
+<h1 id="next">Next</h1>
+
+<p>We are happy to announce, that the Hardening Framework moved to its <a href="https://github.com/dev-sec">new home</a>. As a vendor neutral project we aim to provide best-practice system hardening for various industries. We are now actively searching for supporters to build up the next level of this project. <a href="mailto:chris@lollyrock.com">Get in touch with us.</a></p>
+
+<h1 id="retrospection">Retrospection</h1>
+
+<p>About a year ago the Hardening Framework has started as a small challenge to proof if server hardening can be done with configuration management tools like Puppet, Chef, SaltStack or Ansible. As a small team started to find the answer.</p>
+
+<p>Since <a href="http://www.telekom.com/">Deutsche Telekom</a> was the first sponsor of this open source project, it was natural to use their <a href="http://www.telekom.com/static/-/155996/18/technische-sicherheitsanforderungen-si">internal security guidelines</a> as a starting point for our security rules. Besides their interest in security, Deutsche Telekom faced the challenge that the manual harding processes just doesn&rsquo;t scale in the cloud. Especially <a href="http://www.laboratories.telekom.com/">T-Labs</a>, <a href="https://portal.telekomcloud.com/">Telekom Business Marketplace</a> and the <a href="https://www.telekom.com/security">Telekom Security</a> as well as <a href="http://www.t-systems.com/">T-Systems</a> had great interests to find an industry-wide open source solution.</p>
+
+<p>From the very beginning, the project had a few goals:</p>
+
+<ul>
+<li>support for multiple configuration management tools</li>
+<li>should work with existing open source modules / cookbooks</li>
+<li>reuse the same test scripts</li>
+<li>tests are developed first and are our baseline for the hardening implementation</li>
+<li>Puppet and Chef implementations have to adapt to the common tests</li>
+</ul>
+
+<p>Quickly, we decided for <a href="http://serverspec.org/">Serverspec</a> as the best tool for our tests, because it fulfilled all our needs, had a grown community and worked very well with existing configuration management tools.</p>
+
+<p>Once we decided for Serverspec tests, we focused on the actual hardening implementation. This was a difficult task, because we wanted to reuse official deployment mechanisms for e.g. PostgreSQL but still add our hardening. After some prototypes we decided for an <code>overlay module</code> which acts as a companion to the original modules. It ensures that everything is properly configured and specific hardening options are added.</p>
+
+<p>We identified some of the widely used open source modules that require hardening for live deployment:</p>
+
+<ul>
+<li>Linux OS</li>
+<li>SSH</li>
+<li>Apache Webserver</li>
+<li>Nginx</li>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+</ul>
+
+<p>For every project we started an implementation for Puppet and Chef like e.g. <code>os-hardening</code>:</p>
+
+<ul>
+<li><a href="https://github.com/dev-sec/chef-os-hardening">https://github.com/dev-sec/chef-os-hardening</a></li>
+<li><a href="https://github.com/dev-sec/puppet-os-hardening">https://github.com/dev-sec/puppet-os-hardening</a></li>
+</ul>
+
+<p>For both implementations of the <code>os-hardening</code> module, we use a common test environment. <a href="http://ehaselwanter.com/en/blog/2014/05/08/using-test-kitchen-with-puppet/">It combines all tests under one framework</a>. We used <a href="http://kitchen.ci/">test-kitchen</a> for Puppet and Chef tests:</p>
+
+<ul>
+<li><a href="https://github.com/dev-sec/tests-os-hardening">https://github.com/dev-sec/tests-os-hardening</a></li>
+</ul>
+
+<p>Next, we selected the supported Linux distributions for our first release:</p>
+
+<ul>
+<li>RedHat 6.4, 6.5</li>
+<li>Ubuntu 12.04, 14.04</li>
+<li>CentOS 6.4, 6.5</li>
+<li>Oracle Linux 6.4, 6.5</li>
+<li>Debian 7</li>
+</ul>
+
+<p>As a small team, we were required to automated the tests, otherwise this would not be manageable. We used Travis for code linting and style checks and complement it with a Jenkins environment, that spins up all supported Linux Vms in OpenStack, deploys the hardening, and runs the Serverspec tests and finally sends a report back. Those test are triggered with every Github Commit.</p>
+
+<p>To get the Hardening Framework up and running easily, we have documented examples for Puppet and Chef:</p>
+
+<ul>
+<li><a href="https://github.com/dev-sec/example-puppet-hardening">https://github.com/dev-sec/example-puppet-hardening</a></li>
+<li><a href="https://github.com/dev-sec/example-chef-hardening">https://github.com/dev-sec/example-chef-hardening</a></li>
+</ul>
+
+<p>The project has evolved over the last year. It has become a mature tooling and is running on thousands of production systems. A special thanks to all contributors who helped to build this amazing project:</p>
+
+<ul>
+<li><a href="https://github.com/aschmidt75">Andreas Schmidt</a></li>
+<li><a href="https://github.com/lollyrocker">lollyrocker</a></li>
+<li><a href="https://github.com/jklare">Jan Klare</a></li>
+<li><a href="https://github.com/sirkkalap">Petri Sirkkala</a></li>
+<li><a href="https://github.com/Rockstar04">Trent Petersen</a></li>
+<li><a href="https://github.com/zhallett">Zac Hallett</a></li>
+<li><a href="https://github.com/sgrossberndt">Stephan Großberndt</a></li>
+<li><a href="https://github.com/spielkind">Reik Keutterling</a></li>
+<li><a href="https://github.com/danieldreier">Daniel Dreier</a></li>
+<li><a href="https://github.com/timogoebel">Timo Goebel</a></li>
+<li><a href="https://github.com/fadenb">Tristan Helmich</a></li>
+<li><a href="https://github.com/gdestuynder">Guillaume Destuynder</a></li>
+<li><a href="https://github.com/dupuy">Alexander Dupuy</a></li>
+<li><a href="https://github.com/dmerrick">Dana Merrick</a></li>
+<li><a href="https://github.com/rapenchukd">Drew Rapenchuk</a></li>
+<li><a href="https://github.com/kurthuwig">Kurt Huwig</a></li>
+<li><a href="https://github.com/3flex">Matthew Haughton</a></li>
+<li><a href="https://github.com/michaelkrieg">Michael Krieg</a></li>
+<li><a href="https://github.com/lighttower">lighttower</a></li>
+<li><a href="https://github.com/artem-sidorenko">Artem Sidorenko</a></li>
+<li><a href="https://github.com/a-tom">Thomas Dütsch</a></li>
+<li><a href="https://github.com/atomic111">Patrick Meier</a></li>
+<li><a href="https://github.com/bkw">Bernhard Weisshuhn (a.k.a. bernhorst)</a></li>
+<li><a href="https://github.com/chris-rock">Christoph Hartmann</a></li>
+<li><a href="https://github.com/ehaselwanter">Edmund Haselwanter</a></li>
+<li><a href="https://github.com/arlimus">Dominik Richter</a></li>
+</ul>
+
+<p>Thank you very much! We are looking forward to continue working with you.</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

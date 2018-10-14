@@ -1,33 +1,235 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
-    <loc>http://dev-sec.io/articles.html</loc>
-    <lastmod>2016-03-03T11:38:10.905Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <loc>https://dev-sec.io/blog/2017-12-21-chef-os-3.0-released/</loc>
+    <lastmod>2017-12-21T18:00:00+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://dev-sec.io/features.html</loc>
-    <lastmod>2016-03-03T11:38:10.925Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <loc>https://dev-sec.io/blog/2017-12-19-puppet-os-2.0-released/</loc>
+    <lastmod>2017-12-19T15:00:00+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://dev-sec.io/imprint.html</loc>
-    <lastmod>2016-03-03T11:38:10.929Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <loc>https://dev-sec.io/blog/2017-11-24-cis-docker-benchmark-2.0.0-released/</loc>
+    <lastmod>2017-11-24T11:00:00+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://dev-sec.io/</loc>
-    <lastmod>2016-03-03T11:38:10.942Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <loc>https://dev-sec.io/blog/2017-08-21-cis-kubernetes/</loc>
+    <lastmod>2017-05-15T09:00:00+00:00</lastmod>
   </url>
+  
   <url>
-    <loc>http://dev-sec.io/team.html</loc>
-    <lastmod>2016-03-03T11:38:10.945Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <loc>https://dev-sec.io/blog/2017-05-15-chef-windows-hardening-0.9.0-released/</loc>
+    <lastmod>2017-05-15T09:00:00+00:00</lastmod>
   </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2017-04-23-ansible-new-releases/</loc>
+    <lastmod>2017-04-23T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2017-04-13-openstack-profile/</loc>
+    <lastmod>2017-04-13T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2017-04-06-chef-os-2.0-released/</loc>
+    <lastmod>2017-04-06T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2017-02-06-chef-ssh-2.0-released/</loc>
+    <lastmod>2017-02-06T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2017-01-17-inspec-benchmarks/</loc>
+    <lastmod>2017-01-17T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2016-09-20-ansible-nginx-released/</loc>
+    <lastmod>2016-09-20T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2016-07-17-ansible-mysql-released/</loc>
+    <lastmod>2016-07-17T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2016-04-15-hardening-io-movement/</loc>
+    <lastmod>2016-04-15T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2016-03-20-ansible-3.0-release/</loc>
+    <lastmod>2016-03-20T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2015-11-30-ansible-2.0-release/</loc>
+    <lastmod>2015-11-30T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2015-06-23-ansible-os-released/</loc>
+    <lastmod>2015-07-13T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2015-05-12-puppet4-support/</loc>
+    <lastmod>2015-05-12T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2015-04-30-ansible-ssh-released/</loc>
+    <lastmod>2015-04-30T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2015-04-23-manage-security-baseline/</loc>
+    <lastmod>2015-04-23T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2015-04-15-new-era/</loc>
+    <lastmod>2015-04-15T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/contributing/</loc>
+    <lastmod>2015-04-15T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2015_01_04_future_of_hardening_framework/</loc>
+    <lastmod>2015-01-01T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2014_10_10_itsa-presentation/</loc>
+    <lastmod>2014-10-10T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2014_09_18_hardening_framework_intro/</loc>
+    <lastmod>2014-09-18T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2014_08_30_custom-resource-types-in-serverspec/</loc>
+    <lastmod>2014-08-30T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2014_06_03_integration_testing_infrastructure/</loc>
+    <lastmod>2014-06-03T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2014-05-14_how-to-harden-a-new-server-with-chef/</loc>
+    <lastmod>2014-05-14T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2014_05_08_using-test-kitchen-with-puppet/</loc>
+    <lastmod>2014-05-08T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2013-11-16-infrastructure-as-code-with-chef-or-puppet/</loc>
+    <lastmod>2013-11-16T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/2013_10_01-mythbusting-devops-and-security/</loc>
+    <lastmod>2013-10-01T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/apache/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/</loc>
+    <lastmod>2017-12-21T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/community/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/imprint/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/nginx/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/postgres/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/project/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/ssh/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/ssl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/windows/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/</loc>
+    <lastmod>2017-12-21T18:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/videos/</loc>
+  </url>
+  
 </urlset>

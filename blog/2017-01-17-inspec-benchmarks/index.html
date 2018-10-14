@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  We are happy to announce our new DevSec baselines – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Tuesday, Jan 17, 2017
+          </div>
+          <h1>We are happy to announce our new DevSec baselines</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://lollyrock.com">
+              <div class="usericon-small" style="background-image: url(https://avatars3.githubusercontent.com/u/1178413?v=4);"></div>
+              <div class="username">Christoph Hartmann</div>
+            </a>
+            
+        </div>
+      </div>
+      <p>Happy New Year DevSec users,</p>
+
+<p>from day one of the DevSec Hardening Framework project, we used the same test suites for our Ansible, Chef and Puppet implementations. Those test suites have been implemented in [Serverspec]() and helped us to enforce the same rules for all hardening implementations. The combination with [test-kitchen]() allowed us to easily test Ansible, Chef and Puppet implementations across the multiple operating systems with the same test suites.</p>
+
+<p>The DevSec Hardening Framework grew and users requested additional documentation around our recommendations. We always used industry best-practices, but it would be even better to attach more information directly to our tests. <a href="http://inspec.io/">InSpec</a> builds on the learnings of <a href="https://blog.chef.io/2015/11/04/the-road-to-inspec/">Serverspec</a> and allowed us to add more meta-data to each test. A Serverspec test like:</p>
+
+<pre><code class="language-ruby">describe file('/etc/ssh/sshd_config') do
+  its(:content) { should match(/^Protocol 2$/) }
+end
+</code></pre>
+
+<p>could easily represented in InSpec as:</p>
+
+<pre><code class="language-ruby">control 'ssh-04' do
+  impact 1.0
+  title 'Client: Specify protocol version 2'
+  desc &quot;
+    Only SSH protocol version 2 connections should be permitted. Version 1 of
+    the protocol contains security vulnerabilities. Don't use legacy insecure
+    SSHv1 connections anymore.
+  &quot;
+  describe ssh_config do
+    its('Protocol') { should eq('2') }
+  end
+end
+</code></pre>
+
+<p>With InSpec we are able to document and implement our security checks in one language. We used the opportunity to adapt all of our test suites to use InSpec. Now, users are able to run our tests standalone as well. Therefore we are going to call them <code>baseline</code> instead of <code>tests</code>. The following baselines are available now:</p>
+
+<p>Operating System Baselines:</p>
+
+<ul>
+<li><a href="https://github.com/dev-sec/linux-baseline">Linux Baseline</a></li>
+<li><a href="https://github.com/dev-sec/ssh-baseline">SSH Baseline</a></li>
+<li><a href="https://github.com/dev-sec/windows-baseline">Windows Baseline</a></li>
+</ul>
+
+<p>Patch Baselines:</p>
+
+<ul>
+<li><a href="https://github.com/dev-sec/linux-patch-benchmark">Linux Patch Baseline</a></li>
+<li><a href="https://github.com/dev-sec/windows-patch-benchmark">Windows Patch Baseline</a></li>
+</ul>
+
+<p>Application Baselines:</p>
+
+<ul>
+<li><a href="https://github.com/dev-sec/postgres-baseline">PostgreSQL Baseline</a></li>
+<li><a href="https://github.com/dev-sec/mysql-baseline">MySQL Baseline</a></li>
+<li><a href="https://github.com/dev-sec/nginx-baseline">Nginx Baseline</a></li>
+<li><a href="https://github.com/dev-sec/apache-baseline">Apache Baseline</a></li>
+<li><a href="https://github.com/dev-sec/mysql-baseline">PHP Baseline</a></li>
+</ul>
+
+<p>To use the DevSec Hardening Framework baselines just install [InSpec](). All our baselines are registered in Chef Supermarket:</p>
+
+<pre><code class="language-bash"># List all available profiles
+$ inspec supermarket profiles
+
+# Run Linux baseline
+$ inspec exec supermarket://devsec/linux-baseline
+
+# Run Windows baseline
+$ inspec exec supermarket://devsec/windows-baseline
+</code></pre>
+
+<p>You can run the baselines directly from Github as well:</p>
+
+<pre><code class="language-bash"># Linux
+inspec exec github.com/dev-sec/linux-baseline -t ssh://user:host -i /path/to/key
+
+# Windows
+inspec exec github.com/dev-sec/windows-baseline -t winrm://user:host --password secret
+</code></pre>
+
+<p>Since those baselines can be executed independently, you could verify the state of your servers immediately.</p>
+
+<p>We are looking forward to get feedback.</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

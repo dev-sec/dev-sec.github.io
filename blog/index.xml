@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevSec Blog on DevSec Hardening Framework</title>
+    <link>https://dev-sec.io/blog/</link>
+    <description>Recent content in DevSec Blog on DevSec Hardening Framework</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Dec 2017 18:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dev-sec.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>chef-os-hardening 3.0.0 is released</title>
+      <link>https://dev-sec.io/blog/2017-12-21-chef-os-3.0-released/</link>
+      <pubDate>Thu, 21 Dec 2017 18:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-12-21-chef-os-3.0-released/</guid>
+      <description>DevSec Hardening Framework project is releasing a new major release chef-os-hardening 3.0.0 today.
+The major points of this release are listed below, many thanks for the contributions and help we received from our users and community!
+Highlights and breaking changes:
+ Blacklisting of filesystems (PR 169). Important: vfat is included in the default list, so be careful if you have some desktop systems. SELinux support for RHEL family distributions. SELinux is unmanaged per default and can be enabled via setting [&#39;os-hardening&#39;][&#39;security&#39;][&#39;selinux_mode&#39;] (PR 173, many thanks to AnMoeller for this contribution) Adaptation of some attributes to better RH defaults (PR 177, many thanks to strangeman for updating the baseline)  New attributes and features:</description>
+    </item>
+    
+    <item>
+      <title>puppet-os-hardening 2.0.0 is released</title>
+      <link>https://dev-sec.io/blog/2017-12-19-puppet-os-2.0-released/</link>
+      <pubDate>Tue, 19 Dec 2017 15:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-12-19-puppet-os-2.0-released/</guid>
+      <description>DevSec Hardening Framework project is releasing a new major release puppet-os-hardening 2.0.0 today.
+Since this new version is the first release after 2.5 years, the changes are way too much for a short summary.
+Please checkout the full changelog and README for more details.
+We are looking forward to get your feedback via GitHub issues or Gitter chatroom. And you can follow us on Twitter.</description>
+    </item>
+    
+    <item>
+      <title>cis-docker-benchmark 2.0.0 is released</title>
+      <link>https://dev-sec.io/blog/2017-11-24-cis-docker-benchmark-2.0.0-released/</link>
+      <pubDate>Fri, 24 Nov 2017 11:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-11-24-cis-docker-benchmark-2.0.0-released/</guid>
+      <description>DevSec Hardening Framework project is releasing a new major release of cis-docker-benchmark today.
+The major points of this release are listed below, however there are also many changes under the hood like cleanups of documentation and improvements of the InSpec Profile.
+Many thanks for the contributions and help we received from our users and community!
+Highlights and breaking changes:
+ Update of InSpec Profile to support the CIS Docker Benchmark 1.</description>
+    </item>
+    
+    <item>
+      <title>CIS Kubernetes and CIS Independent Linux Benchmark</title>
+      <link>https://dev-sec.io/blog/2017-08-21-cis-kubernetes/</link>
+      <pubDate>Mon, 15 May 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-08-21-cis-kubernetes/</guid>
+      <description>The mission of DevSec Hardening Framework is to provide users with the best content to stay secure across their infrastructure fleet. We started by providing hardening solutions written in Chef cookbooks, Puppet modules as well as Ansible modules. Beginning of this year, we started to transform our testing suite into standalone InSpec baselines. Since then we added more and more baselines like Nginx, TLS/SSL, OpenStack, MySQL or PostgreSQL.
+We are happy to announce that we got a major contribution by Kristian Vlaardingerbroek from Schuberg Philis.</description>
+    </item>
+    
+    <item>
+      <title>chef-windows-hardening 0.9.0 is released</title>
+      <link>https://dev-sec.io/blog/2017-05-15-chef-windows-hardening-0.9.0-released/</link>
+      <pubDate>Mon, 15 May 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-05-15-chef-windows-hardening-0.9.0-released/</guid>
+      <description>DevSec Hardening Framework project is releasing a new minor release chef-windows-hardening today.
+The release introduces the, always, disabling of SMB1 protocol on Windows operating systems.
+Note: This resource was introduced in the wake of the WannaCrypt/WannaCry ransomware worm which exploits a known vulnerability in the SMBv1 protocol
+Highlights and breaking changes:
+ Enforce the disabling of SMBv1 on all versions of Windows, regardless of installation or whether the feature is enabled (e.</description>
+    </item>
+    
+    <item>
+      <title>New Ansible os-, ssh- and mysql-hardening releases</title>
+      <link>https://dev-sec.io/blog/2017-04-23-ansible-new-releases/</link>
+      <pubDate>Sun, 23 Apr 2017 13:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-04-23-ansible-new-releases/</guid>
+      <description>Hey friends,
+We released new versions of ansible-os-hardening, ansible-ssh-hardening and ansible-mysql-hardening!
+These releases are important to us in multiple ways:
+As always, they provide new features and configuration possibilities for you to use! More on that below.
+Complete tests in TravisCI Furthermore we now leverage the full possibilities of TravisCI for the os-hardening, ssh-hardening and mysql-hardening roles. This means that all supported operating systems are now tested and verified online.</description>
+    </item>
+    
+    <item>
+      <title>Chef Software is contributing OpenStack Baseline</title>
+      <link>https://dev-sec.io/blog/2017-04-13-openstack-profile/</link>
+      <pubDate>Thu, 13 Apr 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-04-13-openstack-profile/</guid>
+      <description>I am happy to announce that the Chef Partners Team contributed a new OpenStack Baseline to our DevSec project. This Baseline is implementing the OpenStack Security Guide in InSpec. JJ Asghar will continue to be a core maintainer.
+The baseline is already covering a wide range of checks for:
+ block-storage compute dashboard identity networking orchestration telemetry  But we still have some white spots:
+ data-processing databases messaging  The baseline is designed to work hand-in-hand with multiple configuration management tools like Ansible, Chef or Puppet, which allows you to run the baseline easily against existing deployments.</description>
+    </item>
+    
+    <item>
+      <title>chef-os-hardening 2.0.0 is released</title>
+      <link>https://dev-sec.io/blog/2017-04-06-chef-os-2.0-released/</link>
+      <pubDate>Thu, 06 Apr 2017 21:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-04-06-chef-os-2.0-released/</guid>
+      <description>DevSec Hardening Framework project is releasing a new major release chef-os-hardening 2.0.0 today.
+The major points of this release are listed below, however there are also many changes under the hood like cleanups of documentation, improvements of the cookbook testing.
+Many thanks for the contributions and help we received from our users and community!
+Highlights and breaking changes:
+ New attribute namespace [&#39;os-hardening&#39;] for the entire cookbook Removal of dependencies to the apt and yum cookbooks Usage of modern versions of sysctl dependency cookbook Cleanup and resolution of Chef deprecations - preparation for the Chef 13 release  New attributes:</description>
+    </item>
+    
+    <item>
+      <title>chef-ssh-hardening 2.0.0 is released</title>
+      <link>https://dev-sec.io/blog/2017-02-06-chef-ssh-2.0-released/</link>
+      <pubDate>Mon, 06 Feb 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-02-06-chef-ssh-2.0-released/</guid>
+      <description>DevSec Hardening Framework project is releasing a new major release chef-ssh-hardening 2.0.0 today.
+Highlights and breaking changes:
+ On the modern chef versions (&amp;gt;= 12.10) autodiscovery of openssh version is used in the decision logic of crypto parameters New attribute namespace [&#39;ssh-hardening&#39;] for the entire cookbook Split of attributes to the server and client namespaces UsePAM is now set to yes per default (and does not break RHEL installations if set to no) Usage of different encryption algorithms based on the available openssh version Removal of DSA support Usage of strong primes for Diffie-Hellman  New attributes:</description>
+    </item>
+    
+    <item>
+      <title>We are happy to announce our new DevSec baselines</title>
+      <link>https://dev-sec.io/blog/2017-01-17-inspec-benchmarks/</link>
+      <pubDate>Tue, 17 Jan 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2017-01-17-inspec-benchmarks/</guid>
+      <description>Happy New Year DevSec users,
+from day one of the DevSec Hardening Framework project, we used the same test suites for our Ansible, Chef and Puppet implementations. Those test suites have been implemented in [Serverspec]() and helped us to enforce the same rules for all hardening implementations. The combination with [test-kitchen]() allowed us to easily test Ansible, Chef and Puppet implementations across the multiple operating systems with the same test suites.</description>
+    </item>
+    
+    <item>
+      <title>Ansible nginx-hardening role released</title>
+      <link>https://dev-sec.io/blog/2016-09-20-ansible-nginx-released/</link>
+      <pubDate>Tue, 20 Sep 2016 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2016-09-20-ansible-nginx-released/</guid>
+      <description>The next part of server hardening with Ansible is released today: The ansible-nginx-hardening role.
+This role hardens your existing nginx installations (version 1.0.15 or later).
+This time we tried to make sure that the hardening role works with popular nginx installation roles, so if you use any of the following (great!) roles to manage your nginx, you can use our hardening role:
+ geerlinggux.nginx jdauphant.nginx franklinkim.nginx  We also tried to provide good documentation on the various settings and think that it turned out very well, but see for yourself.</description>
+    </item>
+    
+    <item>
+      <title>Ansible mysql-hardening role released</title>
+      <link>https://dev-sec.io/blog/2016-07-17-ansible-mysql-released/</link>
+      <pubDate>Sun, 17 Jul 2016 18:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2016-07-17-ansible-mysql-released/</guid>
+      <description>Even though the Github repository already got 17 stars at the time of writing, we never officially released the ansible-mysql-hardening role. Today we change that and release 1.0.0!
+The mysql-hardening role joins the other two already existing Ansible roles, ssh-hardening and os-hardening.
+This role hardens a MySQL server according to best practices and implements the same guidelines as our successful Chef and Puppet implementations.
+The main work was done by Anton Lugovoi and Sebastian Gumprich who implemented the following changes:</description>
+    </item>
+    
+    <item>
+      <title>Hardening Framework got new home</title>
+      <link>https://dev-sec.io/blog/2016-04-15-hardening-io-movement/</link>
+      <pubDate>Fri, 15 Apr 2016 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2016-04-15-hardening-io-movement/</guid>
+      <description>Due to unfortunate circumstances we can&amp;rsquo;t use hardening.io domain anymore. Therefore Hardening Framework moved to a new home: http://dev-sec.io , https://github.com/dev-sec.
+Forwarding can&amp;rsquo;t be configured from hardening.io to the new domain. We know this leads to confusion and we are sorry for that.</description>
+    </item>
+    
+    <item>
+      <title>Hardening Framework releases updated Ansbile os-hardening and ssh-hardening</title>
+      <link>https://dev-sec.io/blog/2016-03-20-ansible-3.0-release/</link>
+      <pubDate>Sun, 20 Mar 2016 18:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2016-03-20-ansible-3.0-release/</guid>
+      <description>The Hardening Framework once again updates its framework&amp;rsquo;s Ansible modules, making them compatible with the new Ansible 2.0 release! But that&amp;rsquo;s not all. Next to bug-fixes and support for additional operating systems, this release focused on making the os-hardening and ssh-hardening roles more configurable. This allows you to alter them to your needs while still providing a strong baseline security.
+As always, thanks for all the contributors!
+Notable changes for os-hardening:</description>
+    </item>
+    
+    <item>
+      <title>Hardening Framework releases updated Ansbile os-hardening and ssh-hardening</title>
+      <link>https://dev-sec.io/blog/2015-11-30-ansible-2.0-release/</link>
+      <pubDate>Mon, 30 Nov 2015 18:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2015-11-30-ansible-2.0-release/</guid>
+      <description>Continuously, the Hardening Framework improves its framework to cover up-to-date server hardening. Sebastian Gumprich and Anton Lugovoi did an amazing job to improve the Ansible implementation for os-hardening and ssh-hardening. Core focus of the last release was to improve and ease the installation via Ansible Galaxy.
+For os-hardening:
+ Fix a bug in the passwdqc template (#51) Change directory layout so the role is easily installable from ansible-galaxy (#49) Improved travis-tests to cover more cases (#42) Fix passwdqc default options (#44) Remove duplicate &amp;ldquo;update pam&amp;rdquo; task (#46) Fix stuck in case pam files was updated before by force update (#45) Fix nologin shell path (#44)  For ssh-hardening:</description>
+    </item>
+    
+    <item>
+      <title>Ansible os-hardening role released</title>
+      <link>https://dev-sec.io/blog/2015-06-23-ansible-os-released/</link>
+      <pubDate>Mon, 13 Jul 2015 18:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2015-06-23-ansible-os-released/</guid>
+      <description>After two months of development the Hardening Framework team is glad to announce that we created our second Ansible role: ansible-os-hardening. This role hardens a Linux operating system according to best practices and implements the same guidelines as our successful Chef and Puppet implementations.
+In these two months Sebastian Gumprich implemented with the help of Christoph Hartmann and Dominik Richter the following changes:
+ Implement os-hardening to meet our tests Enable GPG-checking on all yum-repository files #5 Disable system accounts #6 Module-loading configuration #22 Travis support #17  As always, this role supports Debian- and Enterprise Linux-based operating systems.</description>
+    </item>
+    
+    <item>
+      <title>Hardening Framework supports Puppet 4</title>
+      <link>https://dev-sec.io/blog/2015-05-12-puppet4-support/</link>
+      <pubDate>Tue, 12 May 2015 18:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2015-05-12-puppet4-support/</guid>
+      <description>We are happy to announce Puppet 4 support for the Hardening Framework. All puppet modules have been updated and are continously tested for Puppet 4 support, now:
+ Puppet OS Hardening Puppet SSH hardening Puppet MySql Hardening Puppet Postgres Hardening Puppet Apache Hardening Puppet Nginx Hardening  In addition to Puppet 4, we still test our implementation against Puppet 2.7 &amp;amp; Puppet 3.6. This enables you to smoothly upgrade the Hardening Framwork.</description>
+    </item>
+    
+    <item>
+      <title>Ansible joins Hardening Framework</title>
+      <link>https://dev-sec.io/blog/2015-04-30-ansible-ssh-released/</link>
+      <pubDate>Thu, 30 Apr 2015 18:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2015-04-30-ansible-ssh-released/</guid>
+      <description>The Hardening Framework provides best-practice security for DevOps by implementing server hardening with DevOps tools. We are happy to announce that with help of Sebastian Gumprich we were able to implement our first Ansible role: ansible-ssh-hardening. Over the last weeks, we worked hard to release version 1.0:
+ Implement ssh hardening to meet our tests Setup test infrastructure with kitchen-ansible Implement travis tests#7 Add handlers to restart sshd only when necessary #6 Add support for Oracle Linux #2  The module is available via Ansible Galaxy, now.</description>
+    </item>
+    
+    <item>
+      <title>Managing your Security Baseline</title>
+      <link>https://dev-sec.io/blog/2015-04-23-manage-security-baseline/</link>
+      <pubDate>Thu, 23 Apr 2015 21:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2015-04-23-manage-security-baseline/</guid>
+      <description>Despite many advancements in the field of security, two fundamental issues have stayed at the core of many attacks over the last 20 years. They preveil despite firewalls, SIEMs, or scanners. They are: Misconfiguration and unpatched software with known vulnerabilities.
+Both problems have been addressed with processes and strong governance. While improving the situation considerably, failures are still unavoidable and often unmitigated. I have seen various companies with great risk and security management, that still suffer from severe configuration issues and unpatched machines.</description>
+    </item>
+    
+    <item>
+      <title>A New Era at the Hardening Framework Project</title>
+      <link>https://dev-sec.io/blog/2015-04-15-new-era/</link>
+      <pubDate>Wed, 15 Apr 2015 21:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2015-04-15-new-era/</guid>
+      <description>Next We are happy to announce, that the Hardening Framework moved to its new home. As a vendor neutral project we aim to provide best-practice system hardening for various industries. We are now actively searching for supporters to build up the next level of this project. Get in touch with us.
+Retrospection About a year ago the Hardening Framework has started as a small challenge to proof if server hardening can be done with configuration management tools like Puppet, Chef, SaltStack or Ansible.</description>
+    </item>
+    
+    <item>
+      <title>Future of Hardening Framework</title>
+      <link>https://dev-sec.io/blog/2015_01_04_future_of_hardening_framework/</link>
+      <pubDate>Thu, 01 Jan 2015 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2015_01_04_future_of_hardening_framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardening Framework presentation at itsa</title>
+      <link>https://dev-sec.io/blog/2014_10_10_itsa-presentation/</link>
+      <pubDate>Fri, 10 Oct 2014 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2014_10_10_itsa-presentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic Server Hardening (Presentation)</title>
+      <link>https://dev-sec.io/blog/2014_09_18_hardening_framework_intro/</link>
+      <pubDate>Thu, 18 Sep 2014 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2014_09_18_hardening_framework_intro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Custom Resource Types in Serverspec</title>
+      <link>https://dev-sec.io/blog/2014_08_30_custom-resource-types-in-serverspec/</link>
+      <pubDate>Sat, 30 Aug 2014 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2014_08_30_custom-resource-types-in-serverspec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infrastructure As Code With Chef, Puppet, And KitchenCI</title>
+      <link>https://dev-sec.io/blog/2014_06_03_integration_testing_infrastructure/</link>
+      <pubDate>Tue, 03 Jun 2014 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2014_06_03_integration_testing_infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to harden a new server with Chef</title>
+      <link>https://dev-sec.io/blog/2014-05-14_how-to-harden-a-new-server-with-chef/</link>
+      <pubDate>Wed, 14 May 2014 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2014-05-14_how-to-harden-a-new-server-with-chef/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using Test Kitchen With Puppet</title>
+      <link>https://dev-sec.io/blog/2014_05_08_using-test-kitchen-with-puppet/</link>
+      <pubDate>Thu, 08 May 2014 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2014_05_08_using-test-kitchen-with-puppet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infrastructure as Code with Chef or Puppet</title>
+      <link>https://dev-sec.io/blog/2013-11-16-infrastructure-as-code-with-chef-or-puppet/</link>
+      <pubDate>Sat, 16 Nov 2013 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2013-11-16-infrastructure-as-code-with-chef-or-puppet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mythbusting: DevOps and Security</title>
+      <link>https://dev-sec.io/blog/2013_10_01-mythbusting-devops-and-security/</link>
+      <pubDate>Tue, 01 Oct 2013 19:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2013_10_01-mythbusting-devops-and-security/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

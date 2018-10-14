@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  chef-ssh-hardening 2.0.0 is released – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Monday, Feb 6, 2017
+          </div>
+          <h1>chef-ssh-hardening 2.0.0 is released</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://www.sidorenko.io">
+              <div class="usericon-small" style="background-image: url(https://avatars2.githubusercontent.com/u/1645670?v=4);"></div>
+              <div class="username">Artem Sidorenko</div>
+            </a>
+            
+        </div>
+      </div>
+      <p>DevSec Hardening Framework project is releasing a new major release <a href="https://github.com/dev-sec/chef-ssh-hardening/releases/tag/v2.0.0">chef-ssh-hardening 2.0.0</a> today.</p>
+
+<p><strong>Highlights and breaking changes:</strong></p>
+
+<ul>
+<li>On the modern chef versions (&gt;= 12.10) autodiscovery of openssh version is used in the decision logic of crypto parameters</li>
+<li>New attribute namespace <code>['ssh-hardening']</code> for the entire cookbook</li>
+<li>Split of attributes to the <code>server</code> and <code>client</code> namespaces</li>
+<li><code>UsePAM</code> is now set to <code>yes</code> per default (and does not break RHEL installations if set to <code>no</code>)</li>
+<li>Usage of different encryption algorithms based on the available openssh version</li>
+<li>Removal of DSA support</li>
+<li>Usage of strong primes for Diffie-Hellman</li>
+</ul>
+
+<p><strong>New attributes:</strong></p>
+
+<ul>
+<li><code>['ssh-hardening']['ssh']['client']['send_env']</code> and <code>['ssh-hardening']['ssh']['server']['accept_env']</code> allow configuration of accepted/sent environment parameters</li>
+<li><code>['ssh-hardening']['ssh'][{'client', 'server'}]['kex']</code> , <code>['ssh-hardening']['ssh'][{'client', 'server'}]['mac']</code> and <code>['ssh-hardening']['ssh'][{'client', 'server'}]['cipher']</code> allow configuration of own crypto parameters</li>
+<li><code>['ssh-hardening']['ssh']['server']['log_level']</code> allows configuration of sshd logging level</li>
+<li><code>['ssh-hardening']['ssh']['server']['dh_min_prime_size']</code>, <code>['ssh-hardening']['ssh']['server']['dh_build_primes']</code> and <code>['ssh-hardening']['ssh']['server']['dh_build_primes_size']</code> allow configuration of DH prime parameters</li>
+</ul>
+
+<p><strong>Removal of deprecated code/features:</strong></p>
+
+<ul>
+<li>Removal of user management / key management for root user</li>
+<li>Removal of old global attributes with crypto parameters: <code>['ssh-hardening']['ssh']['cbc_required']</code>, <code>['ssh-hardening']['ssh']['weak_hmac']</code> and <code>['ssh-hardening']['ssh']['weak_kex']</code></li>
+</ul>
+
+<p>Please checkout the <a href="https://github.com/dev-sec/chef-ssh-hardening/blob/v2.0.0/CHANGELOG.md">full changelog</a> and <a href="https://github.com/dev-sec/chef-ssh-hardening/blob/v2.0.0/README.md">README</a> for more details.</p>
+
+<p>We are looking forward to get your feedback via <a href="https://github.com/dev-sec/chef-ssh-hardening/issues">GitHub issues</a> or <a href="https://gitter.im/dev-sec/general">Gitter chatroom</a>. And you can follow us on <a href="https://twitter.com/DevSecIO">Twitter</a>.</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

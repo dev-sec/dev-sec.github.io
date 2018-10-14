@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  DevSec MySQL Baseline – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+
+<div id="mysql-baseline" class="section baseline-links">
+    <div class="row">
+        <div class="inner">
+            <div class="row center links">
+              
+              <a href="https://github.com/dev-sec/mysql-baseline" class="button"><i class="icon-github-circled"></i><span>InSpec Profile</span></a>
+              
+              <a href="https://github.com/dev-sec/ansible-mysql-hardening" class="button"><i class="icon-github-circled"></i><span>Ansible Remediation Role</span></a>
+              
+              <a href="https://github.com/dev-sec/chef-mysql-hardening" class="button"><i class="icon-github-circled"></i><span>Chef Remediation Cookbook</span></a>
+              
+              <a href="https://github.com/hardening-io/puppet-mysql-hardening" class="button"><i class="icon-github-circled"></i><span>Puppet Remediation Module</span></a>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<noscript>Please enable JavaScript to view this website.</noscript>
+
+<script>(function(a){function b(a){return q.typeof="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?b=function(a){return typeof a}:b=function(a){return a&&"function"===typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a},b(a)}function c(a){function b(d,e){try{var f=a[d](e),g=f.value,h=g instanceof q.AwaitValue;Promise.resolve(h?g.wrapped:g).then(function(a){return h?void b("next",a):void c(f.done?"return":"normal",a)},function(a){b("throw",a)})}catch(a){c("throw",a)}}function c(a,c){switch(a){case"return":d.resolve({value:c,done:!0});break;case"throw":d.reject(c);break;default:d.resolve({value:c,done:!1});}d=d.next,d?b(d.key,d.arg):e=null}var d,e;this._invoke=function(a,c){return new Promise(function(f,g){var h={key:a,arg:c,resolve:f,reject:g,next:null};e?e=e.next=h:(d=e=h,b(a,c))})},"function"!==typeof a.return&&(this.return=void 0)}function d(a,b){for(var c,d=0;d<b.length;d++)c=b[d],c.enumerable=c.enumerable||!1,c.configurable=!0,"value"in c&&(c.writable=!0),Object.defineProperty(a,c.key,c)}function e(a,b){for(var c in b){var d=b[c];d.configurable=d.enumerable=!0,"value"in d&&(d.writable=!0),Object.defineProperty(a,c,d)}if(Object.getOwnPropertySymbols)for(var e=Object.getOwnPropertySymbols(b),f=0;f<e.length;f++){var g=e[f],d=b[g];d.configurable=d.enumerable=!0,"value"in d&&(d.writable=!0),Object.defineProperty(a,g,d)}return a}function f(a,b,c){return b in a?Object.defineProperty(a,b,{value:c,enumerable:!0,configurable:!0,writable:!0}):a[b]=c,a}function g(){return q.extends=g=Object.assign||function(a){for(var b,c=1;c<arguments.length;c++)for(var d in b=arguments[c],b)Object.prototype.hasOwnProperty.call(b,d)&&(a[d]=b[d]);return a},g.apply(this,arguments)}function h(a){return q.getPrototypeOf=h=Object.setPrototypeOf?Object.getPrototypeOf:function(a){return a.__proto__||Object.getPrototypeOf(a)},h(a)}function i(a,b){return q.setPrototypeOf=i=Object.setPrototypeOf||function(a,b){return a.__proto__=b,a},i(a,b)}function j(){if("undefined"===typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"===typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(a){return!1}}function k(){return q.construct=j()?k=Reflect.construct:k=function(b,c,d){var e=[null];e.push.apply(e,c);var a=Function.bind.apply(b,e),f=new a;return d&&q.setPrototypeOf(f,d.prototype),f},k.apply(null,arguments)}function l(a){var b="function"===typeof Map?new Map:void 0;return q.wrapNativeSuper=l=function(a){function c(){return q.construct(a,arguments,q.getPrototypeOf(this).constructor)}if(null===a)return null;if("function"!==typeof a)throw new TypeError("Super expression must either be null or a function");if("undefined"!==typeof b){if(b.has(a))return b.get(a);b.set(a,c)}return c.prototype=Object.create(a.prototype,{constructor:{value:c,enumerable:!1,writable:!0,configurable:!0}}),q.setPrototypeOf(c,a)},l(a)}function m(a,b,c){return q.get="undefined"!==typeof Reflect&&Reflect.get?m=Reflect.get:m=function(a,b,c){var d=q.superPropBase(a,b);if(d){var e=Object.getOwnPropertyDescriptor(d,b);return e.get?e.get.call(c):e.value}},m(a,b,c||a)}function n(a,b,c,d){return n="undefined"!==typeof Reflect&&Reflect.set?Reflect.set:function(a,b,c,d){var e,f=q.superPropBase(a,b);if(f){if(e=Object.getOwnPropertyDescriptor(f,b),e.set)return e.set.call(d,c),!0;if(!e.writable)return!1}if(e=Object.getOwnPropertyDescriptor(d,b),e){if(!e.writable)return!1;e.value=c,Object.defineProperty(d,b,e)}else q.defineProperty(d,b,c);return!0},n(a,b,c,d)}function o(a,b,c,d,e){var f=n(a,b,c,d||a);if(!f&&e)throw new Error("failed to set property");return c}function p(a){if(Symbol.iterator in Object(a)||"[object Arguments]"===Object.prototype.toString.call(a))return Array.from(a)}var q=a.babelHelpers={};q.typeof=b,q.asyncIterator=function(a){var b;if("function"===typeof Symbol){if(Symbol.asyncIterator&&(b=a[Symbol.asyncIterator],null!=b))return b.call(a);if(Symbol.iterator&&(b=a[Symbol.iterator],null!=b))return b.call(a)}throw new TypeError("Object is not async iterable")},q.AwaitValue=function(a){this.wrapped=a},"function"===typeof Symbol&&Symbol.asyncIterator&&(c.prototype[Symbol.asyncIterator]=function(){return this}),c.prototype.next=function(a){return this._invoke("next",a)},c.prototype.throw=function(a){return this._invoke("throw",a)},c.prototype.return=function(a){return this._invoke("return",a)},q.AsyncGenerator=c,q.wrapAsyncGenerator=function(a){return function(){return new q.AsyncGenerator(a.apply(this,arguments))}},q.awaitAsyncGenerator=function(a){return new q.AwaitValue(a)},q.asyncGeneratorDelegate=function(a,b){function c(c,d){return e=!0,d=new Promise(function(b){b(a[c](d))}),{done:!1,value:b(d)}}var d={},e=!1;return"function"===typeof Symbol&&Symbol.iterator&&(d[Symbol.iterator]=function(){return this}),d.next=function(a){return e?(e=!1,a):c("next",a)},"function"===typeof a.throw&&(d.throw=function(a){if(e)throw e=!1,a;return c("throw",a)}),"function"===typeof a.return&&(d.return=function(a){return c("return",a)}),d},q.asyncToGenerator=function(a){return function(){var b=this,c=arguments;return new Promise(function(d,e){function f(a,b){try{var c=i[a](b),f=c.value}catch(a){return void e(a)}c.done?d(f):Promise.resolve(f).then(g,h)}function g(a){f("next",a)}function h(a){f("throw",a)}var i=a.apply(b,c);g()})}},q.classCallCheck=function(a,b){if(!(a instanceof b))throw new TypeError("Cannot call a class as a function")},q.createClass=function(a,b,c){return b&&d(a.prototype,b),c&&d(a,c),a},q.defineEnumerableProperties=e,q.defaults=function(a,b){for(var c=Object.getOwnPropertyNames(b),d=0;d<c.length;d++){var e=c[d],f=Object.getOwnPropertyDescriptor(b,e);f&&f.configurable&&a[e]===void 0&&Object.defineProperty(a,e,f)}return a},q.defineProperty=f,q.extends=g,q.objectSpread=function(a){for(var b=1;b<arguments.length;b++){var c=null==arguments[b]?{}:arguments[b],d=Object.keys(c);"function"===typeof Object.getOwnPropertySymbols&&(d=d.concat(Object.getOwnPropertySymbols(c).filter(function(a){return Object.getOwnPropertyDescriptor(c,a).enumerable}))),d.forEach(function(b){q.defineProperty(a,b,c[b])})}return a},q.inherits=function(a,b){if("function"!==typeof b&&null!==b)throw new TypeError("Super expression must either be null or a function");a.prototype=Object.create(b&&b.prototype,{constructor:{value:a,writable:!0,configurable:!0}}),b&&q.setPrototypeOf(a,b)},q.getPrototypeOf=h,q.setPrototypeOf=i,q.construct=k,q.wrapNativeSuper=l,q.instanceof=function(a,b){return null!=b&&"undefined"!==typeof Symbol&&b[Symbol.hasInstance]?b[Symbol.hasInstance](a):a instanceof b},q.interopRequireDefault=function(a){return a&&a.__esModule?a:{default:a}},q.interopRequireWildcard=function(a){if(a&&a.__esModule)return a;var b={};if(null!=a)for(var c in a)if(Object.prototype.hasOwnProperty.call(a,c)){var d=Object.defineProperty&&Object.getOwnPropertyDescriptor?Object.getOwnPropertyDescriptor(a,c):{};d.get||d.set?Object.defineProperty(b,c,d):b[c]=a[c]}return b.default=a,b},q.newArrowCheck=function(a,b){if(a!==b)throw new TypeError("Cannot instantiate an arrow function")},q.objectDestructuringEmpty=function(a){if(null==a)throw new TypeError("Cannot destructure undefined")},q.objectWithoutProperties=function(a,b){if(null==a)return{};var c,d,e={},f=Object.keys(a);for(d=0;d<f.length;d++)c=f[d],0<=b.indexOf(c)||(e[c]=a[c]);if(Object.getOwnPropertySymbols){var g=Object.getOwnPropertySymbols(a);for(d=0;d<g.length;d++)c=g[d],!(0<=b.indexOf(c))&&Object.prototype.propertyIsEnumerable.call(a,c)&&(e[c]=a[c])}return e},q.assertThisInitialized=function(a){if(void 0===a)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return a},q.possibleConstructorReturn=function(a,b){return b&&("object"===typeof b||"function"===typeof b)?b:q.assertThisInitialized(a)},q.superPropBase=function(a,b){for(;!Object.prototype.hasOwnProperty.call(a,b)&&(a=q.getPrototypeOf(a),null!==a););return a},q.get=m,q.set=o,q.taggedTemplateLiteral=function(a,b){return b||(b=a.slice(0)),Object.freeze(Object.defineProperties(a,{raw:{value:Object.freeze(b)}}))},q.temporalRef=function(a,b){if(a===q.temporalUndefined)throw new ReferenceError(b+" is not defined - temporal dead zone");else return a},q.readOnlyError=function(a){throw new Error("\""+a+"\" is read-only")},q.temporalUndefined={},q.slicedToArray=function(a,b){return q.arrayWithHoles(a)||q.iterableToArrayLimit(a,b)||q.nonIterableRest()},q.toArray=function(a){return q.arrayWithHoles(a)||q.iterableToArray(a)||q.nonIterableRest()},q.toConsumableArray=function(a){return q.arrayWithoutHoles(a)||q.iterableToArray(a)||q.nonIterableSpread()},q.arrayWithoutHoles=function(a){if(Array.isArray(a)){for(var b=0,c=Array(a.length);b<a.length;b++)c[b]=a[b];return c}},q.arrayWithHoles=function(a){if(Array.isArray(a))return a},q.iterableToArray=p,q.iterableToArrayLimit=function(a,b){var c=[],d=!0,e=!1,f=void 0;try{for(var g,h=a[Symbol.iterator]();!(d=(g=h.next()).done)&&(c.push(g.value),!(b&&c.length===b));d=!0);}catch(a){e=!0,f=a}finally{try{d||null==h["return"]||h["return"]()}finally{if(e)throw f}}return c},q.nonIterableSpread=function(){throw new TypeError("Invalid attempt to spread non-iterable instance")},q.nonIterableRest=function(){throw new TypeError("Invalid attempt to destructure non-iterable instance")},q.toPropertyKey=function(a){return"symbol"===typeof a?a:a+""}})("undefined"===typeof global?self:global);</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+<script>"use strict";(function(){function a(a,b,c){var d=a;if(d.state=b,d.stateData=c,0<d.onNextStateChange.length){var e=d.onNextStateChange.slice();d.onNextStateChange.length=0;for(var f,g=0,h=e;g<h.length;g++)f=h[g],f()}return d}function b(b){function d(){try{document.head.removeChild(f)}catch(a){}}var e=a(b,"Loading",void 0),f=document.createElement("script");return f.src=b.url,f.onload=function(){var a,b;void 0===r?(a=[],b=void 0):(f=r(),a=f[0],b=f[1]),c(e,a,b),d();var f},f.onerror=function(){g(b,new TypeError("Failed to fetch "+b.url)),d()},document.head.appendChild(f),e}function c(b,c,e){var f=d(b,c),g=f[0],h=f[1];return a(b,"WaitingForTurn",{args:g,deps:h,moduleBody:e})}function d(a,c){for(var e,f=[],g=[],i=0,j=c;i<j.length;i++){if(e=j[i],"exports"===e){f.push(a.exports);continue}if("require"===e){f.push(function(b,c,e){var f=d(a,b),g=f[0],i=f[1];h(i,function(){c&&c.apply(null,g)},e)});continue}if("meta"===e){f.push({url:!0===a.isTopLevel?a.url.substring(0,a.url.lastIndexOf("#")):a.url});continue}var l=k(n(a.urlBase,e));f.push(l.exports),g.push(l),"Initialized"===l.state&&b(l)}return[f,g]}function e(b){var c=a(b,"WaitingOnDeps",b.stateData);return h(b.stateData.deps,function(){return f(c)},function(a){return g(c,a)}),c}function f(b){var c=b.stateData;if(null!=c.moduleBody)try{c.moduleBody.apply(null,c.args)}catch(a){return g(b,a)}return a(b,"Executed",void 0)}function g(b,c){return!0===b.isTopLevel&&setTimeout(function(){throw c}),a(b,"Failed",c)}function h(a,b,c){var d=a.shift();return void 0===d?void(b&&b()):"WaitingOnDeps"===d.state?(!1,void h(a,b,c)):void i(d,function(){h(a,b,c)},c)}function i(a,b,c){switch(a.state){case"WaitingForTurn":return e(a),void i(a,b,c);case"Failed":return void(c&&c(a.stateData));case"Executed":return void b();case"Loading":case"WaitingOnDeps":return void a.onNextStateChange.push(function(){return i(a,b,c)});case"Initialized":throw new Error("All dependencies should be loading already before pressureDependencyToExecute is called.");default:throw new Error("Impossible module state: "+a.state);}}function j(a,b){switch(a.state){case"Executed":case"Failed":return void b();default:a.onNextStateChange.push(function(){return j(a,b)});}}function k(a){var b=q[a];return void 0===b&&(b=q[a]={url:a,urlBase:m(a),exports:Object.create(null),state:"Initialized",stateData:void 0,isTopLevel:!1,onNextStateChange:[]}),b}function l(a){return v.href=a,v.href}function m(a){return a=a.split("?")[0],a=a.split("#")[0],a.substring(0,a.lastIndexOf("/")+1)}function n(a,b){return-1===b.indexOf("://")?l(a+b):b}function o(){return document.baseURI||(document.querySelector("base")||window.location).href}function p(){var b=document.currentScript;if(!b)return u;if(window.HTMLImports){var c=window.HTMLImports.importForElement(b);return c?c.href:u}var d=b.ownerDocument.createElement("a");return d.href="",d.href}if(!window.define){var q=Object.create(null),r=void 0,s=0,t=void 0,u=o();window.define=function(a,b){var d=!1;r=function(){return d=!0,r=void 0,[a,b]};var f=p();setTimeout(function(){if(!1==d){r=void 0;var g=f+"#"+s++,h=k(g);h.isTopLevel=!0;var i=c(h,a,b);void 0===t?e(i):j(k(t),function(){e(i)}),t=g}},0)},window.define._reset=function(){for(var a in q)delete q[a];r=void 0,s=0,t=void 0,u=o()};var v=document.createElement("a")}})();</script>
+<script>
+  requirejs(["/components/inspec-profile.js"]);
+</script>
+
+<div style="max-width: 800px; margin: auto;" class="profile">
+  <inspec-profile></inspec-profile>
+</div>
+<script>
+  window.profile = document.getElementsByTagName("inspec-profile")[0];
+  profile.profile = {"attributes":[{"name":"User","options":{"default":"root","description":"MySQL database user","required":true}},{"name":"Password","options":{"default":"iloverandompasswordsbutthiswilldo","description":"MySQL database password","required":true}}],"controls":[{"code":"control 'mysql-conf-01' do\n  impact 0.5\n  title 'ensure the service is enabled and running'\n  describe service(service_name) do\n    it { should be_enabled }\n    it { should be_running }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-01","impact":0.5,"refs":[],"source_location":{"line":42,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"ensure the service is enabled and running"},{"code":"control 'mysql-conf-02' do\n  impact 0.5\n  title 'only one instance of mysql should run on a server'\n  describe command('ps aux | grep mysqld | egrep -v \"grep|mysqld_safe|logger\" | wc -l') do\n    its(:stdout) { should match(/^1$/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-02","impact":0.5,"refs":[],"source_location":{"line":52,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"only one instance of mysql should run on a server"},{"code":"control 'mysql-conf-03' do\n  impact 0.7\n  title 'enable secure configurations for mysql'\n  describe mysql_conf.params('mysqld') do\n    its('safe-user-create') { should cmp 1 }\n    its('old_passwords') { should_not cmp 1 }\n    its('secure-auth') { should cmp 1 }\n    its('user') { should cmp 'mysql' }\n    its('skip-symbolic-links') { should cmp 1 }\n    its('secure-file-priv') { should_not eq nil }\n    its('local-infile') { should cmp 0 }\n    its('skip-show-database') { should eq '' }\n    its('skip-grant-tables') { should eq nil }\n    its('allow-suspicious-udfs') { should cmp 0 }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-03","impact":0.7,"refs":[],"source_location":{"line":61,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"enable secure configurations for mysql"},{"code":"control 'mysql-conf-04' do\n  impact 0.7\n  title 'ensure the mysql data path is owned by mysql user'\n  describe file(mysql_data_path) do\n    it { should be_directory }\n    it { should be_owned_by 'mysql' }\n    it { should be_grouped_into 'mysql' }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-04","impact":0.7,"refs":[],"source_location":{"line":79,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"ensure the mysql data path is owned by mysql user"},{"code":"control 'mysql-conf-05' do\n  impact 0.5\n  title 'ensure data path is owned by mysql user'\n  describe file(\"#{mysql_data_path}/ibdata1\") do\n    it { should be_owned_by 'mysql' }\n    it { should be_grouped_into 'mysql' }\n    it { should_not be_readable.by('others') }\n    it { should_not be_writable.by('others') }\n    it { should_not be_executable.by('others') }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-05","impact":0.5,"refs":[],"source_location":{"line":89,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"ensure data path is owned by mysql user"},{"code":"control 'mysql-conf-06' do\n  impact 0.5\n  title 'ensure log file is owned by mysql user'\n  describe file(\"#{mysql_log_path}/#{mysql_log_file}\") do\n    it { should be_owned_by 'mysql' }\n    it { should be_grouped_into mysql_log_group }\n    it { should_not be_readable.by('others') }\n    it { should_not be_writable.by('others') }\n    it { should_not be_executable.by('others') }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-06","impact":0.5,"refs":[],"source_location":{"line":101,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"ensure log file is owned by mysql user"},{"code":"control 'mysql-conf-07' do\n  impact 0.7\n  title 'ensure the mysql config file is owned by root'\n  describe file(mysql_config_file) do\n    it { should be_file }\n    it { should be_owned_by 'root' }\n    it { should be_grouped_into 'root' }\n    it { should_not be_readable.by('others') }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-07","impact":0.7,"refs":[],"source_location":{"line":113,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"ensure the mysql config file is owned by root"},{"code":"control 'mysql-conf-08' do\n  impact 0.5\n  title 'ensure the mysql hardening config file is owned by root'\n  describe file(mysql_hardening_file) do\n    it { should be_owned_by 'root' }\n    it { should be_grouped_into 'root' }\n    it { should_not be_readable.by('others') }\n  end\n  only_if { command(\"ls #{mysql_hardening_file}\").exit_status.zero? }\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-08","impact":0.5,"refs":[],"source_location":{"line":125,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"ensure the mysql hardening config file is owned by root"},{"code":"control 'mysql-conf-09' do\n  impact 1.0\n  title 'the use of MYSQL_PWD is insecure and can exploit the password'\n  describe command('env') do\n    its(:stdout) { should_not match(/^MYSQL_PWD=/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-conf-09","impact":1,"refs":[],"source_location":{"line":137,"ref":"mysql-baseline-master/controls/mysql_conf.rb"},"tags":{},"title":"the use of MYSQL_PWD is insecure and can exploit the password"},{"code":"control 'mysql-db-01' do\n  impact 0.3\n  title 'use supported mysql version in production'\n  describe command(\"mysql -u#{user} -p#{pass} mysql -s -e 'select version();' | tail -1\") do\n    its(:stdout) { should_not match(/Community/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-01","impact":0.3,"refs":[],"source_location":{"line":22,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"use supported mysql version in production"},{"code":"control 'mysql-db-02' do\n  impact 0.5\n  title 'use mysql version 5 or higher'\n  describe command(\"mysql -u#{user} -p#{pass} mysql -s -e 'select substring(version(),1,1);' | tail -1\") do\n    its(:stdout) { should match(/^5/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-02","impact":0.5,"refs":[],"source_location":{"line":30,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"use mysql version 5 or higher"},{"code":"control 'mysql-db-03' do\n  impact 1.0\n  title 'test database must be deleted'\n  describe command(\"mysql -u#{user} -p#{pass} -s -e 'show databases like \\\"test\\\";'\") do\n    its(:stdout) { should_not match(/test/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-03","impact":1,"refs":[],"source_location":{"line":38,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"test database must be deleted"},{"code":"control 'mysql-db-04' do\n  impact 1.0\n  title 'deactivate annonymous user names'\n  describe command(\"mysql -u#{user} -p#{pass} mysql -s -e 'select count(*) from mysql.user where user=\\\"\\\";' | tail -1\") do\n    its(:stdout) { should match(/^0/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-04","impact":1,"refs":[],"source_location":{"line":46,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"deactivate annonymous user names"},{"code":"control 'mysql-db-05' do\n  impact 1.0\n  title 'default passwords must be changed'\n  describe command(\"mysql -u#{user} -p#{pass} mysql -s -e 'select count(*) from mysql.user where length(password)=0 or password=\\\"\\\";' | tail -1\") do\n    its(:stdout) { should match(/^0/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-05","impact":1,"refs":[],"source_location":{"line":54,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"default passwords must be changed"},{"code":"control 'mysql-db-06' do\n  impact 0.5\n  title 'the grant option must not be used'\n  describe command(\"mysql -u#{user} -p#{pass} mysql -s -e 'select count(*) from mysql.user where grant_priv=\\\"y\\\" and User!=\\\"root\\\" and User!=\\\"debian-sys-maint\\\";' | tail -1\") do\n    its(:stdout) { should match(/^0/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-06","impact":0.5,"refs":[],"source_location":{"line":62,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"the grant option must not be used"},{"code":"control 'mysql-db-07' do\n  impact 0.5\n  title 'ensure no wildcards are used for hostnames'\n  describe command(\"mysql -u#{user} -p#{pass} mysql -s -e 'select count(*) from mysql.user where host=\\\"%\\\"' | tail -1\") do\n    its(:stdout) { should match(/^0/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-07","impact":0.5,"refs":[],"source_location":{"line":70,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"ensure no wildcards are used for hostnames"},{"code":"control 'mysql-db-08' do\n  impact 0.5\n  title 'it must be ensured that superuser can login via localhost only'\n  describe command(\"mysql -u#{user} -p#{pass} mysql -s -e 'select count(*) from mysql.user where user=\\\"root\\\" and host not in (\\\"localhost\\\",\\\"127.0.0.1\\\",\\\"::1\\\")' | tail -1\") do\n    its(:stdout) { should match(/^0/) }\n  end\nend\n","desc":null,"descriptions":{},"id":"mysql-db-08","impact":0.5,"refs":[],"source_location":{"line":78,"ref":"mysql-baseline-master/controls/mysql_db.rb"},"tags":{},"title":"it must be ensured that superuser can login via localhost only"}],"copyright":"DevSec Hardening Framework Team","copyright_email":"hello@dev-sec.io","generator":{"name":"inspec","version":"2.3.23"},"groups":[{"controls":["mysql-conf-01","mysql-conf-02","mysql-conf-03","mysql-conf-04","mysql-conf-05","mysql-conf-06","mysql-conf-07","mysql-conf-08","mysql-conf-09"],"id":"controls/mysql_conf.rb","title":null},{"controls":["mysql-db-01","mysql-db-02","mysql-db-03","mysql-db-04","mysql-db-05","mysql-db-06","mysql-db-07","mysql-db-08"],"id":"controls/mysql_db.rb","title":null}],"license":"Apache-2.0","maintainer":"DevSec Hardening Framework Team","name":"mysql-baseline","sha256":"51b52cbfa2a5d36f7339c4591825a4b0b3d12045e712027258a05c3564300fe0","summary":"Test-suite for best-practice mysql hardening","supports":[{"platform-family":"unix"}],"title":"DevSec MySQL Baseline","version":"3.0.0"}
+</script>
+
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  chef-windows-hardening 0.9.0 is released – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Monday, May 15, 2017
+          </div>
+          <h1>chef-windows-hardening 0.9.0 is released</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://github.com/yvovandoorn">
+              <div class="usericon-small" style="background-image: url(https://avatars0.githubusercontent.com/u/2694655?v=4);"></div>
+              <div class="username">Yvo van Doorn</div>
+            </a>
+            
+        </div>
+      </div>
+      <p>DevSec Hardening Framework project is releasing a new minor release <a href="https://github.com/dev-sec/chef-windows-hardening/releases/tag/v0.9.0">chef-windows-hardening</a> today.</p>
+
+<p>The release introduces the, always, disabling of SMB1 protocol on Windows operating systems.</p>
+
+<p><em>Note: This resource was introduced in the wake of the WannaCrypt/WannaCry ransomware worm which exploits a <a href="https://technet.microsoft.com/en-us/library/security/ms17-010.aspx">known vulnerability in the SMBv1 protocol</a></em></p>
+
+<p><strong>Highlights and breaking changes:</strong></p>
+
+<ul>
+<li>Enforce the disabling of SMBv1 on all versions of Windows, regardless of installation or whether the feature is enabled (e.g. Windows 2016)</li>
+</ul>
+
+<p><strong>New attributes:</strong>
+- <code>['windows_hardening']['smbv1']['disable']</code> allows the disabling/enabling of the enforcement of disabling SMBv1</p>
+
+<p>We are looking forward to get your feedback via <a href="https://github.com/dev-sec/chef-windows-hardening/issues">GitHub issues</a> or <a href="https://gitter.im/dev-sec/general">Gitter chatroom</a>. And you can follow us on <a href="https://twitter.com/DevSecIO">Twitter</a>.</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

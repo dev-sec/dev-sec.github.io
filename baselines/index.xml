@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview DevSec Baselines on DevSec Hardening Framework</title>
+    <link>https://dev-sec.io/baselines/</link>
+    <description>Recent content in Overview DevSec Baselines on DevSec Hardening Framework</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://dev-sec.io/baselines/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DevSec Apache Baseline</title>
+      <link>https://dev-sec.io/baselines/apache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec Docker Baseline</title>
+      <link>https://dev-sec.io/baselines/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec Kubernetes Baseline</title>
+      <link>https://dev-sec.io/baselines/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec Linux Baseline</title>
+      <link>https://dev-sec.io/baselines/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec MySQL Baseline</title>
+      <link>https://dev-sec.io/baselines/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec Nginx Baseline</title>
+      <link>https://dev-sec.io/baselines/nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec Postgres Baseline</title>
+      <link>https://dev-sec.io/baselines/postgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/postgres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec SSH Baseline</title>
+      <link>https://dev-sec.io/baselines/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec SSL Baseline</title>
+      <link>https://dev-sec.io/baselines/ssl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevSec Windows Baseline</title>
+      <link>https://dev-sec.io/baselines/windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/windows/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
