@@ -1,0 +1,118 @@
+---
+linux:
+  id: linux-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/linux-baseline
+      icon: icon-github-circled
+    - name: Ansible Remediation Role
+      url: https://github.com/dev-sec/ansible-os-hardening
+      icon: icon-github-circled
+    - name: Chef Remediation Cookbook
+      url: https://github.com/dev-sec/chef-os-hardening
+      icon: icon-github-circled
+    - name: Puppet Remediation Module
+      url: https://github.com/hardening-io/puppet-os-hardening
+      icon: icon-github-circled
+ssh:
+  id: ssh-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/ssh-baseline
+      icon: icon-github-circled
+    - name: Ansible Remediation Role
+      url: https://github.com/dev-sec/ansible-ssh-hardening
+      icon: icon-github-circled
+    - name: Chef Remediation Cookbook
+      url: https://github.com/dev-sec/chef-ssh-hardening
+      icon: icon-github-circled
+    - name: Puppet Remediation Module
+      url: https://github.com/hardening-io/puppet-ssh-hardening
+      icon: icon-github-circled
+mysql:
+  id: mysql-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/mysql-baseline
+      icon: icon-github-circled
+    - name: Ansible Remediation Role
+      url: https://github.com/dev-sec/ansible-mysql-hardening
+      icon: icon-github-circled
+    - name: Chef Remediation Cookbook
+      url: https://github.com/dev-sec/chef-mysql-hardening
+      icon: icon-github-circled
+    - name: Puppet Remediation Module
+      url: https://github.com/hardening-io/puppet-mysql-hardening
+      icon: icon-github-circled
+postgres:
+  id: postgres-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/postgres-baseline
+      icon: icon-github-circled
+    - name: Chef Remediation Cookbook
+      url: https://github.com/dev-sec/chef-postgres-hardening
+      icon: icon-github-circled
+    - name: Puppet Remediation Module
+      url: https://github.com/hardening-io/puppet-postgres-hardening
+      icon: icon-github-circled
+nginx:
+  id: nginx-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/nginx-baseline
+      icon: icon-github-circled
+    - name: Ansible Remediation Role
+      url: https://github.com/dev-sec/ansible-nginx-hardening
+      icon: icon-github-circled
+    - name: Chef Remediation Cookbook
+      url: https://github.com/dev-sec/chef-nginx-hardening
+      icon: icon-github-circled
+    - name: Puppet Remediation Module
+      url: https://github.com/hardening-io/puppet-nginx-hardening
+      icon: icon-github-circled
+apache:
+  id: apache-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/apache-baseline
+      icon: icon-github-circled
+    - name: Ansible Remediation Role
+      url: https://github.com/dev-sec/ansible-apache-hardening
+      icon: icon-github-circled
+    - name: Chef Remediation Cookbook
+      url: https://github.com/dev-sec/chef-apache-hardening
+      icon: icon-github-circled
+    - name: Puppet Remediation Module
+      url: https://github.com/hardening-io/puppet-apache-hardening
+      icon: icon-github-circled
+windows:
+  id: windows-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/windows-baseline
+      icon: icon-github-circled
+    - name: Ansible Remediation Role
+      url: https://github.com/dev-sec/ansible-windows-hardening
+      icon: icon-github-circled
+    - name: Chef Remediation Cookbook
+      url: https://github.com/dev-sec/chef-windows-hardening
+      icon: icon-github-circled
+ssl:
+  id: ssl-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/ssl-baseline
+      icon: icon-github-circled
+docker:
+  id: docker-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/cis-docker-benchmark
+      icon: icon-github-circled
+kubernetes:
+  id: kubernetes-baseline
+  links:
+    - name: InSpec Profile
+      url: https://github.com/dev-sec/cis-kubernetes-benchmark
+      icon: icon-github-circled

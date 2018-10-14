@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>Posts</h1>
+  {{ range .Data.Pages }}
+    <article>
+      <h2>{{ .Title }}</h2>
+      {{ .Summary }}
+      <a href="{{ .RelPermalink }}" class="f6 mt2 db link primary-color dim">
+        Read More &raquo;
+      </a>
+    </article>
+  {{ end }}
+{{ end }}

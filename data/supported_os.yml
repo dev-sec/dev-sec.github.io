@@ -1,0 +1,26 @@
+---
+os:
+- name: Ubuntu
+  versions:
+    - 14.04
+    - 16.04
+    - 18.04
+- name: Debian
+  versions:
+    - 8
+    - 9
+- name: RHEL
+  versions:
+    - 6
+    - 7
+- name: CentOS
+  versions:
+    - 6
+    - 7
+- name: Oracle
+  versions:
+    - 6
+    - 7
+- name: OpenSuse
+  versions:
+    - 42

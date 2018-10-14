@@ -1,0 +1,169 @@
+{{ define "main" }}
+  <!-- Landing -->
+  <section class="landing_container" id="landing">
+    <div id="landing-bg">
+    </div>
+
+    <div class="row">
+      <div class="large-10 medium-12 small-12 small-centered columns headline">
+
+        <div class="row">
+          <div class="small-12 columns">
+            <h1 class="t-mint"><strong>dev</strong>ops + <strong>sec</strong>urity</h1>
+            <h3>{{ .Description }}</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Landing -->
+
+  <section class="explain inspec border-top" id="overview">
+    <div class="row">
+      {{ partial "baselines/overview.html" . }}
+    </div>
+  </section>
+
+  <section class="explain inspec border-top" id="detection">
+    <div class="row">
+      <div class="large-12 medium-12 small-12 text-center columns">
+        <h2 style="margin-bottom: 0.8rem">Identify security issues and misconfiguration</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 medium-12 small-12 text-center columns splitarrow" style="padding: 0 21%">
+        <img class="inspec-logo" src="/images/inspec.png" >
+      </div>
+    </div>
+  </section>
+
+  <section class="explain border-top" id="integration">
+    <div class="row">
+      <div class="large-12 medium-12 small-12 text-center columns">
+        <h2 style="margin-bottom: 0.8rem">Remediate with your automation tooling</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 medium-12 small-12 text-center columns splitarrow" style="padding: 0 21%">
+        <img src="/images/splitarrow.png" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-4 medium-4 small-12 text-center columns">
+        <div class="row link-item provider-logo"><div class="small-12 text-center columns">
+          <div>
+            <a href="">
+              <img class="puppet-logo" src="/images/ansible_logo.png" >
+            </a>
+          </div>
+        </div></div>
+      </div>
+      <div class="large-4 medium-4 small-12 text-center columns">
+        <div class="row link-item provider-logo"><div class="small-12 text-center columns">
+          <div>
+            <img class="chef-logo" src="/images/chef.png" >
+          </div>
+        </div></div>
+      </div>
+      <div class="large-4 medium-4 small-12 text-center columns">
+        <div class="row link-item provider-logo"><div class="small-12 text-center columns">
+          <div>
+            <a href="https://forge.puppetlabs.com/hardening">
+              <img class="puppet-logo" src="/images/puppet.png" >
+            </a>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Explain -->
+  <section class="explain border-top" id="explain_intro">
+    <div class="row">
+      <div class="large-6 medium-12 small-12 right columns">
+        <h2>Add security to your automation</h2>
+        <p>Hardening adds a layer into your automation framework, that configures your
+        operating systems and services.</p>
+        <p>It takes care of difficult settings, compliance guidelines, cryptography
+        recommendations, and secure defaults.</p>
+      </div>
+      <div class="large-6 medium-12 small-12 left text-center columns">
+        <img src="/images/configmerge.png" >
+      </div>
+    </div>
+  </section>
+
+
+  <section class="explain border-top" id="explain_demo">
+    <div class="terminal" id="br" id="bn">
+      <div class="header">
+        <div class="ibutton red"><div class="shine"></div><div class="glow"></div></div>
+        <div class="ibutton yellow"><div class="shine"></div><div class="glow"></div></div>
+        <div class="ibutton green"><div class="shine"></div><div class="glow"></div></div>
+        <span id="title">Server Hardening - Zsh</span>
+      </div>
+
+      <div class="window">
+        <iframe id="screen" src="https://player.vimeo.com/video/106808139?autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="users">
+    <p>Our Users</p>
+    <ul>
+      <li><a href="https://www.benocs.com/"><img class="grayscale" src="/images/users/benocs-logo.png" style="height: 40px;"></a></li>
+      <li><a href="https://www.t-mobile.com/"><img class="grayscale" src="/images/users/tmo-logo156.png" style="height: 40px;"></a></li>
+      <li class="small"><a href="https://www.convergint.com/"><img class="grayscale" src="/images/users/Convergint-Logo.png" style="height: 40px;"></a></li>
+      <li class="small"><a href="http://www.telekom.com/"><img class="grayscale" src="/images/users/Telekom_Logo_2013.png" style="height: 35px;"></a></li>
+    </ul>
+
+  </section>
+
+  <section class="press border-top">
+
+    <blockquote class="center">
+    Industry is spending a fortune and useless spend on SIEM  – less than 1% success in preventing breaches.<cite>Amit Yoran keynote at RSA conference 2015</cite>
+    </blockquote>
+
+    <ul>
+      <li><a href="https://news.ycombinator.com/item?id=8875130"><img src="/images/hacker-news.png"></a></li>
+      <li><a href="http://www.heise.de/security/meldung/Telekom-Tools-fuer-sichere-Server-Konfiguration-2517840.html"><img src="/images/heise_security_logo_2014.png"></a></li>
+      <li><a href="http://phpmagazine.net/2015/02/hardening-framework-plans-to-support-php.html"><img src="/images/phpmaglogo.png"></a></li>
+    </ul>
+
+  </section>
+
+  <section class="explain border-top" id="operating_systems">
+    <div class="row">
+      <div class="large-12 medium-12 small-12 text-center columns">
+        <h2 style="margin-bottom: 0.8rem">Verified on</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 medium-12 small-12 text-center columns">
+        <p>Supported and regularly tested</p>
+      </div>
+    </div>
+
+    <div class="row"><div class="large-10 medium-12 small-12 small-centered columns">
+      <div class="row supported_on">
+
+        {{ $len := (len $.Site.Data.supported_os.os) }}
+        {{ range $ind, $os := $.Site.Data.supported_os.os }}
+        <div class="large-3 medium-3 small-6 text-center columns {{ if eq (add $ind 1) $len }} end {{ end }} ">
+          <a href="#" class="{{ lower $os.name }}">
+            <h3>{{$os.name }}</h3>
+            <p>{{ delimit $os.versions ", " }}</p>
+          </a>
+        </div>
+        {{ end }}
+
+      </div>
+      </div></div>
+
+    </div>
+  </section>
+{{ end }}

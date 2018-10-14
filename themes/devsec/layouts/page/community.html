@@ -1,0 +1,35 @@
+{{ define "title" }}
+  {{ .Title }} – {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+
+<div class="explain" id="team">
+
+  <section class="" id="contributors">
+    <div class="row">
+      <div class="large-12 medium-12 small-12 text-center columns subtitle">
+        <h2 style="margin-bottom: 0.8rem">Contributors</h2>
+        <p>Thank you so much for all your great contributions!!</p>
+      </div>
+    </div>
+    <div class="row contactsmall">
+
+      <div class="small-12 text-center columns">
+        {{ $dataJ := getJSON "data/contributors.json" }}
+
+        {{ range $i, $r := $dataJ }}
+          <div style="width: 190px;float: left;">
+          <a href="{{ $r.html_url }}">
+            <img src="{{ $r.avatar_url }}">
+            <p>{{ $r.login }}</p>
+          </a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- End Team -->
+{{ end }}

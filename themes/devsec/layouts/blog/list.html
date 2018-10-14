@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section id="blog-header">
+  <div class="row">
+    <div class="large-12 medium-12 small-12 small-center columns">
+      <h2>News</h2>
+    </div>
+  </div>
+</section>
+
+  <!-- merge internal and external content -->
+  {{ $list := .Data.Pages  }}
+  <section class="blog overview">
+    {{ range $list }}
+    <div class="row">
+      <article class="large-12 medium-12 small-12 small-center columns">
+        {{if eq .Params.External true}}
+        <a href="{{ .Params.External_url }}" class="external">
+          <h2>{{ .Title }}</h2>
+          <span class="time">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</span><div class="tag">external</div>
+        </a>
+        {{else}}
+        <a href="{{ .RelPermalink }}">
+          <h2>{{ .Title }}</h2>
+          <span class="time">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</span>
+          {{ .Summary }}
+            Read More &raquo;
+        </a>
+        {{end}}
+      </article>
+    </div>
+    <br>
+    {{ end }}
+  </section>
+{{ end }}

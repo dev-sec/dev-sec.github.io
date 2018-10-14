@@ -1,0 +1,41 @@
+baseURL = "https://dev-sec.io/"
+languageCode = "en-us"
+title = "DevSec Hardening Framework"
+theme = "devsec"
+metaDataFormat = "yaml"
+
+[[menu.global]]
+  name = "About"
+  weight = 1
+  identifier = "project"
+  url = "/project/"
+
+[[menu.global]]
+  name = "Baselines"
+  weight = 1
+  identifier = "baselines"
+  url = "/baselines/"
+
+[[menu.global]]
+  name = "Videos"
+  weight = 2
+  identifier = "videos"
+  url = "/videos/"
+
+[[menu.global]]
+  name = "Community"
+  weight = 3
+  identifier = "comunity"
+  url = "/community/"
+
+[[menu.global]]
+  name = "News"
+  weight = 4
+  identifier = "blog"
+  url = "/blog/"
+
+[[menu.global]]
+  name = "GitHub"
+  weight = 5
+  identifier = "github"
+  url = "https://github.com/dev-sec"

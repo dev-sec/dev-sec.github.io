@@ -1,0 +1,27 @@
+{{ define "title" }}
+  {{ .Title }} – {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              {{ dateFormat "Monday, Jan 2, 2006" .Date }}
+          </div>
+          <h1>{{ .Title }}</h1>
+          <div class="infobar">
+            {{ range .Params.Authors }}
+            <a class="site-title" href="{{ .link }}">
+              <div class="usericon-small" style="background-image: url({{ .image }});"></div>
+              <div class="username">{{ .name }}</div>
+            </a>
+            {{ end }}
+        </div>
+      </div>
+      {{ .Content }}
+    </article>
+  </div>
+</section>
+{{ end }}
