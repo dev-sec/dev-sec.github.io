@@ -1,9 +1,7 @@
 # dev-sec.io
 
-## Installation
+## Development and Deployment
 
 1. Install Hugo [here](https://gohugo.io/getting-started/installing/)
-2. Develop via:
-    ```
-    hugo server
-    ```
+2. local development via: `hugo server`
+3. deployment via `./deploy.sh`
