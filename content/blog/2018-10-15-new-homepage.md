@@ -7,9 +7,12 @@ authors:
   link: https://lollyrock.com
 ---
 
-Hi Security-Friends,
+Hi Security Friends,
 
-we had this update in works for a while and the new webpage is finally here. It features a few new exiting things. We migrated from our old custom-build web page to [hugo](https://gohugo.io/) and combined our frontpage, blog and documentation into one single repository. This is easier to maintain and to contribute to. Besides the technical improvements, we also worked on an improved user experience. Besides the fresh front-page, we specifically created a new contributor page and improved our baseline overview.
+We had this update in the works for a while and the new homepage is finally here. I'll look at some of the updates and encourage you to reach out for future improvements.
+
+We finally migrated from our old custom-built pages to [Hugo](https://gohugo.io/) and combined our frontpage, blog and documentation into one single repository. This is easier to maintain and to contribute to. Besides these technical improvements, we also worked on the user experience, a fresh front-page, and a new contributor page, and and improved baseline overview.
+
 
 ### New contributor page
 
@@ -17,9 +20,12 @@ The DevSec project is driven by many contributors but it was not easily visible 
 
 ![Contributors](/images/page_contributors.png)
 
+
 ### New baseline views
 
-For quite some time, we track our security guidelines in baselines that are independent from the DevOps automation tool. We use [InSpec](https://inspec.io) to define the baselines and to verify our Ansible, Chef and Puppet remediation modules in an automatic way. Until today, it was challenging for users to see all baseline controls without looking into the bsseline source code. Since we aim to enable everybody to understand and see our security guidelines, a new visualization was required. We updated our existing feature overview and linked the illustration to our new [baseline viewer](https://github.com/arlimus/inspeculus).
+For some time now, we have tracked our security guidelines in baselines that are independent from the DevOps automation tool. We use [InSpec](https://inspec.io) to define the baselines and to verify our Ansible, Chef, and Puppet remediation modules in an automatic way. Until today, it was challenging for users to see all baseline controls without looking into the baseline source code. Since we aim to enable everybody to understand and see our security guidelines, a new visualization was required.
+
+We updated our existing feature overview and linked it to our new [profile viewer](https://github.com/arlimus/inspeculus).
 
 ![Baselines](/images/page_overview.png)
 
@@ -27,7 +33,8 @@ You can click on each benchmark to see baseline details and their controls. In a
 
 ![Baselines](/images/page_baselines.png)
 
-We hope you like those new views!
+We hope you enjoy these new views!
 
-Have a happy secure day.
+
+Have a hacky day,
 Chris
