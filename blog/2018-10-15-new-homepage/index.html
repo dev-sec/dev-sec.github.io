@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+  Our new homepage – DevSec Hardening Framework
+</title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/index.html" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Monday, Oct 15, 2018
+          </div>
+          <h1>Our new homepage</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://lollyrock.com">
+              <div class="usericon-small" style="background-image: url(https://avatars3.githubusercontent.com/u/1178413?v=4);"></div>
+              <div class="username">Christoph Hartmann</div>
+            </a>
+            
+        </div>
+      </div>
+      
+
+<p>Hi Security Friends,</p>
+
+<p>We had this update in the works for a while and the new homepage is finally here. I&rsquo;ll look at some of the updates and encourage you to reach out for future improvements.</p>
+
+<p>We finally migrated from our old custom-built pages to <a href="https://gohugo.io/">Hugo</a> and combined our frontpage, blog and documentation into one single repository. This is easier to maintain and to contribute to. Besides these technical improvements, we also worked on the user experience, a fresh front-page, and a new contributor page, and and improved baseline overview.</p>
+
+<h3 id="new-contributor-page">New contributor page</h3>
+
+<p>The DevSec project is driven by many contributors but it was not easily visible since the development is distributed over multiple repositories. Therefore, it was not easy to honor their contributions. We wrote a small script that uses the Github API to fetch all the information from each repositories and aggregated the results on a <a href="https://dev-sec.io/community/">new community page</a>. It shows all contributors, sorted by their contributions and a link to their github account.</p>
+
+<p><img src="/images/page_contributors.png" alt="Contributors" /></p>
+
+<h3 id="new-baseline-views">New baseline views</h3>
+
+<p>For some time now, we have tracked our security guidelines in baselines that are independent from the DevOps automation tool. We use <a href="https://inspec.io">InSpec</a> to define the baselines and to verify our Ansible, Chef, and Puppet remediation modules in an automatic way. Until today, it was challenging for users to see all baseline controls without looking into the baseline source code. Since we aim to enable everybody to understand and see our security guidelines, a new visualization was required.</p>
+
+<p>We updated our existing feature overview and linked it to our new <a href="https://github.com/arlimus/inspeculus">profile viewer</a>.</p>
+
+<p><img src="/images/page_overview.png" alt="Baselines" /></p>
+
+<p>You can click on each benchmark to see baseline details and their controls. In addition, you find the links for the Ansible, Chef and Puppet at the top of the baseline viewer.</p>
+
+<p><img src="/images/page_baselines.png" alt="Baselines" /></p>
+
+<p>We hope you enjoy these new views!</p>
+
+<p>Have a hacky day,
+Chris</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/imprint">Imprint</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://gitter.im/dev-sec/general?source=orgpage">Gitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>

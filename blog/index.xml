@@ -6,10 +6,21 @@
     <description>Recent content in DevSec Blog on DevSec Hardening Framework</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Dec 2017 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Oct 2018 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dev-sec.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Our new homepage</title>
+      <link>https://dev-sec.io/blog/2018-10-15-new-homepage/</link>
+      <pubDate>Mon, 15 Oct 2018 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2018-10-15-new-homepage/</guid>
+      <description>Hi Security Friends,
+We had this update in the works for a while and the new homepage is finally here. I&amp;rsquo;ll look at some of the updates and encourage you to reach out for future improvements.
+We finally migrated from our old custom-built pages to Hugo and combined our frontpage, blog and documentation into one single repository. This is easier to maintain and to contribute to. Besides these technical improvements, we also worked on the user experience, a fresh front-page, and a new contributor page, and and improved baseline overview.</description>
+    </item>
     
     <item>
       <title>chef-os-hardening 3.0.0 is released</title>
