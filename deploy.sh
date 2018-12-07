@@ -1,27 +1,22 @@
 #!/bin/bash
 
-# This deploy script is from
-# https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-via-docs-folder-on-master-branch
+set -e
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Build the project.
-hugo -t devsec
+echo $GITHUB_AUTH_SECRET > ~/.git-credentials && chmod 0600 ~/.git-credentials
+git config --global credential.helper store
+git config --global user.email "artem-bot@users.noreply.github.com"
+git config --global user.name "Artems Bot"
+git config --global push.default simple
 
-# Go To Public folder
-cd public
-# Add changes to git.
-git add .
+rm -rf deployment
+git clone -b master https://github.com/dev-sec/dev-sec.github.io.git deployment
+rsync -av --delete --exclude ".git" public/ deployment
+cd deployment
+git add -A
+git commit -m "rebuilding site on `date`, commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}"
+git push
 
-# Commit changes.
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
-git commit -m "$msg"
-
-# Push source and build repos.
-git push origin master
-
-# Come Back up to the Project Root
 cd ..
+rm -rf deployment
