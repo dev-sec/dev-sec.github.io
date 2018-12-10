@@ -15,7 +15,7 @@ git clone -b master https://github.com/dev-sec/dev-sec.github.io.git deployment
 rsync -av --delete --exclude ".git" public/ deployment
 cd deployment
 git add -A
-git commit -m "rebuilding site on `date`, commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}"
+git commit -m "rebuilding site on `date`, commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}" || true
 git push
 
 cd ..
