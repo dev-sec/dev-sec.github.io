@@ -367,15 +367,6 @@ Submitting Issues and PRs We utilize Github Issues for issue tracking and contri
     </item>
     
     <item>
-      <title>DevSec Imprint</title>
-      <link>https://dev-sec.io/imprint/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev-sec.io/imprint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>DevSec Kubernetes Baseline</title>
       <link>https://dev-sec.io/baselines/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -453,6 +444,15 @@ Submitting Issues and PRs We utilize Github Issues for issue tracking and contri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev-sec.io/baselines/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Legal Notice</title>
+      <link>https://dev-sec.io/legal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/legal/</guid>
       <description></description>
     </item>
     
