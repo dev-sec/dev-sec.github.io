@@ -1,2 +1,4 @@
 tools/contributors/node_modules
 tools/contributors/contributors.json
+/public
+/deployment
