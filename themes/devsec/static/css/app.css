@@ -10234,14 +10234,6 @@ th.hide-for-touch {
   color: white;
 }
 
-.bg-gray {
-  background-color: #edeeed;
-}
-
-.bg-gray h2 {
-  color: black !important;
-}
-
 .bg-landing {
   background: url('/images/bg.png');
   -moz-background-size: 100% 100%;
@@ -11274,8 +11266,7 @@ footer ul li a:hover {
 
 @media only screen {
 
-  .imprint,
-  .articles {
+  .imprint {
     padding-top: 3rem;
   }
 
@@ -11306,8 +11297,7 @@ footer ul li a:hover {
 
 @media only screen and (min-width: 40.063em) {
 
-  .imprint,
-  .articles {
+  .imprint {
     padding-top: 5rem;
   }
 }
