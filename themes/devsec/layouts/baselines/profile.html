@@ -1,7 +1,3 @@
-{{ define "title" }}
-  {{ .Title }} – {{ .Site.Title }}
-{{ end }}
-
 {{ define "main" }}
 
 {{ partial "baselines/urlbar.html" (index $.Site.Data.baselines .Params.baseline)  }}

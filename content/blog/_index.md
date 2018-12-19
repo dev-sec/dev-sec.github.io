@@ -1,3 +1,3 @@
 ---
-title: "DevSec Blog"
+title: "News"
 ---
