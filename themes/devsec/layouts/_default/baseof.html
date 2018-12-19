@@ -17,6 +17,9 @@
     <!-- End Nav -->
 
     <!-- Code that all your templates share, like a header -->
+    {{ if and (ne .File.Path "community.md") (ne .Section "baselines")  }}
+      {{ partial "page-header.html" . }}
+    {{ end }}
     {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
     {{ end }}
