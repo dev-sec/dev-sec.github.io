@@ -167,11 +167,6 @@
   </url>
   
   <url>
-    <loc>https://dev-sec.io/blog/</loc>
-    <lastmod>2018-10-15T09:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dev-sec.io/community/</loc>
   </url>
   
@@ -217,6 +212,11 @@
   
   <url>
     <loc>https://dev-sec.io/legal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/blog/</loc>
+    <lastmod>2018-10-15T09:00:00+00:00</lastmod>
   </url>
   
   <url>
