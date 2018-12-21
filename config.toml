@@ -11,31 +11,50 @@ metaDataFormat = "yaml"
   url = "/project/"
 
 [[menu.global]]
+  name = "Tools"
+  weight = 2
+  identifier = "inspec_tools"
+  url = "/inspec_tools"
+
+[[menu.global]]
+  name = "Applications"
+  weight = 3
+  identifier = "application"
+  url = "/application/"
+
+[[menu.sub]]
+  name = "Vulcan"
+  parent = "application"
+  weight = 3
+  identifier = "vulcan"
+  url = "/application/vulcan/"
+
+[[menu.global]]
   name = "Baselines"
-  weight = 1
+  weight = 4
   identifier = "baselines"
   url = "/baselines/"
 
 [[menu.global]]
   name = "Videos"
-  weight = 2
+  weight = 5
   identifier = "videos"
   url = "/videos/"
 
 [[menu.global]]
   name = "Community"
-  weight = 3
-  identifier = "community"
+  weight = 6
+  identifier = "comunity"
   url = "/community/"
 
 [[menu.global]]
   name = "News"
-  weight = 4
+  weight = 7
   identifier = "blog"
   url = "/blog/"
 
 [[menu.global]]
   name = "GitHub"
-  weight = 5
+  weight = 8
   identifier = "github"
-  url = "https://github.com/dev-sec"
+  url = "https://github.com/mitre/mitre-inspec.github.io"
