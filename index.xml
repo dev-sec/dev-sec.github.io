@@ -340,6 +340,25 @@ Submitting Issues and PRs We utilize Github Issues for issue tracking and contri
     </item>
     
     <item>
+      <title></title>
+      <link>https://dev-sec.io/inspec_tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/inspec_tools/</guid>
+      <description> Tools overview Inspec Tools </description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>https://dev-sec.io/application/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/application/</guid>
+      <description>Vulcan Description Vulcan is a tool to help streamline the process of creating STIGs and InSpec security compliance profiles. It models the STIG intent form and the process of aligning security controls from SRG items into actual STIG security controls. Vulcan also gives the option while aligning the security controls to insert inspec code and test across any type of system supported by InSpec.
+Features  Model the STIG creation process between the creator(vendor) and the approver(sponsor) Write and test InSpec code on a local system, or across SSH, AWS, and Docker Easily view the progress on what the status is of each control Communicate through the application to make the best decisions on controls Confidential data in the database is encrypted using symmetric encryption Authenticate via the local server, through github, and through configuring an LDAP server.</description>
+    </item>
+    
+    <item>
       <title>DevSec Apache Baseline</title>
       <link>https://dev-sec.io/baselines/apache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -412,15 +431,6 @@ Submitting Issues and PRs We utilize Github Issues for issue tracking and contri
     </item>
     
     <item>
-      <title>DevSec Project</title>
-      <link>https://dev-sec.io/project/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev-sec.io/project/</guid>
-      <description>Challenge Running secure infrastructure is a difficult task. Although server hardening is a well-known topic with many guides out in the wild, it is still very cumbersome to apply and verify secure configuration. If you manage many server, they need to be configured properly and maintained, which is difficult and time-consuming to get right. To answer these needs for security, compliance, and maintainability, we decided to launch this project as a common ground for requirements and their fulfillment.</description>
-    </item>
-    
-    <item>
       <title>DevSec SSH Baseline</title>
       <link>https://dev-sec.io/baselines/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -454,6 +464,24 @@ Submitting Issues and PRs We utilize Github Issues for issue tracking and contri
       
       <guid>https://dev-sec.io/legal/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>MITRE Inspec Operating Systems</title>
+      <link>https://dev-sec.io/baselines/operating_systems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/baselines/operating_systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MITRE Inspec Project</title>
+      <link>https://dev-sec.io/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/project/</guid>
+      <description>Challenge Running secure infrastructure is a difficult task. Although server hardening is a well-known topic with many guides out in the wild, it is still very cumbersome to apply and verify secure configuration. If you manage many server, they need to be configured properly and maintained, which is difficult and time-consuming to get right. To answer these needs for security, compliance, and maintainability, we decided to launch this project as a common ground for requirements and their fulfillment.</description>
     </item>
     
     <item>

@@ -158,6 +158,14 @@
   </url>
   
   <url>
+    <loc>https://dev-sec.io/inspec_tools/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/application/</loc>
+  </url>
+  
+  <url>
     <loc>https://dev-sec.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -195,10 +203,6 @@
   </url>
   
   <url>
-    <loc>https://dev-sec.io/project/</loc>
-  </url>
-  
-  <url>
     <loc>https://dev-sec.io/baselines/ssh/</loc>
   </url>
   
@@ -212,6 +216,14 @@
   
   <url>
     <loc>https://dev-sec.io/legal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/operating_systems/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/project/</loc>
   </url>
   
   <url>
