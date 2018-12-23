@@ -1,5 +1,5 @@
 ---
-title: "MITRE Inspec Project"
+title: "DevSec Project"
 layout: project
 ---
 
