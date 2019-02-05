@@ -17,7 +17,7 @@
     <!-- End Nav -->
 
     <!-- Code that all your templates share, like a header -->
-    {{ if and (and (ne .File.Path "community.md") (ne .Section "baselines")) (ne .File.Path "_index.md") }}
+    {{ if and (and (ne .File.Path "contributors.md") (ne .Section "baselines")) (ne .File.Path "_index.md") }}
       {{ partial "page-header.html" . }}
     {{ end }}
     {{ block "main" . }}
