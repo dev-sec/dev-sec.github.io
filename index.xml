@@ -340,20 +340,31 @@ Submitting Issues and PRs We utilize Github Issues for issue tracking and contri
     </item>
     
     <item>
+      <title>Community</title>
+      <link>https://dev-sec.io/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/community/</guid>
+      <description> Get in touch You can reach us on several ways:
+ @DevSecIO on Twitter Mailing list for general topics: devsec@freelists.org Mailing list with release announcements (no posts are possible here): devsec-announce@freelists.org  Contribute Please have a look at our contribution guide.
+People behind dev-sec.io  Project founders Core Team Contributors  </description>
+    </item>
+    
+    <item>
+      <title>Contributors</title>
+      <link>https://dev-sec.io/contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/contributors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>DevSec Apache Baseline</title>
       <link>https://dev-sec.io/baselines/apache/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dev-sec.io/baselines/apache/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DevSec Community</title>
-      <link>https://dev-sec.io/community/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev-sec.io/community/</guid>
       <description></description>
     </item>
     

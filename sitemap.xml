@@ -163,11 +163,15 @@
   </url>
   
   <url>
-    <loc>https://dev-sec.io/baselines/apache/</loc>
+    <loc>https://dev-sec.io/community/</loc>
   </url>
   
   <url>
-    <loc>https://dev-sec.io/community/</loc>
+    <loc>https://dev-sec.io/contributors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-sec.io/baselines/apache/</loc>
   </url>
   
   <url>
