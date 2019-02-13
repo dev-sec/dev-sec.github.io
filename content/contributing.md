@@ -1,7 +1,6 @@
 ---
 title: "Contributing"
 date:   2015-04-15 21:00:00
-layout: text
 ---
 
 We are glad you want to contribute to InSpec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with [License Headers](/docs/license-headers).
