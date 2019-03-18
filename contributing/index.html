@@ -90,7 +90,7 @@
     <div class="large-12 medium-12 small-12 small-center columns">
       
 
-<p>We are glad you want to contribute to InSpec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with <a href="/docs/license-headers">License Headers</a>.</p>
+<p>We are glad you want to contribute to DevSec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with <a href="/docs/license-headers">License Headers</a>.</p>
 
 <h2 id="submitting-issues-and-prs">Submitting Issues and PRs</h2>
 
@@ -503,6 +503,39 @@ Tasks: TOP =&gt; lint
 
 ± echo $?
 1
+</code></pre>
+
+<h2 id="release-process">Release process</h2>
+
+<p>Our release process has following steps:</p>
+
+<ul>
+<li>Generate changelogs for a new release, bump the metadata and create a release commit and tag</li>
+<li>Upload the new release to the chef supermarket/puppet forge/ansible galaxy</li>
+<li>Upload the new changelog to the GitHub release page</li>
+<li>Create a new tweet with a link to the GitHub release page (from @DevSecIO account or just mention @DevSecIO and Chris retweets it)</li>
+<li>Create a new mail to the <a href="https://www.freelists.org/list/devsec-announce">devsec-announce@freelists.org</a> mailing list</li>
+</ul>
+
+<p>Example of such announcement mail:</p>
+
+<pre><code>Subject: chef-os-hardening 3.2.1 is released
+
+
+DevSec Hardening Framework project is releasing a new patch release of chef-os-hardening 3.2.1 today!
+
+Fixed bugs:
+
+• execute[update-pam] resource fails on Ubuntu 14.04 on Azure #237
+• exec-shield incompatible with Oracle Linux UEK #234
+
+Merged pull requests:
+
+• Use full path for executing pam-auth-update #238 (sean-nixon)
+• Do not apply exec-shield if running Oracle Linux with UEK - addresses #234 #235 (eyespies)
+
+We are looking forward to get your feedback via our new mailing lists (https://dev-sec.io/community/).
+Feel free to follow us on Twitter (https://twitter.com/devsecio) to stay updated.
 </code></pre>
 
     </div>

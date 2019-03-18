@@ -266,7 +266,7 @@ Retrospection About a year ago the Hardening Framework has started as a small ch
       <pubDate>Wed, 15 Apr 2015 21:00:00 +0000</pubDate>
       
       <guid>https://dev-sec.io/contributing/</guid>
-      <description>We are glad you want to contribute to InSpec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with License Headers.
+      <description>We are glad you want to contribute to DevSec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with License Headers.
 Submitting Issues and PRs We utilize Github Issues for issue tracking and contributions. You can contribute in two ways:</description>
     </item>
     
