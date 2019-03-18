@@ -3,7 +3,7 @@ title: "Contributing"
 date:   2015-04-15 21:00:00
 ---
 
-We are glad you want to contribute to InSpec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with [License Headers](/docs/license-headers).
+We are glad you want to contribute to DevSec! This document will help answer common questions you may have during your first contribution. This project is Apache 2 licensed. Every contribution must be under the Apache 2 License, too. For new files we have added a section with [License Headers](/docs/license-headers).
 
 
 ## Submitting Issues and PRs
@@ -426,4 +426,36 @@ Tasks: TOP => lint
 
 ± echo $?
 1
+```
+
+## Release process
+
+Our release process has following steps:
+
+- Generate changelogs for a new release, bump the metadata and create a release commit and tag
+- Upload the new release to the chef supermarket/puppet forge/ansible galaxy
+- Upload the new changelog to the GitHub release page
+- Create a new tweet with a link to the GitHub release page (from @DevSecIO account or just mention @DevSecIO and Chris retweets it)
+- Create a new mail to the [devsec-announce@freelists.org](https://www.freelists.org/list/devsec-announce) mailing list
+
+Example of such announcement mail:
+
+```
+Subject: chef-os-hardening 3.2.1 is released
+
+
+DevSec Hardening Framework project is releasing a new patch release of chef-os-hardening 3.2.1 today!
+
+Fixed bugs:
+
+• execute[update-pam] resource fails on Ubuntu 14.04 on Azure #237
+• exec-shield incompatible with Oracle Linux UEK #234
+
+Merged pull requests:
+
+• Use full path for executing pam-auth-update #238 (sean-nixon)
+• Do not apply exec-shield if running Oracle Linux with UEK - addresses #234 #235 (eyespies)
+
+We are looking forward to get your feedback via our new mailing lists (https://dev-sec.io/community/).
+Feel free to follow us on Twitter (https://twitter.com/devsecio) to stay updated.
 ```
