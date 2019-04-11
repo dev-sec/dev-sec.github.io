@@ -436,7 +436,7 @@ Our release process has following steps:
 - Upload the new release to the chef supermarket/puppet forge/ansible galaxy
 - Upload the new changelog to the GitHub release page
 - Create a new tweet with a link to the GitHub release page (from @DevSecIO account or just mention @DevSecIO and Chris retweets it)
-- Create a new mail to the [devsec-announce@freelists.org](https://www.freelists.org/list/devsec-announce) mailing list
+- Create a new mail to the [devsec@freelists.org](https://www.freelists.org/list/devsec) and [devsec-announce@freelists.org](https://www.freelists.org/list/devsec-announce) mailing lists
 
 Example of such announcement mail:
 
