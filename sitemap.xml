@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://dev-sec.io/blog/2019-05-15-baseline-releases/</loc>
+    <lastmod>2018-05-15T14:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dev-sec.io/blog/2017-12-21-chef-os-3.0-released/</loc>
     <lastmod>2017-12-21T18:00:00+00:00</lastmod>
   </url>
@@ -44,11 +49,6 @@
   
   <url>
     <loc>https://dev-sec.io/blog/2017-04-13-openstack-profile/</loc>
-    <lastmod>2017-04-13T09:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dev-sec.io/blog/2019-05-15-baseline-releases/</loc>
     <lastmod>2017-04-13T09:00:00+00:00</lastmod>
   </url>
   
