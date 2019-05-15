@@ -1,6 +1,6 @@
 ---
 title: "DevSec Baseline releases, major update for our Windows baseline"
-date:   2018-05-15 14:00:00
+date:   2019-05-15 14:00:00
 authors:
 - name: Christoph Hartmann
   image: https://avatars3.githubusercontent.com/u/1178413?v=4
