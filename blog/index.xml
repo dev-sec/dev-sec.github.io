@@ -120,6 +120,17 @@ The baseline is already covering a wide range of checks for:
     </item>
     
     <item>
+      <title>DevSec Baseline releases, major update for our Windows baseline</title>
+      <link>https://dev-sec.io/blog/2019-05-15-baseline-releases/</link>
+      <pubDate>Thu, 13 Apr 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2019-05-15-baseline-releases/</guid>
+      <description>Dear DevSec friends,
+today, we released many DevSec baselines. Thank you, the dev-sec community, for all the contributions to make it happen. We released:
+ Windows Baseline 2.0.0 and 1.2.0 Linux Baseline 2.3.0 Nginx Baselinne 2.3.0 MySQL Baseline 3.1.0 Apache Baseline 2.1.0 Postgres Baseline 2.0.4 Linux Patch Baseline 0.5.0  Especially, I&amp;rsquo;d like to thank Karsten Müller from Lichtblick, Patrick Münch and Torsten Löbner TLoebner from SVA for their major contribution to our Windows baseline.</description>
+    </item>
+    
+    <item>
       <title>chef-os-hardening 2.0.0 is released</title>
       <link>https://dev-sec.io/blog/2017-04-06-chef-os-2.0-released/</link>
       <pubDate>Thu, 06 Apr 2017 21:00:00 +0000</pubDate>
