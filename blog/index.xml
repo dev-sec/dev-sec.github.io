@@ -6,10 +6,21 @@
     <description>Recent content in News on DevSec Hardening Framework</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 May 2019 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dev-sec.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevSec takes part in Hacktoberfest</title>
+      <link>https://dev-sec.io/blog/2019-10-05-hacktoberfest/</link>
+      <pubDate>Sat, 05 Oct 2019 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2019-10-05-hacktoberfest/</guid>
+      <description>Dear DevSec friends,
+it&amp;rsquo;s Hacktoberfest 2019 and we from the DevSec project are taking part in it! And this year not only as contributors but as maintainers as well. We looked for issues in our Chef-cookbooks, Ansible-roles, Puppet-Modules and InSpec-profiles that are good candidates for your contributions to Hacktoberfest. Then we collected them in our Github-project so you have one place to find them all!
+So go grab a Issue, create a Pull Request and grab your Hacktoberfest-swag!</description>
+    </item>
     
     <item>
       <title>DevSec Baseline releases, major update for our Windows baseline</title>
