@@ -1,6 +1,6 @@
 ---
 title: "DevSec takes part in Hacktoberfest"
-date:   2019-10-05 11:00:00
+date:   2019-10-05 09:00:00
 authors:
 - name: Sebastian Gumprich
   image: https://avatars0.githubusercontent.com/u/3198961?v=4
