@@ -6,10 +6,20 @@
     <description>Recent content in Security &#43; DevOps on DevSec Hardening Framework</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Oct 2019 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dev-sec.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Automating dev-sec releases with Github Actions</title>
+      <link>https://dev-sec.io/blog/2020-07-30-automating-releases/</link>
+      <pubDate>Sat, 30 May 2020 09:00:00 +0000</pubDate>
+      
+      <guid>https://dev-sec.io/blog/2020-07-30-automating-releases/</guid>
+      <description>Hey friends,
+some time ago someone who uses our Ansible roles created an issue in our ansible-os-hardening role stating that the readme in the Ansible Galaxy diverged from the actual releases you can find on Galaxy. The reason for that is simple: Galaxy shows the from the master-branch in the Github-repository - not from the latest release that is uploaded there. That produced a discrepancy between the functions of the role and what is described in the readme.</description>
+    </item>
     
     <item>
       <title>DevSec takes part in Hacktoberfest</title>

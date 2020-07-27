@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Automating dev-sec releases with Github Actions – DevSec Hardening Framework </title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+      <section id="page-header">
+  <div class="row">
+    <div class="large-12 medium-12 small-12 small-center columns">
+      <h2>Automating dev-sec releases with Github Actions</h2>
+    </div>
+  </div>
+</section>
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Saturday, May 30, 2020
+          </div>
+          <h1>Automating dev-sec releases with Github Actions</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://www.zufallsheld.de">
+              <div class="usericon-small" style="background-image: url(https://avatars0.githubusercontent.com/u/3198961?v=4);"></div>
+              <div class="username">Sebastian Gumprich</div>
+            </a>
+            
+        </div>
+      </div>
+      <p>Hey friends,</p>
+
+<p>some time ago someone who uses our Ansible roles created an <a href="https://github.com/dev-sec/ansible-os-hardening/issues/269">issue</a> in our ansible-os-hardening role stating that the readme in the Ansible Galaxy diverged from the actual releases you can find on Galaxy.
+The reason for that is simple: Galaxy shows the from the master-branch in the Github-repository - <em>not</em> from the latest release that is uploaded there.
+That produced a discrepancy between the functions of the role and what is described in the readme.
+Since I did not have time to create a new release for os-hardening (it was done manually at the time), the contents diverged quite heavily.</p>
+
+<p>This real and important problem lead me to automating the releases of the Ansible roles.</p>
+
+<p>Our manual workflow consisted of (1) updating the CHANGELOG with the <a href="https://github.com/github-changelog-generator/github-changelog-generator">github-changelog-generator</a>, (2) finding out what the next version number should be by looking at the PRs, then (3) creating a new tag with this version number and finally (4) releasing a new version of Github. Ansible Galaxy then automatically published a new version from the Github release.</p>
+
+<p>My requirements for automating this where:</p>
+
+<ul>
+<li>keep the CHANGELOG and continue using the generator since it works pretty well</li>
+<li>The release version should be automatically decided upon, based on the PRs</li>
+<li>A Release draft should be created that I then can check and publish manually</li>
+</ul>
+
+<p>I then started experimenting with Github Actions (since I hadn&rsquo;t worked with it before and wanted to try it).
+I searched the Actions Marketplace for Actions that could help me accomplish my goal.</p>
+
+<p>The initial Action only created and pushed a changelog every time a new PR was merged, issued were closed or releases published:</p>
+
+<pre><code>name: Changelog
+
+on:
+  pull_request:
+    types: [closed]
+
+  release:
+    types: [published]
+
+  issues:
+    types: [closed, edited]
+
+jobs:
+  generate_changelog:
+    runs-on: ubuntu-latest
+    name: Generate changelog for master branch
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Generate changelog
+        uses: charmixer/auto-changelog-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: push
+        uses: github-actions-x/commit@v2.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'changelog'
+          commit-message: 'update changelog'
+          force-add: 'true'
+          files: CHANGELOG.md
+          name: dev-sec CI
+          email: hello@dev-sec.io
+</code></pre>
+
+<p>I continued experimenting and created a second action that did:</p>
+
+<ul>
+<li>get the previous tag (to generate the changelog from this tag)</li>
+<li>get the next tag with the help of labels on PRs (major, minor, patch)</li>
+<li>generate a changelog</li>
+<li>create a release draft with the generated changelog and the release- and tag-name of the next tag</li>
+</ul>
+
+<p>You can find the code here: <a href="https://github.com/rndmh3ro/ansible-os-hardening/blob/7.0.0/.github/workflows/release.yml">https://github.com/rndmh3ro/ansible-os-hardening/blob/7.0.0/.github/workflows/release.yml</a></p>
+
+<p>So now I had two actions: one for creating a continously updated changelog and one for creating release drafts. I was fine with this for now.</p>
+
+<p>Then <a href="https://github.com/micheelengronne">@micheelengronne</a> picked up my work and continued improving the Action. He applied the Action on our Inspec baselines and unified the two actions into one. You can find the code here: <a href="https://github.com/dev-sec/ssl-baseline/actions/runs/109370590/workflow">https://github.com/dev-sec/ssl-baseline/actions/runs/109370590/workflow</a></p>
+
+<p>So now all our Inspec-baselines and Ansible-roles have almost-automatic releases: whenever someone merges a PR, a release-draft is created containing the changes in a nicely formatted changelog - ready to be released by the push of a button!</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/legal">Legal notice</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>
