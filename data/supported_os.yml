@@ -13,14 +13,17 @@ os:
   versions:
     - 6
     - 7
+    - 8
 - name: CentOS
   versions:
     - 6
     - 7
+    - 8
 - name: Oracle
   versions:
     - 6
     - 7
+    - 8
 - name: OpenSuse
   versions:
     - 42
