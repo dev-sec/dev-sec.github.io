@@ -1,4 +1,11 @@
-# Migrating our roles to a collection 
+---
+title: "Migrating our roles to a collection"
+date:   2020-11-10 09:00:00
+authors:
+- name: Sebastian Gumprich
+  image: https://avatars0.githubusercontent.com/u/3198961?v=4
+  link: https://www.zufallsheld.de
+---
 
 In July 2020 we decided to move our existing Ansible roles for Linux, ssh, nginx and MySQL into an Ansible collection ([what is a collection?](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html)).
 
