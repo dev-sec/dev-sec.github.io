@@ -44,7 +44,7 @@ That means we now support newer versions of MySQL and MariaDB (https://github.co
 
 We also wanted to replace Inspec with its free distribution [cinc-auditor](https://cinc.sh/). This was surprisingly easy as the people behind cinc made it very easy to install cinc-auditor and use it as a drop-in replacement for Inspec. See this [commit](https://github.com/dev-sec/ansible-os-hardening/pull/291/commits/e7a47a1d342e1b45ceeeae7a1ff247f58ce3434e) for details.
 
-There was an [issue](https://github.com/ansible/ansible/issues/66304) in Ansible that we needed to work around. This was done by @schurzi here: https://github.com/dev-sec/ansible-os-hardening/pull/291/commits/3f7598b5bae80f96cad3ad068f0d57b3e1e538ed
+There was an [issue](https://github.com/ansible/ansible/issues/66304) in Ansible that we needed to work around. This was done by [@schurzi](https://github.com/schurzi/) here: https://github.com/dev-sec/ansible-os-hardening/pull/291/commits/3f7598b5bae80f96cad3ad068f0d57b3e1e538ed
 
 Our mysql-hardening-role relies on a existing installation of MySQL or MariaDB. For this we used geerlingguys mysql-role because it supports many operating systems. However the role has some issues and unmerged pull requests that prevented us to use geerlingguys role as is. We had to [fork](https://github.com/dev-sec/ansible-role-mysql/) the role and incorporate some PRs and fixes. We hope we don't have to continuously support the fork though.
 
