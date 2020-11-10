@@ -1,5 +1,5 @@
 ---
-title: "Migrating our roles to a collection"
+title: "Migrating our Ansible roles to a collection"
 date:   2020-11-08 09:00:00
 authors:
 - name: Sebastian Gumprich
@@ -27,11 +27,11 @@ All the roles that lived in separate repositories should move to the `roles`-dir
 The roles were tested with the help of test-kitchen (I wrote about it [here](https://www.zufallsheld.de/2016/01/05/testing-ansible-roles/)) and our trusted [Inspec Baselines](https://dev-sec.io/baselines/). We kept the baselines but replaced test-kitchen with molecule, the de-facto standard for testing Ansible content. This made it possible to test our collection in the same way locally as done in CI. Speaking of CI: We replaced travis (good riddance - Travis [changed](https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing) their pricing model) with [Github Actions](https://github.com/features/actions).
 Now every role inside the collection has its own pipeline that only runs when files from the role change. We still test our roles on a plethora of operating systems and the most important ones (CentOS and Ubuntu in its various versions) are all supported with all roles.
 
-One problem with the new releases existed: since we wanted to re-use the ansible-os-hardening repository for the collection, we could not start from version 1.0.0 for the collection since the tag already existed. So to no break the old role we decided to continue the version from the role in the collection. This is why we starte with version 7 in the collection.
+One problem with the new releases existed: since we wanted to re-use the ansible-os-hardening repository for the collection, we could not start from version 1.0.0 for the collection since the tag already existed. So to no break the old role we decided to continue the version from the role in the collection. This is why we started with version 7 in the collection.
 
 Releasing new versions with a changelog was something we already [automated](https://github.com/dev-sec/ansible-os-hardening/issues/269) some time ago. We wanted to keep the nicely formatted changelogs and automatic releases and modifying the existing Github Actions was no problem.
 
-Our plan how to actually migrate the roles into the collection was looked like this: Start building the collection and use the roles as submodules inside the monorepo. This way we can continue to support the separate roles and the roles inside the collection cannot diverge from the legacy roles.
+Our plan how to actually migrate the roles into the collection looked like this: Start building the collection and use the roles as submodules inside the monorepo. This way we can continue to support the separate roles and the roles inside the collection cannot diverge from the legacy roles.
 
 When everything was migrated, we planned to archive the old roles and link to the collection.
 
@@ -54,16 +54,18 @@ And Github Actions run on a Ubuntu 18.04 virtual machine with AppArmor enabled. 
 It took some days to figure this one out. However once I found out the reason for this, the solution was found much faster. [Robert de Bock](https://robertdebock.nl/) also had this problem and fixed it [here](https://github.com/robertdebock/ansible-role-mysql/commit/7562e99099b06282391ab7ed102b393a0406d212)
 
 We also dropped support for some operating systems:
+
 * CentOS 6 because support ends in November 2020
 * Oracle-Linux because supporting it is really cumbersome and we don't know anyone that uses our roles on Oracle
 
 # The Result
 
 It's here:
+
 * [Galaxy](https://galaxy.ansible.com/devsec/hardening)
 * [Repository on Github](https://github.com/dev-sec/ansible-os-hardening/)
 
-Please share yore feedback with us, ask questions on the mailing list, open issues and pull requests on our repo!
+Please share your feedback with us, ask questions on the mailing list, open issues and pull requests on our repo!
 
 # The future
 
@@ -74,4 +76,4 @@ Of course we want to continue working on the collection and support more operati
 
 # Thanks
 
-I want to thank the devsec team, especially [@schurzi](https://github.com/schurzi/), [@micheelengronne](https://github.com/schurzi/) and [@chris-rock](https://github.com/chris-rock) for their work and support in creating the collection and this awesome opensource community!
+I want to thank the devsec team, especially [@micheelengronne](https://github.com/micheelengronne), [@schurzi](https://github.com/schurzi/) and [@chris-rock](https://github.com/chris-rock) for their work and support in creating the collection and this awesome opensource community!
