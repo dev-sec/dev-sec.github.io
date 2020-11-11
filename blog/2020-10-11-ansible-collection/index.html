@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Migrating our Ansible roles to a collection – DevSec Hardening Framework </title>
+
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/github_buttons.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="/" id="nav-logo">
+          <img src="/images/hardening_logo.png" style="width: 45px;"/>
+          DevSec Hardening Framework
+        </a>
+      </h1>
+
+    </li>
+     
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      
+        <li>
+          <a href="/project/">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/baselines/">
+            Baselines
+          </a>
+        </li>
+      
+        <li>
+          <a href="/videos/">
+            Videos
+          </a>
+        </li>
+      
+        <li>
+          <a href="/community/">
+            Community
+          </a>
+        </li>
+      
+        <li>
+          <a href="/blog/">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/dev-sec">
+            GitHub
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+</nav>
+
+    
+
+    
+    
+      <section id="page-header">
+  <div class="row">
+    <div class="large-12 medium-12 small-12 small-center columns">
+      <h2>Migrating our Ansible roles to a collection</h2>
+    </div>
+  </div>
+</section>
+
+    
+    
+<section class="blog content">
+  <div class="row">
+    <article class="large-12 medium-12 small-12 small-center columns">
+      <div class="header">
+          <div>
+              Sunday, Nov 8, 2020
+          </div>
+          <h1>Migrating our Ansible roles to a collection</h1>
+          <div class="infobar">
+            
+            <a class="site-title" href="https://www.zufallsheld.de">
+              <div class="usericon-small" style="background-image: url(https://avatars0.githubusercontent.com/u/3198961?v=4);"></div>
+              <div class="username">Sebastian Gumprich</div>
+            </a>
+            
+        </div>
+      </div>
+      
+
+<p>In July 2020 we decided to move our existing Ansible roles for Linux, ssh, nginx and MySQL into an Ansible collection (<a href="https://docs.ansible.com/ansible/latest/user_guide/collections_using.html">what is a collection?</a>).</p>
+
+<h1 id="why">Why?</h1>
+
+<p>Having only one repository for all roles means we don&rsquo;t have to duplicate code. We have one common test-suite for all roles that works the same for every role.
+Also Collections are the future, as there is possibly no support for roles in the next version of Ansible Galaxy (see <a href="https://github.com/ansible/galaxy_ng/issues/58">ansible/galaxy_ng#58</a>).</p>
+
+<h1 id="why-not">Why not?</h1>
+
+<p>Collections are only supported from Ansible 2.9 and onwards. However Ansible 2.8 is still supported (<a href="https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#release-status">https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#release-status</a>). This means we need to support the separate roles until 2.9 is the oldest maintained release.</p>
+
+<h1 id="the-plan">The plan</h1>
+
+<p>We decided to use the ansible-os-hardening git repository for our new collection because it has the most stars. We didn&rsquo;t want to lose our precious internet points!
+We created a separate branch and worked on this one until the migration to the main branch was ready.
+All the roles that lived in separate repositories should move to the <code>roles</code>-directory. It was important for us to keep the history of all roles. Fortunately we weren&rsquo;t the first ones who wanted to migrate one repository with its history to another. So with the help of StackOverflow, migrating them wasn&rsquo;t too hard.</p>
+
+<p>The roles were tested with the help of test-kitchen (I wrote about it <a href="https://www.zufallsheld.de/2016/01/05/testing-ansible-roles/">here</a>) and our trusted <a href="https://dev-sec.io/baselines/">Inspec Baselines</a>. We kept the baselines but replaced test-kitchen with molecule, the de-facto standard for testing Ansible content. This made it possible to test our collection in the same way locally as done in CI. Speaking of CI: We replaced travis (good riddance - Travis <a href="https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing">changed</a> their pricing model) with <a href="https://github.com/features/actions">Github Actions</a>.
+Now every role inside the collection has its own pipeline that only runs when files from the role change. We still test our roles on a plethora of operating systems and the most important ones (CentOS and Ubuntu in its various versions) are all supported with all roles.</p>
+
+<p>One problem with the new releases existed: since we wanted to re-use the ansible-os-hardening repository for the collection, we could not start from version 1.0.0 for the collection since the tag already existed. So to no break the old role we decided to continue the version from the role in the collection. This is why we started with version 7 in the collection.</p>
+
+<p>Releasing new versions with a changelog was something we already <a href="https://github.com/dev-sec/ansible-os-hardening/issues/269">automated</a> some time ago. We wanted to keep the nicely formatted changelogs and automatic releases and modifying the existing Github Actions was no problem.</p>
+
+<p>Our plan how to actually migrate the roles into the collection looked like this: Start building the collection and use the roles as submodules inside the monorepo. This way we can continue to support the separate roles and the roles inside the collection cannot diverge from the legacy roles.</p>
+
+<p>When everything was migrated, we planned to archive the old roles and link to the collection.</p>
+
+<h1 id="problems-and-other-interesting-things">Problems and other interesting things</h1>
+
+<p>There were some problems along the way but nothing we couldn&rsquo;t fix.</p>
+
+<p>Along the creation of the collection we needed to update our inspec-baselines as they needed more features to support all our operating systems.
+That means we now support newer versions of MySQL and MariaDB (<a href="https://github.com/dev-sec/mysql-baseline/pull/59">https://github.com/dev-sec/mysql-baseline/pull/59</a>, <a href="https://github.com/dev-sec/mysql-baseline/pull/57">https://github.com/dev-sec/mysql-baseline/pull/57</a>) and we support Arch Linux in the linux-baseline (<a href="https://github.com/dev-sec/linux-baseline/pull/136">https://github.com/dev-sec/linux-baseline/pull/136</a>).</p>
+
+<p>We also wanted to replace Inspec with its free distribution <a href="https://cinc.sh/">cinc-auditor</a>. This was surprisingly easy as the people behind cinc made it very easy to install cinc-auditor and use it as a drop-in replacement for Inspec. See this <a href="https://github.com/dev-sec/ansible-os-hardening/pull/291/commits/e7a47a1d342e1b45ceeeae7a1ff247f58ce3434e">commit</a> for details.</p>
+
+<p>There was an <a href="https://github.com/ansible/ansible/issues/66304">issue</a> in Ansible that we needed to work around. This was done by <a href="https://github.com/schurzi/">@schurzi</a> here: <a href="https://github.com/dev-sec/ansible-os-hardening/pull/291/commits/3f7598b5bae80f96cad3ad068f0d57b3e1e538ed">https://github.com/dev-sec/ansible-os-hardening/pull/291/commits/3f7598b5bae80f96cad3ad068f0d57b3e1e538ed</a></p>
+
+<p>Our mysql-hardening-role relies on a existing installation of MySQL or MariaDB. For this we used geerlingguys mysql-role because it supports many operating systems. However the role has some issues and unmerged pull requests that prevented us to use geerlingguys role as is. We had to <a href="https://github.com/dev-sec/ansible-role-mysql/">fork</a> the role and incorporate some PRs and fixes. We hope we don&rsquo;t have to continuously support the fork though.</p>
+
+<p>The hardest bug we encountered was a problem with AppArmor and MySQL on recent Ubuntu distributions. Here&rsquo;s the bug: <a href="https://bugs.launchpad.net/ubuntu/+source/mysql-5.7/+bug/1610765">https://bugs.launchpad.net/ubuntu/+source/mysql-5.7/+bug/1610765</a>.
+A faulty AppArmor profile prevents MySQL from starting because AppArmor blocks access to MySQL&rsquo;s configuration files.
+And Github Actions run on a Ubuntu 18.04 virtual machine with AppArmor enabled. So I wondered why the role does work when running molecule locally (btw: I use Arch) but not in the CI-pipeline.
+It took some days to figure this one out. However once I found out the reason for this, the solution was found much faster. <a href="https://robertdebock.nl/">Robert de Bock</a> also had this problem and fixed it <a href="https://github.com/robertdebock/ansible-role-mysql/commit/7562e99099b06282391ab7ed102b393a0406d212">here</a></p>
+
+<p>We also dropped support for some operating systems:</p>
+
+<ul>
+<li>CentOS 6 because support ends in November 2020</li>
+<li>Oracle-Linux because supporting it is really cumbersome and we don&rsquo;t know anyone that uses our roles on Oracle</li>
+</ul>
+
+<h1 id="the-result">The Result</h1>
+
+<p>It&rsquo;s here:</p>
+
+<ul>
+<li><a href="https://galaxy.ansible.com/devsec/hardening">Galaxy</a></li>
+<li><a href="https://github.com/dev-sec/ansible-os-hardening/">Repository on Github</a></li>
+</ul>
+
+<p>Please share your feedback with us, ask questions on the mailing list, open issues and pull requests on our repo!</p>
+
+<h1 id="the-future">The future</h1>
+
+<p>We plan to archive the repositories of the roles incorporated in the collection and redirect everyone to the collection. The open issues and pull requests will be moved or closed.
+This way, no code gets lost and (almost) no links will be broken.</p>
+
+<p>Of course we want to continue working on the collection and support more operating systems and more software! If you want to help, reach out!</p>
+
+<h1 id="thanks">Thanks</h1>
+
+<p>I want to thank the devsec team, especially <a href="https://github.com/micheelengronne">@micheelengronne</a>, <a href="https://github.com/schurzi/">@schurzi</a> and <a href="https://github.com/chris-rock">@chris-rock</a> for their work and support in creating the collection and this awesome opensource community!</p>
+
+    </article>
+  </div>
+</section>
+
+    
+    
+    
+
+    
+    <footer>
+      <ul>
+  <li><a href="/legal">Legal notice</a></li>
+  <li><a href="/contributing">Contributing</a></li>
+  <li><a href="https://twitter.com/devsecio">Twitter</a></li>
+  <li><a href="https://galaxy.ansible.com/dev-sec/">Ansible Galaxy</a></li>
+  <li><a href="https://supermarket.getchef.com/cookbooks?q=hardening">Chef Community</a></li>
+  <li><a href="https://forge.puppetlabs.com/hardening">Puppet Forge</a></li>
+</ul>
+
+    </footer>
+    
+
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/foundation/js/foundation/foundation.js"></script>
+    <script src="/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/foundation/js/foundation/foundation.topbar.js"></script>
+
+    <script src="/js/app.js"></script>
+
+    <script type="text/javascript">
+    var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1}};
+    $buoop.ol = window.onload;
+    window.onload=function(){
+      console.log($buoop);
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//browser-update.org/update.js");
+      document.body.appendChild(e);
+    }
+
+    </script>
+  </body>
+</html>
