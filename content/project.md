@@ -43,7 +43,7 @@ We recommend to install operating systems from trusted sources. This could be an
 
 ### Server Hardening
 
-We provide multiple cookbooks for chef and modules for puppet to cover this area. We use best-known guides like [Deutsche Telekom (German)](http://www.telekom.com/static/-/155996/7/technische-sicherheitsanforderungen-si), [BetterCrypto](https://bettercrypto.org/) and the [NSA hardening guide](http://www.nsa.gov/ia/_files/os/redhat/NSA_RHEL_5_GUIDE_v4.2.pdf). For more details look into the respective `test-<project>` repository. Checks are implemented following these guides.
+We provide a collection for Ansible, multiple cookbooks for Chef and modules for Puppet to cover this area. We use best-known guides like [Deutsche Telekom](https://www.telekom.com/en/corporate-responsibility/data-protection-data-security/security/details/privacy-and-security-assessment-process-358312), [BetterCrypto](https://bettercrypto.org/) and the [NSA hardening guide](https://apps.nsa.gov/iaarchive/library/ia-guidance/security-configuration/operating-systems/guide-to-the-secure-configuration-of-red-hat-enterprise.cfm). For more details look into the respective `test-<project>` repository. Checks are implemented following these guides.
 
 ### Continuous management
 
