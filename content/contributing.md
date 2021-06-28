@@ -28,7 +28,7 @@ We have a 3 step process for contributions:
 Our projects are built to last. We strive to ensure high quality throughout the experience. In order to ensure this, we require that all pull requests to DevSec projects meet these specifications:
 
 1. **Tests:** To ensure high quality code and protect against future regressions
-2. **Green CI Tests:** We use [Travis CI](https://travis-ci.org/) and/or [AppVeyor](https://www.appveyor.com/) CI systems to test all pull requests. We require these test runs to succeed on every pull request before being merged.
+2. **Green CI Tests:** We use [GitHub Actions](https://github.com/features/actions) to test all pull requests. We require these test runs to succeed on every pull request before being merged.
 3. **Up-to-date Documentation:**  Every code change should be reflected in an update for our documentation. We expect PRs to update the documentation with the code change.
 
 ## Code Review Process
