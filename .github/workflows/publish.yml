@@ -1,0 +1,22 @@
+name: Push to GitHub Pages on push to src
+on:
+  push:
+    branches:
+      - src
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+
+      - name: Deploy the site
+        uses: benmatselby/hugo-deploy-gh-pages@master
+        env:
+          HUGO_VERSION: 0.55.5
+          TARGET_REPO:  schurzi/dev-sec.github.io 
+          TARGET_BRANCH: master
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CNAME: dev-sec.io
