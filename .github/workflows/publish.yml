@@ -10,13 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 0
+
+      - name: Publish Site
+        uses: chabad360/hugo-gh-pages@v2
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          cname: dev-sec.io
+          branch: master
+          hugoVersion: 0.55.5
 
       - name: Deploy the site
-        uses: benmatselby/hugo-deploy-gh-pages@master
+        uses: benmatselby/hugo-deploy-gh-pages@v1
         env:
           HUGO_VERSION: 0.55.5
-          TARGET_REPO:  schurzi/dev-sec.github.io 
+          TARGET_REPO:  schurzi/dev-sec.github.io
           TARGET_BRANCH: master
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CNAME: dev-sec.io
