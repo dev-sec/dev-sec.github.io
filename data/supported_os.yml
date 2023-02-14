@@ -2,23 +2,23 @@
 os:
 - name: Ubuntu
   versions:
-    - 14.04
-    - 16.04
     - 18.04
+    - 20.04
+    - 22.04
 - name: Debian
   versions:
-    - 8
-    - 9
+    - 10
+    - 11
 - name: RHEL
   versions:
-    - 6
     - 7
     - 8
+    - 9
 - name: CentOS
   versions:
-    - 6
     - 7
     - 8
+    - 9
 - name: Oracle
   versions:
     - 6
