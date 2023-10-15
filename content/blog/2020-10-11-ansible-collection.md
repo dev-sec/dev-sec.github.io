@@ -62,7 +62,7 @@ We also dropped support for some operating systems:
 
 It's here:
 
-* [Galaxy](https://galaxy.ansible.com/devsec/hardening)
+* [Galaxy](https://galaxy.ansible.com/ui/repo/published/devsec/hardening/)
 * [Repository on Github](https://github.com/dev-sec/ansible-os-hardening/)
 
 Please share your feedback with us, ask questions on the mailing list, open issues and pull requests on our repo!

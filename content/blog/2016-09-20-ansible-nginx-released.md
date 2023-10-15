@@ -13,9 +13,9 @@ This role hardens your existing nginx installations (version 1.0.15 or later).
 
 This time we tried to make sure that the hardening role works with popular nginx installation roles, so if you use any of the following (great!) roles to manage your nginx, you can use our hardening role:
 
-* [geerlinggux.nginx](https://galaxy.ansible.com/geerlingguy/nginx/)
-* [jdauphant.nginx](https://galaxy.ansible.com/jdauphant/nginx/)
-* [franklinkim.nginx](https://galaxy.ansible.com/franklinkim/nginx/)
+* [geerlinggux.nginx](https://galaxy.ansible.com/ui/standalone/roles/geerlingguy/nginx/)
+* [jdauphant.nginx](https://galaxy.ansible.com/ui/standalone/roles/jdauphant/nginx/)
+* [franklinkim.nginx](https://galaxy.ansible.com/ui/standalone/roles/franklinkim/nginx/)
 
 We also tried to provide good documentation on the various settings and think that it turned out very well, but [see](https://github.com/dev-sec/ansible-nginx-hardening#nginx-hardening-ansible-role) for yourself.
 
@@ -25,6 +25,6 @@ Of course we not only maintain this role for Ansible, there exist implementation
 
 We're supporting this role on Debian- and Enterprise Linux-based operating systems, but we'll also try our best in helping you run the role on other systems! Just open up an issue or pull request or join our [Gitter Chatroom](https://gitter.im/dev-sec/general) to chat directly with us!
 
-You can find the role on [Github](https://github.com/dev-sec/ansible-nginx-hardening/) and on [Ansible Galaxy](https://galaxy.ansible.com/dev-sec/nginx-hardening/).
+You can find the role on [Github](https://github.com/dev-sec/ansible-nginx-hardening/) and on [Ansible Galaxy](https://galaxy.ansible.com/ui/standalone/roles/dev-sec/nginx-hardening/).
 
 Be sure to follow us on [Twitter](https://twitter.com/DevSecIO) for the latest updates.
