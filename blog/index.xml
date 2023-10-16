@@ -204,7 +204,7 @@ from day one of the DevSec Hardening Framework project, we used the same test su
       <description>The next part of server hardening with Ansible is released today: The ansible-nginx-hardening role.
 This role hardens your existing nginx installations (version 1.0.15 or later).
 This time we tried to make sure that the hardening role works with popular nginx installation roles, so if you use any of the following (great!) roles to manage your nginx, you can use our hardening role:
- geerlinggux.nginx jdauphant.nginx franklinkim.nginx  We also tried to provide good documentation on the various settings and think that it turned out very well, but see for yourself.</description>
+ nginxinc.nginx geerlinggux.nginx jdauphant.nginx  We also tried to provide good documentation on the various settings and think that it turned out very well, but see for yourself.</description>
     </item>
     
     <item>
