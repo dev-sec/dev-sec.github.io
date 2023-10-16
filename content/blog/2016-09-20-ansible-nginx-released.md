@@ -13,9 +13,9 @@ This role hardens your existing nginx installations (version 1.0.15 or later).
 
 This time we tried to make sure that the hardening role works with popular nginx installation roles, so if you use any of the following (great!) roles to manage your nginx, you can use our hardening role:
 
+* [nginxinc.nginx](https://galaxy.ansible.com/ui/standalone/roles/nginxinc/nginx/)
 * [geerlinggux.nginx](https://galaxy.ansible.com/ui/standalone/roles/geerlingguy/nginx/)
 * [jdauphant.nginx](https://galaxy.ansible.com/ui/standalone/roles/jdauphant/nginx/)
-* [franklinkim.nginx](https://galaxy.ansible.com/ui/standalone/roles/franklinkim/nginx/)
 
 We also tried to provide good documentation on the various settings and think that it turned out very well, but [see](https://github.com/dev-sec/ansible-nginx-hardening#nginx-hardening-ansible-role) for yourself.
 
