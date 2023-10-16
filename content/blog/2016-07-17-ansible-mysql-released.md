@@ -31,7 +31,7 @@ The main work was done by [Anton Lugovoi](https://github.com/fitz123) and [Sebas
 We're supporting this role on Debian- and Enterprise Linux-based operating systems, but we'll also try our best in helping you run the role on other systems! Just open up an issue or pull request or join our [Gitter Chatroom](https://gitter.im/dev-sec/general) to chat directly with us!
 
 
-You can find the role on [Github](https://github.com/dev-sec/ansible-mysql-hardening/) and on [Ansible Galaxy](https://galaxy.ansible.com/dev-sec/mysql-hardening/).
+You can find the role on [Github](https://github.com/dev-sec/ansible-mysql-hardening/) and on [Ansible Galaxy](https://galaxy.ansible.com/ui/standalone/roles/dev-sec/mysql-hardening/).
 
 
 Be sure to follow us on [Twitter](https://twitter.com/hardening_io) for the latest updates.

@@ -16,6 +16,6 @@ The [Hardening Framework](http://dev-sec.io/) provides best-practice security fo
  * Add handlers to restart sshd only when necessary [#6](https://github.com/dev-sec/ansible-ssh-hardening/issues/6)
  * Add support for Oracle Linux [#2](https://github.com/dev-sec/ansible-ssh-hardening/issues/2)
 
-The module is available via [Ansible Galaxy](https://galaxy.ansible.com/dev-sec/ssh-hardening/), now.
+The module is available via [Ansible Galaxy](https://galaxy.ansible.com/ui/standalone/roles/dev-sec/ssh-hardening/), now.
 
 As a next step, we plan to add support more modules. `ansible-os-hardening` is already in the works. Stay tuned and follow us on [Twitter](https://twitter.com/hardening_io).
