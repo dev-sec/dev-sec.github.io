@@ -1,0 +1,15 @@
+---
+name: Codespell - Spellcheck
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [src]
+  pull_request:
+    branches: [src]
+
+jobs:
+  codespell:
+    uses: "dev-sec/.github/.github/workflows/codespell.yml@main"
+    with:
+      ignore_words_list: "bund,seh,ois"
+      skip: "./themes/devsec/static/node_modules,./themes/devsec/static/foundation,./themes/devsec/static/jquery,./themes/devsec/static/css/app.css"
